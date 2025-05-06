@@ -1,0 +1,51 @@
+\chapter{Introduction}
+
+\section{Background and Motivation}
+It is very challenging to predict stock prices over time because of its intrinsic complexity and ambiguity over financial markets. Stock price fluctuations are affected by countless variables, including economic upsets, supply and demand, and even psychological behaviors of mood swings, which have a hard time being captured in quantifiable and predictive methods. Mathematical models seldom seem to capture the intricate nature of the market dynamics perfectly. Recurrent Neural Networks, especially Long Short-Term Memory (LSTM) networks, have proved promising to solve this problem by capturing effective temporal patterns of stock price data. Nevertheless, these models have drawbacks. One major disadvantage is the inherent lag in prediction where the forecasted values mostly lag behind the actual movement of the stock prices. This delay decreases the predictability of the model and its applicability in industries that demand sharp timing for making a profit in trading decisions.
+
+In turn, by unifying advanced neural network architectures and preprocessing techniques, this dissertation could address the challenges mentioned, improve the accuracy and the timeliness of stock price forecasts, and integrate them into algorithmic trading, potentially becoming a competitive advantage for the latter over simple lagging indicators.
+
+\section{Objectives of the Study}
+The main objectives of this dissertation are:
+\begin{enumerate}
+    \item To build up a more advanced stock price prediction model to be able to correctly forecast the next time step in real terms and by minimizing the lag between
+observed and predicted values.
+    \item To leverage RNNs and LSTM networks in conjunction with adaptive filtering and enhanced data preprocessing techniques to improve model performance.
+    \item To integrate the predictive model into algorithmic trading strategies, replacing or complementing lagging indicators like Moving Averages (MAs) and Relative Strength Index (RSI) with a forward-looking predictive system.
+    \item To maximize the profitability of trades by identifying optimal entry and exit points based on the predictive model’s outputs.
+\end{enumerate}
+
+\section{Scope of the Dissertation}
+The scope of this dissertation includes the development, implementation, and evaluation of a stock price prediction framework using neural networks. The framework incorporates:
+\begin{itemize}
+    \item Advanced deep learning architectures, specifically RNNs and LSTM networks.
+    \item Adaptive preprocessing methods to improve the quality of input data.
+    \item Integration with algorithmic trading strategies to test the practical usability of the predictive model in financial markets.
+\end{itemize}
+
+The focus is on daily stock price data, with an emphasis on predicting short-term price movements (e.g., the next day’s closing price). While the framework is designed with stock markets in mind, the methodology can be extended to other financial instruments like commodities (e.g., oil prices) or indices.
+
+\section{Structure of the Dissertation}
+
+The dissertation is organized as follows:
+
+\begin{itemize}
+    \item \textbf{Chapter 2: Literature Review} \\
+    Explores the existing methods for stock price prediction, including traditional statistical approaches and advancements in neural network-based models. The chapter also highlights research gaps and positions the study within the context of existing literature.
+    
+    \item \textbf{Chapter 3: Frameworks and Models for Stock Price Prediction} \\
+    Describes the proposed architectures and models in detail. This includes hybrid architectures such as the LSTM-RLS model, the DNS architecture, the ARIMA-LSTM Residual Integration Framework, and the Multi-Feature LSTM Forecasting Framework. The chapter also discusses data preprocessing techniques, training methodologies, and feature engineering processes.
+    
+    \item \textbf{Chapter 4: Results and Evaluation} \\
+    Presents the experimental results and evaluates the performance of the proposed models using various metrics. Visualization of results and detailed analysis are included for each framework, highlighting their predictive capabilities and limitations.
+    
+    \item \textbf{Chapter 5: Discussions and Challenges} \\
+    Summarizes the key findings, addresses the challenges encountered during the model development process, and discusses the implications of the results. This chapter also explores potential refinements to improve the models further.
+    
+    \item \textbf{Chapter 6: Conclusion and Future Direction} \\
+    Concludes the dissertation by summarizing the key contributions and insights gained from the study. Additionally, it outlines potential directions for future research and model enhancements.
+    
+    \item \textbf{Chapter 7: Publications} \\
+    Lists the publications resulting from the work presented in this dissertation.
+
+\end{itemize}

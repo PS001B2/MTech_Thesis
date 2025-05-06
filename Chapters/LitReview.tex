@@ -1,0 +1,39 @@
+\chapter{Literature Review}
+
+\section{Overview of Stock Price Prediction Methods}
+Stock price prediction has been a subject of extensive research, employing both traditional statistical methods and modern machine learning techniques. Traditional approaches, such as ARIMA models, rely heavily on the detection of linear patterns in historical data and therefore are not good enough to capture complex and nonlinear dynamics in financial markets. Recent advances in machine learning have introduced neural networks, particularly Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks, as promising alternatives. These models are very good at capturing temporal dependencies and nonlinear relationships, making them very suitable for time-series forecasting.
+
+Hybrid architectures have led the field ahead by combining deep learn-ning models with preprocessing techniques such as Kalman Filters and Wavelet Transforms. These combinations enhance prediction accuracy as noise and
+capturing complex patterns in financial data. The subsequent sections review key contributions in this domain.
+
+\section{Insights from Recurrent Neural Networks (RNNs) and LSTMs}
+Recurrent Neural Networks (RNNs) and their advanced variants, LSTMs, have demonstrated exceptional capabilities in time-series forecasting. LSTMs, with their ability to capture long-term dependencies, address the vanishing gradient problem that limits traditional RNNs.  
+
+For instance, \textcite{dastgerdi_investigating_2022} introduced an LSTM-based approach integrated with Kalman Filters and Wavelet Transforms for financial forecasting. Wavelet Transforms were used for signal decomposition, enhancing the signal-to-noise ratio, while the Kalman Filter refined the LSTM’s predictions by filtering out noise. This synergy improved accuracy and reliability over traditional methods.  
+
+Similarly, \textcite{fang_kalman-lstm_2021} proposed a Kalman-LSTM model for short-term traffic flow prediction, showcasing how preprocessing with Kalman Filters can improve the quality of inputs for LSTMs. These studies highlight the importance of combining noise reduction techniques with the temporal modeling capabilities of LSTMs.
+
+\section{Applications of Hybrid Architectures in Time Series Forecasting}
+Hybrid models combining traditional statistical methods, preprocessing filters, and deep learning networks have emerged as powerful tools for time series forecasting.  
+
+\textcite{song_improved_2022} proposed a Kalman Filter Fusing LSTM (KFFLSTM) model for tracking nonlinear dynamics, addressing challenges in environments with non-Gaussian noise. The model combined LSTMs to analyze complex nonlinear patterns, but the predictions were optimized in the light of historical information by applying Kalman filters.  
+
+In another study, \textcite{tian_application_2024} used a KF-LSTM algorithm in ultra-wideband indoor positioning systems, which proved its application in noise filtering and location estimation with robust accuracy. Similarly, \textcite{wang_hybrid_2024} combined Adaptive Extended Kalman Filters with LSTM networks for the states of charge of lithium-ion batteries, where LSTMs were used to capture the nonlinear patterns and enhance prediction accuracy. 
+
+In the stock market domain, \textcite{sahni_neoteric_2022} introduced a hybrid ARIMA-LSTM model. The ARIMA model predicted linear trends, while the LSTM captured residual nonlinearities, resulting in improved accuracy on Indian stock market data. These hybrid approaches underscore the potential of combining statistical and deep learning methods for enhanced forecasting.  
+
+\section{Research Gaps and Positioning of the Study}
+Despite significant advancements, several challenges remain in stock price prediction:
+\begin{itemize}
+    \item \textbf{Lag in Predictions:} While LSTM and Kalman Filter-based models reduce overall prediction errors, they often suffer from a lag when forecasting real-time changes, particularly in volatile markets. \textcite{samanta_dual_2020} addressed this issue with a dual network solution, combining a trend predictor with a dynamic model to reduce lag. However, such approaches remain underexplored in financial forecasting.
+    
+    \item \textbf{Integration of Adaptive Filters with Neural Networks:} Most existing research focuses on using Kalman Filters and similar techniques for data preprocessing, rather than integrating them into the neural network's weight update mechanism. This presents an opportunity to explore real-time learning models that combine the adaptability of recursive filters with the pattern recognition capabilities of LSTMs.
+
+    \item \textbf{Focus on Nonlinear Dynamics:} Although hybrid models have shown promise, many approaches still struggle with accurately modeling complex nonlinearities in financial data. Advanced architectures combining preprocessing, filtering, and deep learning could offer a more robust solution.
+
+    \item \textbf{Lack of Movement Prediction Metrics:} Traditional evaluation metrics
+like Mean Squared Error (MSE), fail to capture the effect of lag properly in real-time prediction. Novel metrics, including the Movement Prediction Metric recently proposed by  \textcite{samanta_dual_2020} will provide a better
+insights into model performance.
+\end{itemize}
+
+This dissertation aims to address these gaps by developing a novel hybrid framework that integrates recursive filtering techniques with LSTMs, focusing on reducing prediction lag and enhancing the accuracy of financial time-series forecasting.

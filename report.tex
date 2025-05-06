@@ -1,0 +1,93 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{pdfpages}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{xcolor,sectsty}
+\usepackage{mathptmx} % Times Roman font
+\usepackage[scaled=.90]{helvet}
+\usepackage{csquotes} % Required for biblatex
+\usepackage[backend=biber,style=ieee]{biblatex} % Using biblatex with IEEE style
+\addbibresource{references.bib}
+
+\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, 
+    pdftitle={A Comprehensive Framework for Stock Price Prediction}, 
+    pdfauthor={Your Name}, 
+    pdfsubject={Dissertation}, 
+    pdfkeywords={Stock Prediction, GAN, LSTM, ARIMA}]{hyperref}
+
+% Custom colors
+\definecolor{auburn}{rgb}{0.43, 0.21, 0.1}
+\definecolor{vividauburn}{rgb}{0.58, 0.15, 0.14}
+\definecolor{bole}{rgb}{0.47, 0.27, 0.23}
+\definecolor{internationalkleinblue}{rgb}{0.0, 0.18, 0.65}
+
+% Title and section formatting
+\titleformat{\chapter}[display]
+{\huge\bfseries\color{auburn}}
+{\chaptertitlename\ \thechapter}{15pt}{\Huge}
+\titleformat{\section}
+{\Large\bfseries\color{vividauburn}}
+{\thesection}{12pt}{}
+\subsectionfont{\color{bole}} 
+
+% Fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\fontsize{8}{8}\selectfont\itshape\nouppercase{\textcolor{internationalkleinblue}{\leftmark}}}
+\fancyfoot[R]{\fontsize{8}{8}\selectfont\itshape\nouppercase{\thepage}}
+\fancyfoot[C]{\fontsize{8}{7}\selectfont\itshape\nouppercase{\textcolor{internationalkleinblue}{A Comprehensive Framework for Stock Price Prediction for Algorithmic Trading Application}}}
+\fancyfoot[L]{\fontsize{8}{8}\selectfont\itshape\nouppercase{\textcolor{internationalkleinblue}{PDEU}}}
+
+% Footrule and headrule
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\doublespacing
+
+\begin{document}
+\thispagestyle{empty} 
+\input{Chapters/title}
+\clearpage
+
+% \thispagestyle{empty}
+% \includepdf[pages={1}]{DIAT_Internship_Completion_Certificate-crop.pdf}
+
+\thispagestyle{empty}
+\include{Chapters/ApprovalSheet}
+
+\thispagestyle{empty}
+\include{Chapters/Declaration}
+
+% \thispagestyle{empty}
+% \include{acknow}
+
+% Set to fancy headers and footers again
+\pagestyle{fancy}
+
+\pagenumbering{roman}
+\tableofcontents 
+\clearpage
+\listoffigures
+\listoftables
+\newpage
+
+\pagenumbering{arabic}
+
+% Main content
+\input{Chapters/introduction} 
+\input{Chapters/LitReview}
+\input{Chapters/work-done}
+\input{Chapters/Results}
+\input{Chapters/DiscAndChallenges}
+\input{Chapters/conclusion}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+
+\end{document}

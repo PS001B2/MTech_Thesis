@@ -1,0 +1,26 @@
+\chapter{Discussions and Challenges}
+
+\section{Key Findings}
+Although the RMSE and \( R^2 \) score of the enhanced hybrid LSTM-RLS model were lower, the actual vs. prediction plot revealed a constant lag of one time step in the predicted stock prices. To address this issue, the DNS architecture was adopted. However, despite experimenting with various combinations of activation functions and slope trend methods, the model could not eliminate the lag.
+
+Consequently, the DNS architecture was replaced by the ARIMA-LSTM Residual Integration Framework. Since ARIMA did not perform as expected in predicting the linear component, LSTM was utilized to predict both linear and non-linear components. However, this model also failed to remove the lag and exhibited a higher RMSE compared to other model architectures.
+
+To further enhance performance, additional features were incorporated, and a dataset with multiple features was developed as described earlier. The Multi-Feature LSTM Forecasting Framework was then employed. Despite these enhancements, this model architecture, when combined with the proposed training method, was also unable to eliminate the lag in predictions.
+
+Additionally, the Hybrid LSTM-RLS with a multi-feature input did not perform well. The reason behind this is that the LSTM output, which consists of daily returns, is highly volatile in nature, making it difficult for the model to generalize effectively.
+
+The ARIMAX-LSTM-RLS model also slightly reduced performance, suggesting that the final predictions obtained from the residuals architecture do not serve as suitable inputs for the RLS model in an online prediction setting.
+
+Furthermore, GARCH, for some reason, failed to capture any volatility (variance) in the residuals obtained after the mean predictions by ARIMAX. As a result, the final predictions produced by GARCH were identical to those obtained from ARIMAX alone, rendering GARCH ineffective in improving prediction performance.
+
+Based on the comparative performance of different architectures tested in this dissertation, the residuals architecture has demonstrated the best predictive capability so far.
+
+\section{Challenges and Model Refinement}
+A significant challenge faced during the development of the hybrid models was the persistent lag in long-term predictions. Despite the efforts to refine the models, this lag continued to appear, particularly in the hybrid LSTM-RLS models. When attempting to mitigate the lag by introducing alternative models designed specifically for lag removal, the RMSE decreased, but the lag issue remained unchanged.
+
+This issue highlights the difficulty in eliminating the lag while trying to improve accuracy in long-term predictions. The persistence of this lag, even after applying different techniques to remove it, remains a key challenge in the framework.
+
+Additionally, the volatility modeling through GARCH did not yield the expected improvements. Since GARCH consistently predicted near-zero volatility for the residuals, it failed to contribute meaningful insights into stock price fluctuations. This outcome further emphasizes the complexity of modeling stock returns, where conventional volatility models may not always be applicable or beneficial.
+
+Overall, while significant progress has been made in understanding and refining predictive models, challenges such as lag in predictions and ineffective volatility modeling remain open problems for future research.
+

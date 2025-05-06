@@ -1,0 +1,32 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Hybrid LSTM-RLS Architecture}}{11}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Enhanced Hybrid LSTM-RLS Architecture}}{13}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Input Sequence Formation for RLS}}{15}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Flow diagram of Multi-Feature Hybrid LSTM-RLS implementation.}}{17}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces RLS input sequence construction using LSTM outputs.}}{18}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces DNS Architecture}}{20}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribution plot of raw close values, log-transformed close values, and scaled log-transformed close values.}}{22}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Visualization of the Incremental Training Process for Multi-Feature LSTM Forecasting Framework.}}{27}{figure.3.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Distribution plots of all features used in the forecasting framework.}}{28}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Correlation matrix of all features in the dataset.}}{29}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Seasonal decomposition of NSEI close values.}}{30}{figure.3.11}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Original vs. Predicted Stock Prices}}{35}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Returns: Original vs. Predicted Prices}}{35}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Stock Prices: Shifted Predictions (-1)}}{35}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Stock Prices: Actual vs. Predicted Daily Returns}}{36}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison of Stock Prices and Returns (Shifted -1)}}{36}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ARIMAX Test Predictions - Output: Close Price}}{37}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces ARIMAX Test Predictions - Output: Returns}}{37}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Final Test Predictions - Output: Close Price}}{38}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Final Test Predictions - Output: Returns}}{38}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Actual vs. Predicted Returns After Applying RLS to Final Predictions}}{38}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Absolute error between actual and predicted one-time step daily close return, compared with the total RMSE of the test data.}}{40}{figure.4.11}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Actual vs Predicted daily close return where the model is retrained after each prediction as per the incremental training methodology.}}{41}{figure.4.12}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Residuals: Actual Values - ARIMAX Predictions}}{41}{figure.4.13}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Actual vs. Predicted Returns Using GARCH Model}}{42}{figure.4.14}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
