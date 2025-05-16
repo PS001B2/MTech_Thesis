@@ -7,7 +7,7 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Flow diagram of Multi-Feature Hybrid LSTM-RLS implementation.}}{17}{figure.3.4}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces RLS input sequence construction using LSTM outputs.}}{18}{figure.3.5}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces DNS Architecture}}{20}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribution plot of raw close values, log-transformed close values, and scaled log-transformed close values.}}{22}{figure.3.7}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Distribution plot of raw close values, log-transformed close values, and scaled log-transformed close values.}}{21}{figure.3.7}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Visualization of the Incremental Training Process for Multi-Feature LSTM Forecasting Framework.}}{27}{figure.3.8}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Distribution plots of all features used in the forecasting framework.}}{28}{figure.3.9}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Correlation matrix of all features in the dataset.}}{29}{figure.3.10}%

@@ -1,4 +1,4 @@
-\chapter{Frameworks and Models for Stock Price Prediction}
+\chapter{Model Architectures for Stock Price Prediction}
 
 \section{Overview of Proposed Architectures}
 This chapter presents the various architectures and frameworks explored for stock price prediction, from initial experiments during the summer internship to advanced hybrid and feature-rich frameworks developed later. The focus is on improving prediction accuracy, addressing issues like lag, and incorporating domain-specific features. A systematic approach to model building, including feature engineering and model integration, is discussed.
@@ -17,8 +17,8 @@ The Hybrid LSTM-RLS Architecture was the first model developed during my summer 
 
 The workflow for this architecture is as follows:
 \begin{enumerate}
-    \item \textbf{Install and load necessary libraries:} Libraries such as TensorFlow, NumPy, yfinance, and scikit-learn were installed and imported.
-    \item \textbf{Load stock data using yfinance API:} Historical stock price data was fetched using the yfinance API.
+    \item \textbf{Install and import libraries:} TensorFlow, NumPy, yfinance, and scikit-learn.
+    \item \textbf{Fetch stock data:} Historical prices retrieved via yfinance API.
     \item \textbf{Data preprocessing:} The data was normalized, missing values were handled, and it was split into training and testing sets.
     \item \textbf{Create sequences:} Price sequences of fixed length were created as input to the LSTM model.
     \item \textbf{Train the LSTM model:} The LSTM model was trained to predict the next stock price based on these sequences.
@@ -56,7 +56,7 @@ The architecture process involves the following steps:
     
     \item \textbf{Normalize the data:}
     \begin{itemize}
-        \item Data was normalized and scaled to a range of 0 to 1 using \texttt{MinMaxScaler}.
+        \item Data normalized to [0, 1] using \texttt{MinMaxScaler}.
     \end{itemize}
     
     \item \textbf{Sequence creation for LSTM:}
@@ -129,7 +129,7 @@ This sliding window approach facilitated seamless integration between the LSTM a
 
 \subsection{Multi-Feature Hybrid LSTM-RLS Implementation}
 
-In the \textbf{Hybrid LSTM-RLS architecture with a multi-feature dataset}, the dataset was utilized in its preprocessed form, eliminating the need for additional preprocessing steps. The overall workflow of the implementation is illustrated in \textbf{Figure~\ref{fig:HybridLSTM_RLS_M}}.
+The preprocessed dataset was directly used in the \textbf{Hybrid LSTM-RLS architecture}. See \textbf{Figure~\ref{fig:HybridLSTM_RLS_M}} for the workflow.
 
 \begin{figure}[h!]
     \centering
@@ -138,7 +138,7 @@ In the \textbf{Hybrid LSTM-RLS architecture with a multi-feature dataset}, the d
     \label{fig:HybridLSTM_RLS_M}
 \end{figure}
 
-The LSTM model was trained following the standard sequence-based approach, where multi-feature input sequences were constructed and used for training.
+The LSTM model was trained following the standard sequence based approach, where multi-feature input sequences were constructed and used for training.
 
 \subsubsection{Key Modification: RLS Input Sequence Construction}
 
@@ -164,7 +164,7 @@ A significant deviation from the previous approach was the method used to constr
 \subsubsection{Impact of this Approach}
 
 \begin{itemize}
-    \item \textbf{Alternative Feature Representation}: By constructing input sequences from returns and close prices, the model captured different aspects of market behavior.  
+    \item \textbf{Alternative Feature Representation}: By constructing input sequences \\from returns and close prices, the model captured different aspects of market behavior.  
     \item \textbf{Comparative Performance Analysis}: Training for both returns and close prices allowed an in-depth evaluation of prediction effectiveness under different target variable choices.  
     \item \textbf{Flexible RLS Adaptation}: The RLS model benefited from this new input structure, enabling it to adjust dynamically to either return-based or price-based forecasts.  
 \end{itemize}
@@ -188,7 +188,7 @@ Steps include:
     \item \textbf{Prediction refinement:} Network 2 uses the output of Network 1 to generate lag-free predictions.
 \end{enumerate}
 
-\section{Advanced Data Preprocessing for Enhanced Model Performance}
+\section{Advanced Data Preprocessing for Enhanced\\ Model Performance}
 \subsection{Challenges in Scaling and Activation}
 During the development of the stock price prediction models, challenges arose when scaling the data using traditional normalization techniques such as MinMaxScaler. This approach limits the range of predictions to the maximum value observed during training, potentially capping future predictions. To address this issue, an alternative preprocessing technique was introduced, which involves:
 \begin{itemize}
@@ -627,7 +627,11 @@ where $Z \in \mathbb{R}^{61 \times 1}$ is the sequence and $\sigma$ denotes the 
 
 \subsection{Transformer Encoder Block}
 
+\begingroup
+\sloppy
 Each Transformer Encoder block consists of a Multi-Head Self-Attention (MHSA) layer followed by a feed-forward network (FFN):
+\endgroup
+
 \[
 \text{MHSA}(X) = \text{LayerNorm}(X + \text{Dropout}(\text{MultiHeadAttention}(X, X)))
 \]
@@ -751,267 +755,3 @@ The RAGIC architecture is designed for time series forecasting tasks with inhere
 \end{itemize}
 
 Its integration of noise-aware attention and adversarial learning enables better modeling of complex financial dynamics.
-
-% \chapter{Frameworks and Models for Stock Price Prediction}
-
-% \section{Overview of Proposed Architectures}
-% This chapter provides a detailed explanation of various architectures designed and developed for stock price prediction. Starting from the Hybrid LSTM-RLS Architecture created during the summer internship, subsequent modifications and alternative models are described, highlighting their strengths, limitations, and outcomes.
-
-% \section{Hybrid LSTM-RLS Architecture}
-
-% \subsection{Workflow and Design}
-
-% The Hybrid LSTM-RLS architecture was developed during my summer internship. It combines the strengths of Long Short-Term Memory (LSTM) networks for sequential data modeling with Recursive Least Squares (RLS) for refining predictions.
-
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{SummerInternArchitecture.pdf} % Adjust width as needed
-%     \caption{Hybrid LSTM-RLS Architecture}
-% \label{fig:summerarch}
-% \end{figure}
-
-% Figure \ref{fig:summerarch} illustrates the workflow of this architecture. Key steps are as follows:
-% \begin{enumerate}
-%     \item \textbf{Install and load necessary libraries:} 
-%     \begin{itemize}
-%         \item Libraries such as tensorflow, numpy, yfinance and scikit- learn are installed and imported.
-%     \end{itemize}
-    
-%     \item \textbf{Load stock data using yfinance API:} 
-%     \begin{itemize}
-%         \item Data representing price of the stocks in any given time is extracted from yfinance API for the desired time.
-%     \end{itemize}
-    
-%     \item \textbf{Data preprocessing:} 
-%     \begin{itemize}
-%         \item Preprocessing of data is also performed, which consists of normalization, missing values dealt and the splitting of data in training and testing.
-%     \end{itemize}
-    
-%     \item \textbf{Create sequences:}
-%     \begin{itemize}
-%         \item Price sequences of stocks are generated for making the data ready for LSTM
-% model. Every one of these sequences includes information about the past price level for training purposes.
-%     \end{itemize}
-    
-%     \item \textbf{Train the LSTM model:}
-%     \begin{itemize}
-%         \item Using these sequences, LSTM model is prepared and tested for predicting the next value of the stock.
-%     \end{itemize}
-    
-%     \item \textbf{LSTM predictions passed to RLS model:}
-%     \begin{itemize}
-%         \item The scalar predictions from the LSTM model are taken as an input by the RLS algorithm.
-%     \end{itemize}
-    
-%     \item \textbf{RLS model provides final prediction:}
-%     \begin{itemize}
-%         \item The RLS model processes the LSTM prediction and from it produces the final stock price prediction.
-%     \end{itemize}
-    
-% \end{enumerate}
-
-% \section{Enhanced Hybrid LSTM-RLS Architecture}
-
-% To address issues such as dimension mismatches and long training times in the original architecture, several enhancements were implemented in Semester 3. These refinements simplified the process and improved predictive accuracy.
-
-% Figure \ref{fig:Refinedarch} illustrates the improved workflow:
-
-% After I started Semester 3, I improved the architecture developed in this early figure \ref{fig:Refinedarch}. Such improvements were executed to make the architecture more predictable and to solve problems such as dimension mismatch and long training times. It made the model much simpler and highly efficient to use for stock price forecasting.
-
-% \subsection{Architecture Workflow}
-
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{RefinedArchitecture.pdf} % Adjust width as needed
-%     \caption{Enhanced Hybrid LSTM-RLS Architecture}
-% \label{fig:Refinedarch}
-% \end{figure}
-
-% Architecture process involves the following steps:
-
-% \begin{enumerate}
-%     \item \textbf{Install and import necessary libraries:}
-%     \begin{itemize}
-%         \item All libraries are imported as like yfinance, tensorflow, scikit-learn and so on.
-%     \end{itemize}
-    
-%     \item \textbf{Import Nifty 50 daily close price data:}
-%     \begin{itemize}
-%         \item For the last 12 years, it fetches the closing prices of Nifty 50 from the yfinance API daily.
-%     \end{itemize}
-    
-%     \item \textbf{Normalize the data:}
-%     \begin{itemize}
-%         \item Normalized the data and scaled it between 0 to 1 and fed it into the LSTM model. This was done using MinMaxScaler.
-%     \end{itemize}
-    
-%     \item \textbf{Create sequences for LSTM:}
-%     \begin{itemize}
-%         \item Sequences of past stock prices are created to prepare the data for LSTM training.
-%     \end{itemize}
-    
-%     \item \textbf{Divide the data into 80\% training and 20\% testing:}
-%     \begin{itemize}
-%         \item The sequences are divided into 80\% for training and 20\% for testing.
-%     \end{itemize}
-    
-%     \item \textbf{Train the LSTM model:}
-%     \begin{itemize}
-%         \item The LSTM model is trained on the 80\% training data over several epochs to predict the stock prices.
-%     \end{itemize}
-    
-%     \item \textbf{Use LSTM to forecast:}
-%     \begin{itemize}
-%         \item The trained LSTM model provides predictions for both the train and test sets.
-%     \end{itemize}
-    
-%     \item \textbf{Sequences used in RLS model input:}
-%     \begin{itemize}
-%         \item The LSTM model predictions are used to create input sequences for the Recursive Least Squares (RLS) model.
-%     \end{itemize}
-    
-%     \item \textbf{Forecast final stock prices using the RLS model:}
-%     \begin{itemize}
-%         \item The RLS model uses the LSTM predictions as input and outputs the final stock price predictions.
-%     \end{itemize}
-    
-% \end{enumerate}
-
-% \subsection{Developing Input Sequences for RLS}
-
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{RLSInputCreation.pdf} % Adjust width as needed
-%     \caption{Input Sequence Formation}
-% \label{fig:inputseq}
-% \end{figure}
-
-% The following steps are followed to generate the input sequences for the RLS model based on LSTM predictions:
-
-% \begin{enumerate}
-%     \item \textbf{Original Sequence for LSTM:} 
-%     \begin{itemize}
-%         \item The original sequence of stock prices is used as the input to the LSTM model. 
-%         \item For example, a sequence from index 0 to 49 is selected.
-%     \end{itemize}
-
-%     \item \textbf{Training the LSTM Model:}
-%     \begin{itemize}
-%         \item The LSTM model is trained on the input sequence.
-%         \item After training, the LSTM model generates a prediction, i.e., the 50th value based on the past 49 values.
-%     \end{itemize}
-
-%     \item \textbf{Shifting the Sequence for RLS Input:}
-%     \begin{itemize}
-%         \item The sequence used for LSTM training is shifted by one step to create the input for the RLS model.
-%         \item For instance, the sequence now starts from index 1 and runs up to index 50.
-%         \item The prediction generated by the trained LSTM model for the 50th point is appended to this new sequence.
-%     \end{itemize}
-
-%     \item \textbf{Final Input for RLS Model:}
-%     \begin{itemize}
-%         \item The shifted sequence (from 1 to 50) is provided as input to the RLS model.
-%         \item The RLS model uses this input to generate the final stock price prediction.
-%     \end{itemize}
-% \end{enumerate}
-
-% This process enables the integration of the LSTM predictions with the RLS model by using a sequential sliding window approach.
-
-% \section{Dual Network Solution Architecture}
-% The RMSE and R\(^2\) score of the Enhanced Hybrid LSTM-RLS architecture show good performance, but there exists a constant lag of 1 time step in the predictions. This results in a relatively higher RMSE error of 0.76\%. To address this lag, I adopted the Dual Network Solution (DNS) architecture proposed by \textcite{samanta_dual_2020}, which is designed to reduce such time-step lags in forecasting.
-
-% Figure \ref{fig:DNSArch} illustrates the architecture of the Dual Network Solution (DNS) Architecture, which operates as follows:
-
-% \begin{enumerate}
-%     \item \textbf{Training Network 1}: 
-%     Network 1 is trained on trends extracted from actual data using the Slope Difference Method or Moving Averages.
-    
-%     \item \textbf{Training Network 2}: 
-%     Network 2 is trained directly on the actual data.
-    
-%     \item \textbf{Lag-Free Prediction}: 
-%     After training, the models are used for lag-free predictions.
-    
-%     \item \textbf{Input to Network 1}: 
-%     The actual data is passed as input to Network 1, which predicts the trend based on this input.
-    
-%     \item \textbf{Input to Network 2}: 
-%     The predicted trend from Network 1 is then provided as input to Network 2 to obtain the final prediction.
-% \end{enumerate}
-
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{23MAI004_Sem3_MidSem_Report/DNSArchitecture.pdf} % Adjust width as needed
-%     \caption{DNS Architecture}
-% \label{fig:DNSArch}
-% \end{figure}
-
-% \section{ARIMA-LSTM Residual Integration Framework}
-
-% In this section, I have employed a hybrid model aimed at addressing the lag observed in the results of the Dual Network Solution (DNS) architecture discussed previously. The model architecture used here is inspired by the framework proposed by Shah et al. In their approach, the authors decompose the final stock price prediction into three components: \textbf{linear}, \textbf{non-linear}, and \textbf{error}.
-
-% \begin{itemize}
-%     \item \textbf{Linear Component}: The ARIMA model is employed to make an initial prediction by capturing the linear component in the data. The residuals are then computed as the difference between the actual values and the ARIMA predictions.  
-%     \item \textbf{Non-linear Component}: The calculated residuals are used as input to an LSTM model, which is trained to capture the non-linear component of the data.  
-%     \item \textbf{Final Prediction}: The predictions from the ARIMA model and the LSTM model are combined to obtain the final stock price predictions.
-% \end{itemize}
-
-% To build upon this framework, I have made modifications by employing the LSTM model to predict both the linear and non-linear components of the data. This adjustment aims to enhance the model’s flexibility and predictive accuracy. The complete flow of the proposed architecture, including its modifications, is illustrated in \textbf{Figure 1}.
-
-% \section{Multi-Feature LSTM Forecasting Framework}
-
-% As the \textbf{ARIMA-LSTM Residual Integration Framework} was unable to effectively remove the lag in predictions and its performance degraded compared to other proposed models, I decided to adopt a \textbf{Multi-Feature LSTM Forecasting Framework}. This approach utilizes multiple features as input to train the LSTM architecture, aiming to improve the predictive accuracy and eliminate lag.
-
-% \subsection{Feature Engineering}
-
-% The dataset includes the following features:
-% \begin{itemize}
-%     \item \textbf{5-day, 15-day, 30-day, and 60-day returns} calculated using the average of high and low values of NSEI.
-%     \item \textbf{5-day, 15-day, 30-day, and 60-day returns} calculated using the average of open and close values of NSEI.
-%     \item \textbf{RSI (Relative Strength Index)} values calculated on daily close values, normalized to a range of \([-0.5, 0.5]\).
-%     \item \textbf{OBV (On-Balance Volume)} values calculated using close values and volume of NSEI, normalized to a range of \([-1, 1]\).
-%     \item \textbf{1-day returns} calculated on daily close values of INR-USD currency exchange data.
-%     \item \textbf{1-day returns} calculated on daily close values of the \(^\text{INDIAVIX}\) index.
-% \end{itemize}
-
-% All return values were kept in their original scale, while RSI and OBV were normalized for consistency.
-
-% The entire dataset is visualized using histograms, correlation plots, and pair plots, which are shown below.
-
-
-% \subsection{Feature Selection Using SelectKBest}
-
-% To refine the dataset, I applied the \textbf{SelectKBest} feature selection method with \texttt{f\_regression} as the scoring function. The input features were evaluated against the daily returns calculated on daily close values of NSEI as the output. The importance scores of the features are presented in Table~\ref{tab:feature_importance}.
-
-% \begin{table}[H]
-% \centering
-% \begin{tabular}{|l|c|}
-% \hline
-% \textbf{Feature} & \textbf{Score} \\ \hline
-% INDIAVIX\_1D     & 1125.250181    \\ \hline
-% RSI\_Normalized  & 292.775295     \\ \hline
-% Open\_Close\_5d  & 276.984547     \\ \hline
-% High\_Low\_5d    & 268.947328     \\ \hline
-% High\_Low\_15d   & 79.876745      \\ \hline
-% Open\_Close\_15d & 79.634278      \\ \hline
-% INRUSD\_X        & 42.357608      \\ \hline
-% Open\_Close\_30d & 35.719346      \\ \hline
-% High\_Low\_30d   & 35.259659      \\ \hline
-% Open\_Close\_60d & 16.824506      \\ \hline
-% High\_Low\_60d   & 16.235917      \\ \hline
-% OBV\_Normalized  & 0.570088       \\ \hline
-% % Unnamed: 0       & 0.075218       \\ \hline
-% \end{tabular}
-% \caption{Feature Importance Scores using SelectKBest}
-% \label{tab:feature_importance}
-% \end{table}
-
-% \subsection{Feature Refinement}
-
-% Based on the feature importance scores, the following features were dropped due to their low relevance:
-% \begin{itemize}
-%     \item \textbf{OBV\_Normalized}: Score of 0.570088.
-%     \item \textbf{30-day and 60-day returns} calculated for both \textbf{open-close} and \textbf{high-low} averages.
-% \end{itemize}
-
-% The refined feature set focuses on the most important predictors, ensuring improved model performance while reducing complexity.
