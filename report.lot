@@ -3,13 +3,13 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Feature Importance Scores using SelectKBest}}{30}{table.3.1}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces LSTM-RLS Performance Metrics}}{36}{table.4.1}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces RMSE Comparison for Daily Returns (LSTM-RLS)}}{37}{table.4.2}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Performance Metrics for Multi-Feature LSTM-RLS}}{37}{table.4.3}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Comparison of DNS Models: LSTM-SDM, LSTM-MA, RBF-SDM, and RBF-MA}}{38}{table.4.4}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Test RMSE and \( R^2 \) Score for ARIMAX and Final Model}}{40}{table.4.5}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Performance Metrics After Applying RLS to Residuals}}{41}{table.4.6}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Performance Metrics of GARCH Model}}{44}{table.4.7}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces LSTM-RLS Performance Metrics}}{45}{table.4.1}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces RMSE Comparison for Daily Returns (LSTM-RLS)}}{46}{table.4.2}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Performance Metrics for Multi-Feature LSTM-RLS}}{46}{table.4.3}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Comparison of DNS Models: LSTM-SDM, LSTM-MA, RBF-SDM, and RBF-MA}}{47}{table.4.4}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Test RMSE and \( R^2 \) Score for ARIMAX and Final Model}}{49}{table.4.5}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Performance Metrics After Applying RLS to Residuals}}{50}{table.4.6}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Performance Metrics of GARCH Model}}{53}{table.4.7}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

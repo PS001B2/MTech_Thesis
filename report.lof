@@ -13,20 +13,20 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Correlation matrix of all features in the dataset.}}{29}{figure.3.10}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Seasonal decomposition of NSEI close values.}}{30}{figure.3.11}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Original vs. Predicted Stock Prices}}{37}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Returns: Original vs. Predicted Prices}}{37}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Stock Prices: Shifted Predictions (-1)}}{37}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Stock Prices: Actual vs. Predicted Daily Returns}}{38}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison of Stock Prices and Returns (Shifted -1)}}{38}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces ARIMAX Test Predictions - Output: Close Price}}{39}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces ARIMAX Test Predictions - Output: Returns}}{39}{figure.4.7}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Final Test Predictions - Output: Close Price}}{40}{figure.4.8}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Final Test Predictions - Output: Returns}}{40}{figure.4.9}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Actual vs. Predicted Returns After Applying RLS to Final Predictions}}{40}{figure.4.10}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Absolute error between actual and predicted one-time step daily close return, compared with the total RMSE of the test data.}}{42}{figure.4.11}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Actual vs Predicted daily close return where the model is retrained after each prediction as per the incremental training methodology.}}{43}{figure.4.12}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Residuals: Actual Values - ARIMAX Predictions}}{43}{figure.4.13}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Actual vs. Predicted Returns Using GARCH Model}}{44}{figure.4.14}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Original vs. Predicted Stock Prices}}{46}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Returns: Original vs. Predicted Prices}}{46}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Stock Prices: Shifted Predictions (-1)}}{46}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Stock Prices: Actual vs. Predicted Daily Returns}}{47}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison of Stock Prices and Returns (Shifted -1)}}{47}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ARIMAX Test Predictions - Output: Close Price}}{48}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces ARIMAX Test Predictions - Output: Returns}}{48}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Final Test Predictions - Output: Close Price}}{49}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Final Test Predictions - Output: Returns}}{49}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Actual vs. Predicted Returns After Applying RLS to Final Predictions}}{49}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Absolute error between actual and predicted one-time step daily close return, compared with the total RMSE of the test data.}}{51}{figure.4.11}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Actual vs Predicted daily close return where the model is retrained after each prediction as per the incremental training methodology.}}{52}{figure.4.12}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Residuals: Actual Values - ARIMAX Predictions}}{52}{figure.4.13}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Actual vs. Predicted Returns Using GARCH Model}}{53}{figure.4.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

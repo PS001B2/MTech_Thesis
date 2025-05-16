@@ -366,7 +366,7 @@ Finally, Figure~\ref{fig:seasonal_decomposition} presents the seasonal decomposi
 \end{figure}
 
 \subsection{Feature Selection Using SelectKBest}
-Feature selection was performed using the SelectKBest method with \texttt{f\_regression}. The feature importance scores are presented in Table~\ref{tab:feature_importance}.
+Feature selection was performed using the SelectKBest method with \textsf{f\_regression}. The feature importance scores are presented in Table~\ref{tab:feature_importance}.
 
 \begin{table}[h!]
 \centering
@@ -502,6 +502,255 @@ Model parameters are estimated by minimizing the negative log-likelihood of the 
 % \end{tabular}
 % \end{table}
 
+
+\section{Custom Ensemble Learning Architecture}
+
+\subsection{Theory and Architecture Overview}
+
+This model is an ensemble learning framework designed to improve predictive accuracy by combining multiple base regressors and modeling their outputs using a neural network-based MetaLearner. The architecture consists of:
+
+\begin{enumerate}
+    \item \textbf{Base Models:} Four tree-based regressors (XGBoost, LightGBM, CatBoost, RandomForest) and a time series model (ARIMAX).
+    \item \textbf{Meta Feature Generator:} Uses predictions from base models and their rolling MAE to construct meta features.
+    \item \textbf{MetaLearner:} A sequence-based LSTM model that learns to optimally combine meta features to predict the final target.
+\end{enumerate}
+
+The ensemble leverages the strengths of both:
+\begin{itemize}
+    \item \textit{Tree-based models} for capturing nonlinear patterns.
+    \item \textit{ARIMAX} for linear autoregressive temporal relationships.
+    \item \textit{LSTM} for modeling sequential dependence in prediction errors and combining predictions dynamically.
+\end{itemize}
+
+\subsection{Meta Feature Representation}
+
+Each input $\mathbf{x}_t \in \mathbb{R}^{d}$ is passed to the base models and ARIMAX to produce scalar predictions $\hat{y}_{t}^{(i)}$ for each model $i$. Along with each prediction, a rolling MAE score is computed:
+
+\begin{equation}
+\text{MAE}_{t}^{(i)} = \frac{1}{w} \sum_{j=t-w+1}^{t} \left| y_j - \hat{y}_j^{(i)} \right|
+\end{equation}
+
+The meta input $\mathbf{z}_t \in \mathbb{R}^{5 \times 2}$ at time $t$ is constructed as:
+
+\begin{equation}
+\mathbf{z}_t = \left[ \left( \hat{y}_t^{(i)}, \text{MAE}_t^{(i)} \right) \right]_{i=1}^5
+\end{equation}
+
+where $i = \{ \text{XGB, LGB, CAT, RF, ARIMAX} \}$.
+
+\subsection{MetaLearner Model}
+
+The MetaLearner is a neural network consisting of:
+\begin{itemize}
+    \item \textbf{Input:} Sequence of shape $(5, 2)$
+    \item \textbf{LSTM Layer:} 16 units with ReLU activation
+    \item \textbf{Dense Output Layer:} Single scalar prediction
+\end{itemize}
+
+The output of the MetaLearner is given by:
+
+\begin{equation}
+\hat{y}_t^{\text{meta}} = \text{Dense} \left( \text{LSTM}(\mathbf{z}_t) \right)
+\end{equation}
+
+\subsection{Algorithm Flow}
+
+\begin{enumerate}
+    \item \textbf{Load and Split Dataset} into train, validation, and test sets.
+    \item \textbf{Train Base Models:}
+    \begin{itemize}
+        \item XGBoost
+        \item LightGBM
+        \item CatBoost
+        \item RandomForest
+        \item ARIMAX (on training set)
+    \end{itemize}
+    \item \textbf{Generate Meta Features:}
+    \begin{itemize}
+        \item For each time step in train/val/test:
+        \begin{itemize}
+            \item Predict using each base model
+            \item Forecast ARIMAX
+            \item Calculate rolling MAE of each model
+            \item Store $(\text{prediction}, \text{MAE})$ as meta feature
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Train MetaLearner (LSTM):}
+    \begin{itemize}
+        \item Input: meta feature sequence $(5, 2)$
+        \item Output: predicted value $\hat{y}_t$
+    \end{itemize}
+    \item \textbf{Evaluate on Validation and Test Set} using RMSE
+\end{enumerate}
+
+% \subsection{Pseudocode}
+
+% \begin{verbatim}
+% Function CustomEnsembleLearningModel(X_train, y_train, X_val, y_val, X_test, y_test):
+%     Step 1: Train base models (XGB, LGB, CAT, RF)
+%     Step 2: Fit ARIMAX on y_train with X_train as exog
+%     Step 3: For each sample in train/val/test:
+%         - Predict using all base models
+%         - Forecast ARIMAX
+%         - Compute rolling MAE for each model
+%         - Store [prediction, MAE] as meta feature
+%     Step 4: Stack meta features into 3D array of shape (N, 5, 2)
+%     Step 5: Build and train LSTM model on meta features
+%     Step 6: Predict on validation and test meta features
+%     Step 7: Compute and log RMSE for all models and MetaNet
+
+% End Function
+% \end{verbatim}
+
+\section{Transformer-based GAN Architecture}
+
+In this section, we propose a sequence-to-one forecasting framework inspired by the TTS-GAN architecture. The model consists of a Generator and a Discriminator, both utilizing Transformer Encoder blocks to process multivariate sequential data. The goal is to generate a future return value based on historical sequences, and adversarially train the model to ensure realistic output generation.
+
+\subsection{Generator Architecture}
+
+The Generator $G$ takes as input a multivariate sequence $X \in \mathbb{R}^{T \times d}$ of length $T=60$ with $d=12$ features and predicts a scalar output $\hat{y}_{t+1} \in \mathbb{R}$. The input is first linearly projected into an embedding space and combined with learned positional encodings:
+\[
+x'_t = \text{Dense}(X_t) + \text{Embedding}(t)
+\]
+This representation is passed through $L$ stacked Transformer Encoder blocks, followed by a Global Average Pooling operation and a final dense layer:
+\[
+\hat{y}_{t+1} = G(X) = \text{Dense}(\text{GAP}(\text{TransformerBlocks}(x')))
+\]
+
+\subsection{Discriminator Architecture}
+
+The Discriminator $D$ takes as input a univariate sequence of length 61: a real or generated scalar return $\hat{y}_{t+1}$ appended to the past 60 true values $y_{t-59}, \dots, y_t$. The architecture is similar to the Generator: a dense projection followed by positional embeddings and multiple Transformer blocks. The final output is a scalar in $[0, 1]$:
+\[
+D(Z) = \sigma(\text{Dense}(\text{GAP}(\text{TransformerBlocks}(Z))))
+\]
+where $Z \in \mathbb{R}^{61 \times 1}$ is the sequence and $\sigma$ denotes the sigmoid activation.
+
+\subsection{Transformer Encoder Block}
+
+Each Transformer Encoder block consists of a Multi-Head Self-Attention (MHSA) layer followed by a feed-forward network (FFN):
+\[
+\text{MHSA}(X) = \text{LayerNorm}(X + \text{Dropout}(\text{MultiHeadAttention}(X, X)))
+\]
+\[
+\text{FFN}(X) = \text{LayerNorm}(\text{MHSA}(X) + \text{Dropout}(\text{Dense}(\text{GELU}(\text{Dense}(X)))))
+\]
+
+\subsection{Training Procedure}
+
+The model is trained using a combination of mean squared error (MSE) and adversarial loss. Let $y_{t+1}$ be the true target and $\hat{y}_{t+1}$ the generator's prediction. The Discriminator loss is given by:
+\[
+\mathcal{L}_D = \text{BCE}(1, D(y_{\text{seq}}^{\text{real}})) + \text{BCE}(0, D(y_{\text{seq}}^{\text{fake}}))
+\]
+where $y_{\text{seq}}^{\text{real}} = [y_{t-59}, \dots, y_t, y_{t+1}]$ and $y_{\text{seq}}^{\text{fake}} = [y_{t-59}, \dots, y_t, \hat{y}_{t+1}]$.
+
+The Generator is optimized using:
+\[
+\mathcal{L}_G = \text{MSE}(y_{t+1}, \hat{y}_{t+1}) + \lambda \cdot \text{BCE}(1, D(y_{\text{seq}}^{\text{fake}}))
+\]
+where $\lambda$ is a small weighting factor for adversarial loss (e.g., $\lambda = 0.01$).
+
+\subsection{Optimization}
+
+Gradients are computed using backpropagation through both the Generator and Discriminator. Separate optimizers are used for $G$ and $D$, and their parameters are updated iteratively at each training step.
+
+\section{RAGIC Architecture for Financial Time Series Forecasting}
+
+\subsection{Overview}
+
+The \textbf{RAGIC (Risk-Aware Generator with Integrated Critic)} architecture is a hybrid deep learning framework developed to model financial time series data with enhanced robustness and generalization. It integrates noise-injected attention mechanisms, temporal modeling using multi-head attention and TCNs, and adversarial learning using a Wasserstein critic to improve prediction performance on volatile data.
+
+RAGIC is designed to forecast the next value in a sequence (e.g., stock return or price) by conditioning on multivariate historical data. It consists of three main modules:
+\begin{itemize}
+    \item \textbf{Risk Module} (attention + noise for uncertainty modeling)
+    \item \textbf{Temporal Module} (Transformer + TCN for time series understanding)
+    \item \textbf{Critic} (Wasserstein GAN discriminator to enforce realistic prediction quality)
+\end{itemize}
+
+\subsection{Theory and Components}
+
+\subsubsection{Risk Module}
+
+The \textbf{Risk Module} aims to model market uncertainty by injecting Gaussian noise into the input sequence and applying attention-based weighting. This mechanism allows the model to focus on uncertain and potentially volatile patterns.
+
+Given input $X \in \mathbb{R}^{W \times K}$ and noise $\epsilon \sim \mathcal{N}(0, I)$ of shape $\mathbb{R}^{W \times 1}$, the steps are:
+\begin{enumerate}
+    \item Concatenate: $X_{\text{aug}} = [X \, | \, \epsilon]$
+    \item Attention weights: $a = \text{softmax}(WX_{\text{aug}})$
+    \item Weighted input: $\tilde{X} = a \odot X$
+    \item Residual connection and normalization: $X_{\text{risk}} = \text{LayerNorm}(\tilde{X} + X)$
+\end{enumerate}
+
+\subsubsection{Temporal Module}
+
+The \textbf{Temporal Module} processes the output of the risk module through a combination of positional embeddings, multi-head self-attention, and a two-layer Temporal Convolutional Network (TCN). It captures both long-term dependencies and local temporal dynamics.
+
+Let $X_{\text{risk}} \in \mathbb{R}^{W \times K}$ be the input:
+\begin{enumerate}
+    \item Add positional embedding: $X_{\text{pos}} = X_{\text{risk}} + \text{Embed}(\text{position})$
+    \item Multi-head attention: $X_{\text{attn}} = \text{MultiHeadAttention}(X_{\text{pos}})$
+    \item Residual + LayerNorm: $X_{\text{norm}} = \text{LayerNorm}(X_{\text{attn}} + X_{\text{pos}})$
+    \item TCN: Two dilated Conv1D layers with causal padding and ReLU activation.
+    \item Global pooling and dense output: $\hat{y} = \text{Dense}( \text{GlobalAvgPool}(X_{\text{tcn}}) )$
+\end{enumerate}
+
+\subsubsection{Generator and Critic}
+
+\textbf{Generator:} Composed of the Risk and Temporal modules, it predicts the next time-step value $\hat{y}$ from a sequence $X$ and random noise $\epsilon$.
+
+\textbf{Critic:} A GRU-based Wasserstein discriminator that receives a full sequence of $W$ time steps (including either the predicted or real value as the last step) and outputs a scalar "realness" score:
+\[
+D(X) = \text{Dense}(\text{GRU}(X))
+\]
+
+\subsection{Training Algorithm}
+
+The RAGIC framework is trained in an adversarial manner, where the Generator aims to produce realistic predictions, and the Critic learns to distinguish between real and generated sequences. The loss functions are:
+
+\begin{itemize}
+    \item \textbf{Generator Loss (Predictor):}
+    \[
+    \mathcal{L}_G = \text{MSE}(y, \hat{y})
+    \]
+    
+    \item \textbf{Critic Loss:}
+    \[
+    \mathcal{L}_D = \mathbb{E}_{\text{fake}}[D(X_{\text{fake}})] - \mathbb{E}_{\text{real}}[D(X_{\text{real}})]
+    \]
+\end{itemize}
+
+\subsection{Workflow}
+
+\begin{enumerate}
+    \item Load time series data $X \in \mathbb{R}^{T \times K}$ and target $Y \in \mathbb{R}^T$.
+    \item Create overlapping sequences of length $W=60$.
+    \item Split into training and test sets.
+    \item For each epoch:
+    \begin{itemize}
+        \item Generate noise $\epsilon$ for each batch.
+        \item \textbf{Train Generator:}
+            \begin{itemize}
+                \item Pass $X$ and $\epsilon$ through Risk $\rightarrow$ Temporal to get $\hat{y}$.
+                \item Minimize MSE with ground truth $y$.
+            \end{itemize}
+        \item \textbf{Train Critic:}
+            \begin{itemize}
+                \item Concatenate predicted or real $y$ with $X[:, 1:, :]$ to form fake/real sequences.
+                \item Maximize $\mathcal{L}_D$ (Wasserstein loss).
+            \end{itemize}
+    \end{itemize}
+    \item Track losses and visualize performance.
+\end{enumerate}
+
+\subsection{Applications}
+
+The RAGIC architecture is designed for time series forecasting tasks with inherent uncertainty and noise, such as:
+\begin{itemize}
+    \item Stock return forecasting
+    \item Volatility prediction
+    \item Economic indicator forecasting
+\end{itemize}
+
+Its integration of noise-aware attention and adversarial learning enables better modeling of complex financial dynamics.
 
 % \chapter{Frameworks and Models for Stock Price Prediction}
 
