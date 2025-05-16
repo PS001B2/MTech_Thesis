@@ -289,18 +289,7 @@ This integration of RLS with the residuals architecture provided valuable insigh
 %     \item Similarly, the first data point in the testing dataset is removed, and the latest actual value is added to it.
 % \end{enumerate}
 
-% This process ensures that the sizes of the training and testing datasets remain constant while incorporating the most recent data for improved accuracy. The model is then retrained daily after updating the datasets with the newly available data points.
 
-% \subsection{Visualization of Incremental Training Process}
-
-% The incremental training method is visualized in Figure~\ref{fig:incremental_training}, which provides a schematic representation of how the training and testing datasets are updated and retrained iteratively.
-
-% \begin{figure}[h!]
-%     \centering
-%     \includegraphics[width=\textwidth]{incremental_training.pdf}
-%     \caption{Visualization of the Incremental Training Process for Multi-Feature LSTM Forecasting Framework.}
-%     \label{fig:incremental_training}
-% \end{figure}
 
 \section{Multi-Feature LSTM Forecasting Framework}
 \subsection{Overview and Objectives}
@@ -435,6 +424,83 @@ The GARCH model was not used in isolation but was integrated into the broader fr
 
 By integrating GARCH with ARIMAX, the model was able to separately handle both the trend and volatility components of stock returns, improving the overall robustness of the forecasting framework.
 
+\section{Stochastic Volatility Model with Gaussian Mixture Observation}
+\label{sec:sv-model}
+
+\subsection{Model Specification}
+
+The stochastic volatility (SV) model describes the evolution of the latent log-volatility $x_t$ as an autoregressive process:
+
+\begin{equation}
+x_t = \phi_0 + \phi_1 x_{t-1} + \eta_t, \quad \eta_t \sim \mathcal{N}(0, \sigma_Q^2)
+\end{equation}
+
+The observation equation is modeled as a two-component Gaussian mixture:
+
+\begin{equation}
+y_t \sim 0.5 \cdot \mathcal{N}(0, e^{x_t} + \sigma_{R0}^2) + 0.5 \cdot \mathcal{N}(\mu_1, e^{x_t} + \sigma_{R1}^2)
+\end{equation}
+
+This mixture structure allows the model to capture heavy tails in financial return distributions, where $y_t = \log(r_t^2 + \varepsilon)$ represents the log-squared normalized return with a small constant $\varepsilon$ to avoid numerical instability.
+
+\subsection{Filtering Procedure}
+
+We implement a recursive filtering algorithm to estimate the hidden state $x_t$ at each time step:
+
+\begin{enumerate}
+    \item \textbf{Prediction:}
+    \begin{align}
+        x_t^- &= \phi_0 + \phi_1 x_{t-1} \\
+        P_t^- &= \phi_1^2 P_{t-1} + \sigma_Q^2
+    \end{align}
+    
+    \item \textbf{Compute Likelihoods:}
+    \begin{align}
+        p_0 &= \mathcal{N}(y_t; 0, e^{x_t^-} + \sigma_{R0}^2) \\
+        p_1 &= \mathcal{N}(y_t; \mu_1, e^{x_t^-} + \sigma_{R1}^2)
+    \end{align}
+    
+    \item \textbf{Posterior Weights:}
+    \begin{align}
+        w_0 &= \frac{0.5 \cdot p_0}{0.5 \cdot p_0 + 0.5 \cdot p_1}, \quad w_1 = 1 - w_0
+    \end{align}
+    
+    \item \textbf{Update:}
+    \begin{align}
+        \text{residual} &= w_0 \cdot \frac{y_t - 0}{\text{var}_0} + w_1 \cdot \frac{y_t - \mu_1}{\text{var}_1} \\
+        \text{gain} &= \frac{P_t^-}{P_t^- + w_0 \cdot \text{var}_0 + w_1 \cdot \text{var}_1} \\
+        x_t &= x_t^- + \text{gain} \cdot \text{residual}
+    \end{align}
+\end{enumerate}
+
+This Kalman-like update allows efficient recursive estimation of the latent volatility under the non-Gaussian observation framework.
+
+\subsection{Parameter Estimation}
+
+Model parameters are estimated by minimizing the negative log-likelihood of the entire sequence using the L-BFGS-B optimization algorithm, subject to bounds ensuring stationarity and numerical stability.
+
+% \clearpage
+% \appendix
+% \section{Estimated Parameters for the Stochastic Volatility Model}
+% \label{appendix:sv-params}
+
+% \begin{table}[H]
+% \centering
+% \caption{Final Estimated Parameters and Standard Errors}
+% \begin{tabular}{lcc}
+% \toprule
+% \textbf{Parameter} & \textbf{Estimate} & \textbf{Standard Error} \\
+% \midrule
+% $\phi_0$     & -0.2673  & 0.7626  \\
+% $\phi_1$     & 0.8644   & 0.5623  \\
+% $\sigma_Q$   & 5.0000   & 37.8893 \\
+% $\alpha$     & 0.9361   & 14.5753 \\
+% $\sigma_{R0}$ & 1.0566  & 0.8037  \\
+% $\mu_1$      & -3.1405  & 0.8446  \\
+% $\sigma_{R1}$ & 2.2621  & 0.5529  \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
 
 
 % \chapter{Frameworks and Models for Stock Price Prediction}

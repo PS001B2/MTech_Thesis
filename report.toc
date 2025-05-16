@@ -41,30 +41,34 @@
 \contentsline {subsection}{\numberline {3.8.1}Introduction to GARCH}{31}{subsection.3.8.1}%
 \contentsline {subsection}{\numberline {3.8.2}Model Implementation}{31}{subsection.3.8.2}%
 \contentsline {subsection}{\numberline {3.8.3}Integration with Existing Architectures}{32}{subsection.3.8.3}%
-\contentsline {chapter}{\numberline {4}Results and Evaluation}{33}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Evaluation Metrics and Criteria}{33}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Performance of Enhanced Hybrid LSTM-RLS Architecture}{34}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Results Before and After Shift Adjustment}{34}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Performance with Multi-Feature Dataset}{35}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Performance of DNS Architecture}{36}{section.4.3}%
-\contentsline {section}{\numberline {4.4}ARIMA-LSTM Residual Framework Results}{36}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}ARIMAX Test Predictions}{37}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Final Test Predictions}{37}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Performance Metrics}{37}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Impact of RLS on Final Predictions}{38}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Multi-Feature LSTM Results}{39}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Evaluation Metrics and Analysis}{39}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Interpretation of Results}{40}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Visualization of Results}{40}{subsection.4.5.3}%
-\contentsline {section}{\numberline {4.6}GARCH Model Results}{40}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Evaluation Metrics and Performance}{41}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Residuals from ARIMAX Predictions}{41}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Visualization of Predictions}{41}{subsection.4.6.3}%
-\contentsline {chapter}{\numberline {5}Discussions and Challenges}{43}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Key Findings}{43}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Challenges and Model Refinement}{44}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Conclusion and Future Direction}{46}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusion}{46}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Future Direction}{47}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Publications}{48}{chapter.7}%
-\contentsline {chapter}{Bibliography}{49}{chapter.7}%
+\contentsline {section}{\numberline {3.9}Stochastic Volatility Model with Gaussian Mixture Observation}{32}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Model Specification}{33}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Filtering Procedure}{33}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}Parameter Estimation}{34}{subsection.3.9.3}%
+\contentsline {chapter}{\numberline {4}Results and Evaluation}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Evaluation Metrics and Criteria}{35}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Performance of Enhanced Hybrid LSTM-RLS Architecture}{36}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Results Before and After Shift Adjustment}{36}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Performance with Multi-Feature Dataset}{37}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Performance of DNS Architecture}{38}{section.4.3}%
+\contentsline {section}{\numberline {4.4}ARIMA-LSTM Residual Framework Results}{38}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}ARIMAX Test Predictions}{39}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Final Test Predictions}{39}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Performance Metrics}{39}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Impact of RLS on Final Predictions}{40}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Multi-Feature LSTM Results}{41}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Evaluation Metrics and Analysis}{41}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Interpretation of Results}{42}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Visualization of Results}{42}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}GARCH Model Results}{42}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Evaluation Metrics and Performance}{43}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Residuals from ARIMAX Predictions}{43}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Visualization of Predictions}{43}{subsection.4.6.3}%
+\contentsline {chapter}{\numberline {5}Discussions and Challenges}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Key Findings}{45}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Challenges and Model Refinement}{46}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future Direction}{48}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{48}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Direction}{49}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Publications}{50}{chapter.7}%
+\contentsline {chapter}{Bibliography}{51}{chapter.7}%
