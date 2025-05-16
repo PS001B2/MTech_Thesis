@@ -1,0 +1,515 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{dastgerdi_investigating_2022}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0288cdae1896eb3a25891ab5b4303352}{%
+           family={Dastgerdi},
+           familyi={D\bibinitperiod},
+           given={Amin\bibnamedelima Karimi},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=b962bb6b4e97a88576426c1545649b95}{%
+           family={Mercorelli},
+           familyi={M\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{87f38dd604f46996dc5984c1f25e5a08}
+      \strng{fullhash}{87f38dd604f46996dc5984c1f25e5a08}
+      \strng{bibnamehash}{87f38dd604f46996dc5984c1f25e5a08}
+      \strng{authorbibnamehash}{87f38dd604f46996dc5984c1f25e5a08}
+      \strng{authornamehash}{87f38dd604f46996dc5984c1f25e5a08}
+      \strng{authorfullhash}{87f38dd604f46996dc5984c1f25e5a08}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Predicting financial markets is of particular importance for investors who intend to make the most profit. Analysing reasonable and precise strategies for predicting financial markets has a long history. Deep learning techniques include analyses and predictions that can assist scientists in discovering unknown patterns of data. In this project, application of noise elimination techniques such as Wavelet transform and Kalman filter in combination of deep learning methods were discussed for predicting financial time series. The results show employing noise elimination techniques such as Wavelet transform and Kalman filter, have considerable effect on performance of {LSTM} neural network in extracting hidden patterns in the financial time series and can precisely predict future actions in these markets.}
+      \field{day}{18}
+      \field{issn}{2224-2899, 1109-9526}
+      \field{journaltitle}{{WSEAS} {TRANSACTIONS} {ON} {BUSINESS} {AND} {ECONOMICS}}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{title}{Investigating the Effect of Noise Elimination on {LSTM} Models for Financial Markets Prediction Using Kalman Filter and Wavelet Transform}
+      \field{urlday}{10}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{19}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{432\bibrangedash 441}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.37394/23207.2022.19.39
+      \endverb
+      \verb{file}
+      \verb Dastgerdi and Mercorelli - 2022 - Investigating the Effect of Noise Elimination on L.pdf:/Users/sharmaparth/Zotero/storage/NKBTBRRU/Dastgerdi and Mercorelli - 2022 - Investigating the Effect of Noise Elimination on L.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://wseas.com/journals/bae/2022/a765107-015(2022).pdf
+      \endverb
+      \verb{url}
+      \verb https://wseas.com/journals/bae/2022/a765107-015(2022).pdf
+      \endverb
+    \endentry
+    \entry{fang_kalman-lstm_2021}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=8eb3d74f259ea9d828722569886126b9}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Weiwei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=0e703cc8b8319d9f832635db7b75c6a6}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Weihong},
+           giveni={W\bibinitperiod}}}%
+        {{hash=c5f3b172e37fb63da9110d47079b0bed}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=77688efd72442dcafdc517067f583307}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={Jingwen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fe5956745bc4d1abf288b0606f086283}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Teng},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chongqing, China}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b05296168368ec9d5b65884a30397a2e}
+      \strng{fullhash}{e7b029da6adabcfb7d8583619ae1926f}
+      \strng{bibnamehash}{e7b029da6adabcfb7d8583619ae1926f}
+      \strng{authorbibnamehash}{e7b029da6adabcfb7d8583619ae1926f}
+      \strng{authornamehash}{b05296168368ec9d5b65884a30397a2e}
+      \strng{authorfullhash}{e7b029da6adabcfb7d8583619ae1926f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes a time prediction model based on Kalman filtering and {LSTM}, namely the Kalman {LSTM} model, which is used to predict time series data with long-term and short-term characteristics. The {KalmanLSTM} model uses {LSTM}'s unique storage function to "store" the information contained in the pre-order data. It is then used to obtain the basic time series of the prediction problem in subsequent processing. The following Kalman filter model dynamically adjusts the basic time data series obtained by {LSTM} processing. Finally, we will obtain adjusted forecasts. Here, we establish training and test set samples to train the Kalman-{LSTM} model and test the performance of the sample model. For comparison, we evaluated the {RMSE} (root mean square error) indicator of the conventional {LSTM} model with the Kalman-{LSTM} model. The results show that the Kalman-{LSTM} model is superior to the {LSTM} model, and can get more accurate predictions.}
+      \field{booktitle}{2021 {IEEE} 5th Advanced Information Technology, Electronic and Automation Control Conference ({IAEAC})}
+      \field{day}{12}
+      \field{eventtitle}{2021 {IEEE} 5th Advanced Information Technology, Electronic and Automation Control Conference ({IAEAC})}
+      \field{isbn}{978-1-72818-028-1}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{title}{Kalman-{LSTM} Model for Short-term Traffic Flow Forecasting}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1604\bibrangedash 1608}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/IAEAC50856.2021.9390991
+      \endverb
+      \verb{file}
+      \verb Fang et al. - 2021 - Kalman-LSTM Model for Short-term Traffic Flow Fore.pdf:/Users/sharmaparth/Zotero/storage/CQN4PUKS/Fang et al. - 2021 - Kalman-LSTM Model for Short-term Traffic Flow Fore.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9390991/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9390991/
+      \endverb
+    \endentry
+    \entry{song_improved_2022}{article}{}
+      \name{author}{6}{}{%
+        {{hash=0f9c80f21ac9c39660b31815b6f31282}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Fei},
+           giveni={F\bibinitperiod}}}%
+        {{hash=78be8ea0cb80e4e1b59bf06100942e90}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6daab9c045b3d0fc9e6183326e04b8ff}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=49dfd7053196f7046e8a1bdb7ddda734}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Limeng},
+           giveni={L\bibinitperiod}}}%
+        {{hash=58065c26fafb44d1f9bff473a1c3ee61}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Minqi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c82a1e79240e212fea2d08782a673906}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Junfang},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=8405c5e3310cb2cca478dc560491682c}{%
+           family={Alamoodi},
+           familyi={A\bibinitperiod},
+           given={A.H.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{08e0186b47e3cfaea841205a3231f076}
+      \strng{fullhash}{b80e87fbbb43336db6e83caa158a8e20}
+      \strng{bibnamehash}{b80e87fbbb43336db6e83caa158a8e20}
+      \strng{authorbibnamehash}{b80e87fbbb43336db6e83caa158a8e20}
+      \strng{authornamehash}{08e0186b47e3cfaea841205a3231f076}
+      \strng{authorfullhash}{b80e87fbbb43336db6e83caa158a8e20}
+      \strng{editorbibnamehash}{8405c5e3310cb2cca478dc560491682c}
+      \strng{editornamehash}{8405c5e3310cb2cca478dc560491682c}
+      \strng{editorfullhash}{8405c5e3310cb2cca478dc560491682c}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The target tracking of nonlinear maneuvering radar in dense clutter environments is still an important but difficult problem to be solved effectively. Traditional solutions often rely on motion models and prior distributions. This paper presents a novel improved architecture of Kalman filter based on a recursive neural network, which combines the sequence learning of recurrent neural networks with the precise prediction of Kalman filter in an end-to-end manner. We employ three {LSTM} networks to model nonlinear motion equation, motion noise, and measurement noise, respectively, and learn their long-term dependence from a large amount of training data. They are then applied to the prediction and update process of Kalman filter to calculate the estimated target state. Our approach is able to address the tracking problem of nonlinear maneuvering radar target online end-to-end and does not require the motion models and prior distributions. Experimental results show that our method is more effective and faster than the traditional methods and more accurate than the method with {LSTM} network alone.}
+      \field{day}{21}
+      \field{issn}{1530-8677, 1530-8669}
+      \field{journaltitle}{Wireless Communications and Mobile Computing}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{shortjournal}{Wireless Communications and Mobile Computing}
+      \field{title}{An Improved Kalman Filter Based on Long Short-Memory Recurrent Neural Network for Nonlinear Radar Target Tracking}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{2022}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1155/2022/8280428
+      \endverb
+      \verb{file}
+      \verb Song et al. - 2022 - An Improved Kalman Filter Based on Long Short-Memo.pdf:/Users/sharmaparth/Zotero/storage/Q3973LNR/Song et al. - 2022 - An Improved Kalman Filter Based on Long Short-Memo.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.hindawi.com/journals/wcmc/2022/8280428/
+      \endverb
+      \verb{url}
+      \verb https://www.hindawi.com/journals/wcmc/2022/8280428/
+      \endverb
+    \endentry
+    \entry{tian_application_2024}{article}{}
+      \name{author}{6}{}{%
+        {{hash=fdfee2e3c1c068d2dd528460b5a1cc60}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Yalin},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d767fc417881d8ac11b2874af766e8bb}{%
+           family={Lian},
+           familyi={L\bibinitperiod},
+           given={Zengzeng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=4594190fbd4a3e1a20f19b096b6abb62}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Penghui},
+           giveni={P\bibinitperiod}}}%
+        {{hash=df8cd231ad43703a53dd3a0794f7cae1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Mengqi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=399f3d8770e8f8421e4eec452bc8b520}{%
+           family={Yue},
+           familyi={Y\bibinitperiod},
+           given={Zhe},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=22da5948a22101f06b86f1a848e64321}{%
+           family={Chai},
+           familyi={C\bibinitperiod},
+           given={Huabin},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c47c20e0901b6b1e48c0bef928245ca}
+      \strng{fullhash}{1000fc21aa0bcf7b25213512a7a1f8fd}
+      \strng{bibnamehash}{1000fc21aa0bcf7b25213512a7a1f8fd}
+      \strng{authorbibnamehash}{1000fc21aa0bcf7b25213512a7a1f8fd}
+      \strng{authornamehash}{1c47c20e0901b6b1e48c0bef928245ca}
+      \strng{authorfullhash}{1000fc21aa0bcf7b25213512a7a1f8fd}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract Ultra-wideband technology has good anti-interference capabilities and development prospects in indoor positioning. Since ultra-wideband will be affected by random errors in indoor positioning, to exploit the advantages of the Kalman filter ({KF}) and the long short-term memory ({LSTM}) network, this paper proposes a long short-term memory neural network algorithm fused with the Kalman filter ({KF}–{LSTM}) to improve {UWB} positioning. First, the ultra-wideband data is processed through {KF} to weaken the noise in the data, and then the data is fed into the {LSTM} network for training, and the capability of the {LSTM} network to process time series features is employed to obtain more accurate label positions. Finally, simulation and measurement results show that the {KF}–{LSTM} algorithm achieves 71.31\%, 37.28\%, and 49.31\% higher average positioning accuracy than the back propagation ({BP}) network, (back propagation network fused with the Kalman filter ({KF}-{BP}), and {LSTM} network algorithms, respectively, and the {KF}–{LSTM} algorithm performs more stably. Meanwhile, the more noise the data contains, the more obvious the stability contrast between the four algorithms.}
+      \field{day}{22}
+      \field{issn}{2045-2322}
+      \field{journaltitle}{Scientific Reports}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shortjournal}{Sci Rep}
+      \field{title}{Application of a long short-term memory neural network algorithm fused with Kalman filter in {UWB} indoor positioning}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2024}
+      \field{volume}{14}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1925}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41598-024-52464-y
+      \endverb
+      \verb{file}
+      \verb Tian et al. - 2024 - Application of a long short-term memory neural net.pdf:/Users/sharmaparth/Zotero/storage/EZL4YTR5/Tian et al. - 2024 - Application of a long short-term memory neural net.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41598-024-52464-y
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41598-024-52464-y
+      \endverb
+    \endentry
+    \entry{wang_hybrid_2024}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=42111461efe014b53b28e65eb7dd3ed4}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chunsheng},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9ee26751f49d06f4e9489bdceb89555a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ripeng},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2923de2da7f9b32b957552e414b6bc16}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=fe891ec1caaae1c82d39c8783ae1c36a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Mutian},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{73b022eba262c6fb75b8d1ad692633c6}
+      \strng{fullhash}{dd16405c007396f685979b9a06747b38}
+      \strng{bibnamehash}{dd16405c007396f685979b9a06747b38}
+      \strng{authorbibnamehash}{dd16405c007396f685979b9a06747b38}
+      \strng{authornamehash}{73b022eba262c6fb75b8d1ad692633c6}
+      \strng{authorfullhash}{dd16405c007396f685979b9a06747b38}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{A Hybrid Model for State of Charge Estimation of Lithium-Ion Batteries Utilizing Improved Adaptive Extended Kalman Filter and Long Short-Term Memory Neural Network}
+      \field{urlday}{5}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.2139/ssrn.4834979
+      \endverb
+      \verb{file}
+      \verb Wang et al. - 2024 - A Hybrid Model for State of Charge Estimation of L.pdf:/Users/sharmaparth/Zotero/storage/7I78P7Z5/Wang et al. - 2024 - A Hybrid Model for State of Charge Estimation of L.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ssrn.com/abstract=4834979
+      \endverb
+      \verb{url}
+      \verb https://www.ssrn.com/abstract=4834979
+      \endverb
+    \endentry
+    \entry{sahni_neoteric_2022}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=619c6fad523ab210c7a286fc5671f1c9}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Hetvi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8af8f1b4a33f1d1955b16e20a0878faa}{%
+           family={Bhatt},
+           familyi={B\bibinitperiod},
+           given={Vishva},
+           giveni={V\bibinitperiod}}}%
+        {{hash=e126922374eceb691b9a36094341b723}{%
+           family={Shah},
+           familyi={S\bibinitperiod},
+           given={Jigarkumar},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=a55840837ce06408e0a8c0f7155080da}{%
+           family={Sahni},
+           familyi={S\bibinitperiod},
+           given={Manoj},
+           giveni={M\bibinitperiod}}}%
+        {{hash=86ca126e46a1d17a8f14ea906e747cda}{%
+           family={Merigó},
+           familyi={M\bibinitperiod},
+           given={José\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=226353b15eb8aede9e4ba028a1ad6e52}{%
+           family={Sahni},
+           familyi={S\bibinitperiod},
+           given={Ritu},
+           giveni={R\bibinitperiod}}}%
+        {{hash=0a6e2dd2d1df1668e1fa6668c17598f7}{%
+           family={Verma},
+           familyi={V\bibinitperiod},
+           given={Rajkumar},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Singapore}%
+      }
+      \list{publisher}{1}{%
+        {Springer Singapore}%
+      }
+      \strng{namehash}{f646d30bee681ebce4a927ea32b395db}
+      \strng{fullhash}{f646d30bee681ebce4a927ea32b395db}
+      \strng{bibnamehash}{f646d30bee681ebce4a927ea32b395db}
+      \strng{authorbibnamehash}{f646d30bee681ebce4a927ea32b395db}
+      \strng{authornamehash}{f646d30bee681ebce4a927ea32b395db}
+      \strng{authorfullhash}{f646d30bee681ebce4a927ea32b395db}
+      \strng{editorbibnamehash}{59fdd05628b3ec5a4799e894fbd368e1}
+      \strng{editornamehash}{509a046c95b6a2e9e9556bf1331a345b}
+      \strng{editorfullhash}{59fdd05628b3ec5a4799e894fbd368e1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Stock market time-series analysis and its price prediction have been intriguing the human mind ever since they were in existence. Analysis of time series with the help of various models has become imperative not only in business but also in every day stock market practices as algorithms improve the speed, accuracy, and discipline and one can always backtest these strategies to see the type of performance achieved in a real-time environment. Numerous models have been put forward to improve the accuracy and robustness in forecasting market prices. However, due to the high volatility and non-stationary nature of the stock market data, many of these models have been ineffective in forecasting future trends. Addition of artificial neural networks to such models would lead to giant leaps in this domain providing reliable and accurate models as the weights are assigned to the input parameters, are computed in the training phase and are adapted by learning with gradient descent and backpropagation algorithm. This paper proposes an aggregation of the novel autoregressive integrated moving average ({ARIMA}) model with the long short- term memory ({LSTM}) model to increase the forecasting accuracy by using the dynamism of neural networks, thereby generating the best-fitted coefficients for the model. The methodology of this model is then evaluated by comparing the empirical results with other conventional models on the Indian stock market data. Accordingly, it is observed that this model achieves significantly better forecasting accuracy and can alternatively be put forward to be used as a suitable model.}
+      \field{booktitle}{Mathematical Modeling, Computational Intelligence Techniques and Renewable Energy}
+      \field{isbn}{9789811659515 9789811659522}
+      \field{langid}{english}
+      \field{note}{Series Title: Advances in Intelligent Systems and Computing}
+      \field{title}{A Neoteric Technique Using {ARIMA}-{LSTM} for Time Series Analysis on Stock Market Forecasting}
+      \field{urlday}{31}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{1405}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{381\bibrangedash 392}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/978-981-16-5952-2_33
+      \endverb
+      \verb{file}
+      \verb Shah et al. - 2022 - A Neoteric Technique Using ARIMA-LSTM for Time Ser.pdf:/Users/sharmaparth/Zotero/storage/SWQFQJZE/Shah et al. - 2022 - A Neoteric Technique Using ARIMA-LSTM for Time Ser.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-981-16-5952-2_33
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-981-16-5952-2_33
+      \endverb
+    \endentry
+    \entry{samanta_dual_2020}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=2d161ef85a9b6b4aeb4a91a925f3c9bb}{%
+           family={Samanta},
+           familyi={S\bibinitperiod},
+           given={Subhrajit},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7e7c73f50aa9ede6bdcdce28cc40498b}{%
+           family={Pratama},
+           familyi={P\bibinitperiod},
+           given={Mahardhika},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fba549dc1404dbe9d722aa24ceffe3b2}{%
+           family={Sundaram},
+           familyi={S\bibinitperiod},
+           given={Suresh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=397c14328c2484e16306c31d425db2b3}{%
+           family={Srikanth},
+           familyi={S\bibinitperiod},
+           given={Narasimalu},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Glasgow, United Kingdom}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{5b1232e11bdce2d49f817bf1e011052e}
+      \strng{fullhash}{ab9007f8ac0b96b571057263c60468fa}
+      \strng{bibnamehash}{ab9007f8ac0b96b571057263c60468fa}
+      \strng{authorbibnamehash}{ab9007f8ac0b96b571057263c60468fa}
+      \strng{authornamehash}{5b1232e11bdce2d49f817bf1e011052e}
+      \strng{authorfullhash}{ab9007f8ac0b96b571057263c60468fa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{When it comes to time series forecasting, lag in the predicted sequence can be a predominant issue. Unfortunately, this is often overlooked in most of the time series literature as this does not contribute to a high prediction error (i.e. {MSE}). However, it leads to a rather poor forecast in terms of movement prediction in time series. In this article, we tackle this basic problem with a novel trend driven mechanism. Trend, deﬁned as the inherent pattern of the data, is extracted here and utilized next to perform a lag-free forecasting. We propose a generic and light Dual Network Solution ({DNS}), where the ﬁrst network predicts the trend and the second network utilizes that predicted trend along with its historical information to capture the dynamical behavior of the time series efﬁciently. {DNS} exhibits a substantially improved (≈ 10\% better) performance compared to more complex and resource-intensive state-of-theart algorithms in large scale regression problems. Apart from the traditional Mean Squared Error ({MSE}), we also propose a new Movement Prediction Metric or {MPM} (for detection of lag in time series) as a new complementary performance metric to evaluate the efﬁcacy of {DNS} better.}
+      \field{booktitle}{2020 International Joint Conference on Neural Networks ({IJCNN})}
+      \field{eventtitle}{2020 International Joint Conference on Neural Networks ({IJCNN})}
+      \field{isbn}{978-1-72816-926-2}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{title}{A Dual Network Solution ({DNS}) for Lag-Free Time Series Forecasting}
+      \field{urlday}{5}
+      \field{urlmonth}{8}
+      \field{urlyear}{2024}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IJCNN48605.2020.9207022
+      \endverb
+      \verb{file}
+      \verb Samanta et al. - 2020 - A Dual Network Solution (DNS) for Lag-Free Time Se.pdf:/Users/sharmaparth/Zotero/storage/QSGFIIE4/Samanta et al. - 2020 - A Dual Network Solution (DNS) for Lag-Free Time Se.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9207022/
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9207022/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

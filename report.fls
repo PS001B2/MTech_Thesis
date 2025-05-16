@@ -211,6 +211,11 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/lscape.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 OUTPUT report.bcf
+INPUT report.bbl
+INPUT ./report.bbl
+INPUT ./report.bbl
+INPUT ./report.bbl
+INPUT report.bbl
 INPUT ./report.out
 INPUT ./report.out
 INPUT report.out
@@ -334,6 +339,7 @@ INPUT ./Chapters/LitReview.tex
 INPUT ./Chapters/LitReview.tex
 INPUT ./Chapters/LitReview.tex
 INPUT Chapters/LitReview.tex
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
 INPUT ./Chapters/work-done.tex
 INPUT ./Chapters/work-done.tex
 INPUT ./Chapters/work-done.tex
@@ -493,7 +499,9 @@ INPUT ./Chapters/conclusion.tex
 INPUT ./Chapters/conclusion.tex
 INPUT ./Chapters/conclusion.tex
 INPUT Chapters/conclusion.tex
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT report.aux
 INPUT ./Chapters/ApprovalSheet.aux
 INPUT ./Chapters/ApprovalSheet.aux
