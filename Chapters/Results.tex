@@ -449,14 +449,37 @@ Figure~\ref{fig:sv_density} displays the kernel density estimation (KDE) curves 
 \end{figure}
 
 \section{Ensemble Learning Results}
+
 \subsection{Actual vs Predicted Returns}
 Figure~\ref{fig:ensemble_actual_vs_pred} presents the predicted daily returns from the ensemble meta-learner compared with the actual close returns.
 
 \subsection{Performance Metrics}
 \begin{itemize}
-    \item \textbf{RMSE:} 0.0064
-    \item \textbf{R\textsuperscript{2} Score:} ----
+    \item \textbf{MetaNet RMSE (Validation):} 0.0065
+    \item \textbf{MetaNet RMSE (Test):} 0.0064
+    \item \textbf{MetaNet R\textsuperscript{2} Score (Test):} ----
 \end{itemize}
+
+\subsection{Base Model Comparison}
+Table~\ref{tab:ensemble_base_models} shows the RMSE values for each base model on both the validation and test sets, highlighting the performance of MetaNet as the final predictor.
+
+\begin{table}[h!]
+\centering
+\caption{RMSE of Base Models and MetaNet (Validation and Test Sets)}
+\label{tab:ensemble_base_models}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Model} & \textbf{RMSE (Validation)} & \textbf{RMSE (Test)} \\
+\midrule
+XGBoost     & 0.00670 & 0.00624 \\
+LightGBM    & 0.00670 & 0.00638 \\
+CatBoost    & 0.00663 & 0.00636 \\
+RandomForest & 0.00667 & 0.00658 \\
+ARIMAX      & 0.00713 & 0.00766 \\
+MetaNet     & \textbf{0.00655} & \textbf{0.00638} \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \begin{figure}[h!]
     \centering

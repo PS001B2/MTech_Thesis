@@ -1,12 +1,32 @@
 \chapter{Conclusion and Future Direction}
 
 \section{Conclusion}
-In this work, various hybrid models and frameworks were developed and tested to predict stock prices with the goal of improving prediction accuracy and handling the challenges associated with stock price prediction. The initial hybrid LSTM-RLS model, although promising, encountered issues with a consistent lag in the predictions, especially in long-term forecasting. Efforts to address this lag by adopting alternative models, such as the DNS architecture and ARIMA-LSTM Residual Integration Framework, led to mixed results. While the lag issue persisted, and the RMSE did not significantly improve, valuable insights were gained regarding the limitations of these models in predicting stock prices effectively.
+This work explored multiple hybrid and deep learning-based models to improve stock return prediction. The initial Hybrid LSTM-RLS model showed consistent one-step lag, which persisted across the DNS and ARIMA-LSTM Residual Integration frameworks, despite minor RMSE improvements. The Multi-Feature LSTM Framework improved input representation but failed to resolve the lag issue.
 
-Subsequent improvements involved expanding the feature set to develop the Multi-Feature LSTM Forecasting Framework. Despite the additional features, the problem of lag in long-term predictions remained a challenge. The experiments conducted indicate that while hybrid models can provide useful predictions, managing the lag in predictions and achieving low RMSE for long-term forecasts is still a significant challenge.
+GARCH integration over ARIMAX residuals proved ineffective, consistently predicting near-zero volatility. The Stochastic Volatility model followed general return patterns but exhibited lags and deviations. Transformer GAN and RAGIC architectures, implemented with minimal tuning, resulted in high prediction errors.
+
+The Ensemble Learning Framework, combining ARIMAX, tree-based models, and a MetaNet, delivered the best performance by eliminating lag and closely tracking return trends, despite some directional prediction errors. Overall, ensemble learning proved the most effective strategy for real-time stock return forecasting among all models tested.
 
 \section{Future Direction}
 Future work will focus on exploring alternative architectures and advanced techniques to address the issue of lag and further improve the performance of stock price prediction models. Additionally, incorporating more sophisticated feature engineering and model tuning strategies could enhance prediction accuracy and help overcome the challenges faced in this study.
 
 \chapter{Publications}
 The paper based on this work was presented at the \textbf{28th Nirma International Conference on Management (NICOM)}, held from \textbf{January 8 to January 10, 2025}. The presentation was part of the sub-theme \textbf{Finance and Accounting}, under the track titled “\textit{Financial Technologies and Digitalization: Financial Analytics and Machine Learning \& Deep Learning Applications in Finance.}”
+
+Based on the research conducted in this dissertation, the following journals have been identified as suitable targets for future publication:
+
+\section*{1. The Journal of Finance and Data Science}
+
+\begin{itemize}
+    \item \textbf{Impact Factor:} 3.9
+    \item \textbf{Scopus Indexed:} Yes
+\end{itemize}
+
+\section*{2. Data Science in Finance and Economics}
+
+\begin{itemize}
+    \item \textbf{Impact Factor:} 1.3
+    \item \textbf{Scopus Indexed:} No
+\end{itemize}
+
+These journals have been selected based on their relevance to the subject areas of finance, time series forecasting, and data science.

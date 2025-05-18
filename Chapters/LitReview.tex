@@ -21,6 +21,20 @@ In another study, \textcite{tian_application_2024} used a KF-LSTM algorithm in u
 
 In the stock market domain, \textcite{sahni_neoteric_2022} introduced a hybrid ARIMA-LSTM model. The ARIMA model predicted linear trends, while the LSTM captured residual nonlinearities, resulting in improved accuracy on Indian stock market data. These hybrid approaches underscore the potential of combining statistical and deep learning methods for enhanced forecasting.  
 
+\section{GANs in Time-Series Forecasting}
+
+Generative Adversarial Networks (GANs) have emerged as powerful tools for modeling complex data distributions, particularly in image and text generation. Recently, their application has expanded into the time-series domain to address challenges in capturing the stochastic nature of sequential data.
+
+Traditional supervised learning models used in time-series forecasting tend to be deterministic, which limits their ability to simulate the intrinsic randomness of financial markets. In contrast, GANs generate new samples by learning to mimic the underlying distribution of the training data, offering more flexible generative capabilities.
+
+\textcite{yoon_time-series_nodate} proposed Time-series GANs (TimeGAN), a hybrid architecture that combines adversarial training with supervised learning in a joint embedding space. TimeGAN ensures that the generated sequences preserve temporal dependencies and variable correlations by integrating both reconstruction loss and adversarial loss. This dual-objective approach significantly improves the realism and predictive power of generated sequences compared to conventional GANs.
+
+Building on the generative capability of GANs, \textcite{gu_ragic_2025} introduced the RAGIC (Risk-Aware Generative Framework for Stock Interval Construction) architecture. Unlike typical point-prediction models, RAGIC focuses on generating realistic price intervals that account for market uncertainty and risk. Its generator learns both global and local market trends, simulating plausible future price paths infused with market randomness. By performing statistical inference on these generated sequences, RAGIC constructs dynamic prediction intervals with adaptive widths that reflect market volatility.
+
+A key innovation in RAGIC lies in its risk-aware interval estimation, which maintains consistent coverage (95\%) while keeping the interval width narrow. This is particularly useful for decision-making in financial domains, where understanding the range of possible outcomes is often more informative than single-point forecasts.
+
+Together, these advances show that GANs, particularly architectures like TimeGAN and RAGIC, provide a promising direction for modeling complex, uncertain, and non-linear behaviors in financial time-series forecasting. They also open up new possibilities for risk-sensitive prediction frameworks that are both robust and informative.
+
 \section{Research Gaps and Positioning of the Study}
 Despite significant advancements, several challenges remain in stock price prediction:
 \begin{itemize}
@@ -30,9 +44,7 @@ Despite significant advancements, several challenges remain in stock price predi
 
     \item \textbf{Capturing Deep Nonlinearities:} Current hybrids (e.g., ARIMA-LSTM, Kalman-LSTM) improve over single models but still rely on relatively shallow nonlinear transformations. There is a need for architectures that explicitly learn higher-order interactions—such as attention-based layers, convolutional preprocessing, or adversarial generators—to better model the complex, nonstationary dynamics of financial time series.
 
-    \item \textbf{Lack of Movement Prediction Metrics:} Traditional evaluation metrics
-like Mean Squared Error (MSE), fail to capture the effect of lag properly in real-time prediction. Novel metrics, including the Movement Prediction Metric recently proposed by  \textcite{samanta_dual_2020} will provide a better
-insights into model performance.
+    \item \textbf{Lack of Movement Prediction Metrics:} Traditional evaluation metrics like Mean Squared Error (MSE) fail to capture the effect of lag properly in real-time prediction. Novel metrics, including the Movement Prediction Metric recently proposed by \textcite{samanta_dual_2020} will provide better insights into model performance.
 \end{itemize}
 
 This dissertation aims to address these gaps by developing a novel hybrid framework that integrates recursive filtering techniques with LSTMs, focusing on reducing prediction lag and enhancing the accuracy of financial time-series forecasting.

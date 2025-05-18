@@ -1,0 +1,77 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{pdfpages}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{xcolor,sectsty}
+\usepackage{mathptmx} % Times Roman font
+\usepackage[scaled=.90]{helvet}
+\usepackage{csquotes} % Required for biblatex
+\usepackage[backend=biber,style=ieee]{biblatex} % Using biblatex with IEEE style
+\addbibresource{Ref/references.bib}
+\usepackage[
+    bookmarks,
+    colorlinks=false,
+    pdfborder={0 0 0},
+    pdftitle={Your PDF Title Here},
+    pdfauthor={Your Name Here},
+    pdfsubject={Subject Here},
+    pdfkeywords={Keyword1, Keyword2}
+]{hyperref}
+
+% Custom colors
+\definecolor{auburn}{rgb}{0.43, 0.21, 0.1}
+\definecolor{vividauburn}{rgb}{0.58, 0.15, 0.14}
+\definecolor{bole}{rgb}{0.47, 0.27, 0.23}
+
+% Title and section formatting
+\titleformat{\chapter}[display]
+  {\huge\bfseries\color{auburn}}
+  {\chaptertitlename\ \thechapter}{15pt}{\Huge}
+\titleformat{\section}
+  {\Large\bfseries\color{vividauburn}}
+  {\thesection}{12pt}{}
+\subsectionfont{\color{bole}} 
+
+\doublespacing
+
+\begin{document}
+
+\thispagestyle{empty} 
+% \input{../Chapters/title}
+\clearpage
+
+% \includepdf[pages={1}]{../DIAT_Internship_Completion_Certificate-crop.pdf}
+% \include{../Chapters/ApprovalSheet}
+% \include{../Chapters/Declaration}
+% \include{../acknow}
+
+% \pagenumbering{roman}
+% \tableofcontents 
+% \clearpage
+% \listoffigures
+% \listoftables
+% \newpage
+
+\pagenumbering{arabic}
+
+% Main content with updated relative paths
+\input{Chapters/introduction} 
+\input{Chapters/LitReview}
+\input{Chapters/work-done}
+\input{Chapters/Results}
+\input{Chapters/DiscAndChallenges}
+\input{Chapters/conclusion}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+
+\end{document}
