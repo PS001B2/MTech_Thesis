@@ -83,12 +83,25 @@
 \contentsline {section}{\numberline {4.6}GARCH Model Results}{51}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Evaluation Metrics and Performance}{52}{subsection.4.6.1}%
 \contentsline {subsection}{\numberline {4.6.2}Residuals from ARIMAX Predictions}{52}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Visualization of Predictions}{52}{subsection.4.6.3}%
-\contentsline {chapter}{\numberline {5}Discussions and Challenges}{54}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Key Findings}{54}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Challenges and Model Refinement}{55}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Conclusion and Future Direction}{57}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusion}{57}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Future Direction}{58}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Publications}{59}{chapter.7}%
-\contentsline {chapter}{Bibliography}{60}{chapter.7}%
+\contentsline {subsection}{\numberline {4.6.3}Visualization of Predictions}{53}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Stochastic Volatility Results}{53}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Actual vs Predicted Returns}{53}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Distribution Comparison}{53}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}Performance Metrics}{53}{subsection.4.7.3}%
+\contentsline {section}{\numberline {4.8}Ensemble Learning Results}{54}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Actual vs Predicted Returns}{54}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Performance Metrics}{55}{subsection.4.8.2}%
+\contentsline {section}{\numberline {4.9}Transformer GAN Results}{55}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Actual vs Predicted Returns}{55}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}Performance Metrics}{55}{subsection.4.9.2}%
+\contentsline {section}{\numberline {4.10}RAGIC Framework Results}{55}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Actual vs Predicted Returns}{56}{subsection.4.10.1}%
+\contentsline {subsection}{\numberline {4.10.2}Performance Metrics}{56}{subsection.4.10.2}%
+\contentsline {chapter}{\numberline {5}Discussions and Challenges}{57}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Key Findings}{57}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Challenges and Model Refinement}{58}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future Direction}{60}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{60}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Direction}{61}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Publications}{62}{chapter.7}%
+\contentsline {chapter}{Bibliography}{63}{chapter.7}%

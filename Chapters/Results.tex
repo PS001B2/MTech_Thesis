@@ -420,3 +420,82 @@ R\textsuperscript{2} Score & 0.36  \\ \hline
 \end{tabular}
 \end{table}
 
+
+\section{Stochastic Volatility Results}
+\subsection{Actual vs Predicted Returns}
+Figure~\ref{fig:sv_actual_vs_pred} shows the normalized actual returns plotted against the normalized filtered log-volatility estimates from the stochastic volatility model.
+
+\subsection{Distribution Comparison}
+Figure~\ref{fig:sv_density} displays the kernel density estimation (KDE) curves of actual returns versus fitted returns from the stochastic volatility model, highlighting how well the model captures the return distribution characteristics.
+
+\subsection{Performance Metrics}
+\begin{itemize}
+    \item \textbf{RMSE:} 0.0104
+    \item \textbf{R\textsuperscript{2} Score:} -0.2091
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/stochastic_volatility.pdf}
+    \caption{Normalized actual returns vs filtered log-volatility (Stochastic Volatility Model).}
+    \label{fig:sv_actual_vs_pred}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/stochastic_volatility_density.pdf}
+    \caption{Density comparison of actual returns vs fitted returns (Stochastic Volatility Model).}
+    \label{fig:sv_density}
+\end{figure}
+
+\section{Ensemble Learning Results}
+\subsection{Actual vs Predicted Returns}
+Figure~\ref{fig:ensemble_actual_vs_pred} presents the predicted daily returns from the ensemble meta-learner compared with the actual close returns.
+
+\subsection{Performance Metrics}
+\begin{itemize}
+    \item \textbf{RMSE:} 0.0064
+    \item \textbf{R\textsuperscript{2} Score:} ----
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/metanet_final_test_plot_s.pdf}
+    \caption{Actual vs Predicted daily close return (Ensemble Meta-Learner).}
+    \label{fig:ensemble_actual_vs_pred}
+\end{figure}
+
+\section{Transformer GAN Results}
+\subsection{Actual vs Predicted Returns}
+Figure~\ref{fig:tgan_actual_vs_pred} illustrates the ability of the Transformer-based GAN to replicate daily return dynamics.
+
+\subsection{Performance Metrics}
+\begin{itemize}
+    \item \textbf{RMSE:} ----
+    \item \textbf{R\textsuperscript{2} Score:} ----
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/_8_ActualVsPred_c.pdf}
+    \caption{Actual vs Predicted daily close return (Transformer GAN).}
+    \label{fig:tgan_actual_vs_pred}
+\end{figure}
+
+\section{RAGIC Framework Results}
+\subsection{Actual vs Predicted Returns}
+Figure~\ref{fig:ragic_actual_vs_pred} compares the predicted returns from the RAGIC framework against the actual returns, reflecting the model’s interpretability and precision.
+
+\subsection{Performance Metrics}
+\begin{itemize}
+    \item \textbf{RMSE:} ----
+    \item \textbf{R\textsuperscript{2} Score:} ----
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/9_Act_vs_Pred_Point.pdf}
+    \caption{Actual vs Predicted daily close return (RAGIC Framework).}
+    \label{fig:ragic_actual_vs_pred}
+\end{figure}
+

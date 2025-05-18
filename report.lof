@@ -27,6 +27,11 @@
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Actual vs Predicted daily close return where the model is retrained after each prediction as per the incremental training methodology.}}{52}{figure.4.12}%
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Residuals: Actual Values - ARIMAX Predictions}}{52}{figure.4.13}%
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Actual vs. Predicted Returns Using GARCH Model}}{53}{figure.4.14}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Normalized actual returns vs filtered log-volatility (Stochastic Volatility Model).}}{54}{figure.4.15}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Density comparison of actual returns vs fitted returns (Stochastic Volatility Model).}}{54}{figure.4.16}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Actual vs Predicted daily close return (Ensemble Meta-Learner).}}{55}{figure.4.17}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Actual vs Predicted daily close return (Transformer GAN).}}{56}{figure.4.18}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Actual vs Predicted daily close return (RAGIC Framework).}}{56}{figure.4.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
