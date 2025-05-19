@@ -17,8 +17,8 @@
 \contentsline {subsection}{\numberline {3.3.1}Architecture Workflow}{15}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Developing Input Sequences for RLS}{17}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Multi-Feature Hybrid LSTM-RLS Implementation}{18}{subsection.3.3.3}%
-\contentsline {subsubsection}{Key Modification: RLS Input Sequence Construction}{18}{section*.4}%
-\contentsline {subsubsection}{Impact of this Approach}{20}{section*.5}%
+\contentsline {subsubsection}{Key Modification: RLS Input Sequence Construction}{18}{section*.5}%
+\contentsline {subsubsection}{Impact of this Approach}{20}{section*.6}%
 \contentsline {section}{\numberline {3.4}Dual Network Solution (DNS) Architecture}{21}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Design and Integration}{21}{subsection.3.4.1}%
 \contentsline {section}{\numberline {3.5}Advanced Data Preprocessing for Enhanced\\ Model Performance}{21}{section.3.5}%
@@ -28,13 +28,13 @@
 \contentsline {subsection}{\numberline {3.6.1}ARIMAX-LSTM Hybridization}{24}{subsection.3.6.1}%
 \contentsline {subsection}{\numberline {3.6.2}Challenges and Model Refinement}{25}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Applying RLS to Residuals Framework Output}{26}{subsection.3.6.3}%
-\contentsline {subsubsection}{RLS Input Sequence Construction}{26}{section*.6}%
-\contentsline {subsubsection}{Impact of RLS on the Residuals Architecture}{26}{section*.7}%
+\contentsline {subsubsection}{RLS Input Sequence Construction}{26}{section*.7}%
+\contentsline {subsubsection}{Impact of RLS on the Residuals Architecture}{26}{section*.8}%
 \contentsline {section}{\numberline {3.7}Multi-Feature LSTM Forecasting Framework}{27}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Overview and Objectives}{27}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3.7.2}Training Methodology}{27}{subsection.3.7.2}%
-\contentsline {subsubsection}{One-Step Prediction and Incremental Training}{28}{section*.8}%
-\contentsline {subsubsection}{Visualization of Incremental Training Process}{28}{section*.9}%
+\contentsline {subsubsection}{One-Step Prediction and Incremental Training}{28}{section*.9}%
+\contentsline {subsubsection}{Visualization of Incremental Training Process}{28}{section*.10}%
 \contentsline {subsection}{\numberline {3.7.3}Feature Engineering Techniques}{29}{subsection.3.7.3}%
 \contentsline {subsection}{\numberline {3.7.4}Feature Selection Using SelectKBest}{30}{subsection.3.7.4}%
 \contentsline {subsection}{\numberline {3.7.5}Feature Refinement}{31}{subsection.3.7.5}%
@@ -60,9 +60,9 @@
 \contentsline {section}{\numberline {3.12}RAGIC Architecture for Financial Time Series Forecasting}{42}{section.3.12}%
 \contentsline {subsection}{\numberline {3.12.1}Overview}{42}{subsection.3.12.1}%
 \contentsline {subsection}{\numberline {3.12.2}Theory and Components}{42}{subsection.3.12.2}%
-\contentsline {subsubsection}{Risk Module}{42}{section*.10}%
-\contentsline {subsubsection}{Temporal Module}{43}{section*.11}%
-\contentsline {subsubsection}{Generator and Critic}{43}{section*.12}%
+\contentsline {subsubsection}{Risk Module}{42}{section*.11}%
+\contentsline {subsubsection}{Temporal Module}{43}{section*.12}%
+\contentsline {subsubsection}{Generator and Critic}{43}{section*.13}%
 \contentsline {subsection}{\numberline {3.12.3}Training Algorithm}{44}{subsection.3.12.3}%
 \contentsline {subsection}{\numberline {3.12.4}Workflow}{44}{subsection.3.12.4}%
 \contentsline {subsection}{\numberline {3.12.5}Applications}{45}{subsection.3.12.5}%
@@ -104,4 +104,4 @@
 \contentsline {section}{\numberline {6.1}Conclusion}{64}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Future Direction}{65}{section.6.2}%
 \contentsline {chapter}{\numberline {7}Publications}{66}{chapter.7}%
-\contentsline {chapter}{Bibliography}{68}{section*.16}%
+\contentsline {chapter}{Bibliography}{68}{section*.17}%
