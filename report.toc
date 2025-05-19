@@ -97,11 +97,11 @@
 \contentsline {subsection}{\numberline {4.9.1}Actual vs Predicted Returns}{58}{subsection.4.9.1}%
 \contentsline {section}{\numberline {4.10}RAGIC Framework Results}{58}{section.4.10}%
 \contentsline {subsection}{\numberline {4.10.1}Actual vs Predicted Returns}{58}{subsection.4.10.1}%
-\contentsline {chapter}{\numberline {5}Discussions and Challenges}{59}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Key Findings}{59}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Challenges and Model Refinement}{61}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Conclusion and Future Direction}{64}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusion}{64}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Future Direction}{65}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Publications}{66}{chapter.7}%
-\contentsline {chapter}{Bibliography}{68}{section*.17}%
+\contentsline {chapter}{\numberline {5}Discussions and Challenges}{60}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Key Findings}{60}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Challenges and Model Refinement}{62}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future Direction}{65}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{65}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Direction}{66}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Publications}{67}{chapter.7}%
+\contentsline {chapter}{Bibliography}{69}{section*.17}%

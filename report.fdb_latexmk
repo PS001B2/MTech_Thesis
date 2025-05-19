@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber report"] 1747634435.55415 "report.bcf" "report.bbl" "report" 1747640238.164 0
+["biber report"] 1747634435.55415 "report.bcf" "report.bbl" "report" 1747644695.13571 0
   "Ref/references.bib" 1747593498.7569 21747 4726e3d3bbb8f79bf601eac417bc667d ""
-  "report.bcf" 1747640238.0845 108578 f6ca9180a47b34d89c260452d64bfd70 "pdflatex"
+  "report.bcf" 1747644695.05729 108578 f6ca9180a47b34d89c260452d64bfd70 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1747640237.02473 "/Users/sharmaparth/Codes/Latex_Files/23MAI004_Sem4_MidSem_Report/report.tex" "report.pdf" "report" 1747640238.16424 0
+["pdflatex"] 1747644693.99352 "/Users/sharmaparth/Codes/Latex_Files/23MAI004_Sem4_MidSem_Report/report.tex" "report.pdf" "report" 1747644695.13592 0
   "/Users/sharmaparth/Codes/Latex_Files/23MAI004_Sem4_MidSem_Report/report.tex" 1747639307.41475 2668 6c5a72471c594aeb83e5d5189e20aa75 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -156,14 +156,14 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1725363514.22317 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1725363476 8221423 f6e0919bbbcef2aa323d708277b45c4d ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Chapters/ApprovalSheet.aux" 1747640237.70213 4043 8d7f8f7750ee7c8379995e12a8521053 "pdflatex"
-  "Chapters/ApprovalSheet.tex" 1747640236.81589 1484 063d1252565ec1c8078d4a501e9330af ""
-  "Chapters/Declaration.aux" 1747640237.69874 4041 bc408fe1bd4f9f80bc78c8143982bf10 "pdflatex"
+  "Chapters/ApprovalSheet.aux" 1747644694.67106 4043 8d7f8f7750ee7c8379995e12a8521053 "pdflatex"
+  "Chapters/ApprovalSheet.tex" 1747642860.28744 1489 41c827d1c779a93670e7e90199c57517 ""
+  "Chapters/Declaration.aux" 1747644694.66764 4041 bc408fe1bd4f9f80bc78c8143982bf10 "pdflatex"
   "Chapters/Declaration.tex" 1746514234 1009 1fa1bb3780bdccfcdc2a59de00887b20 ""
   "Chapters/DiscAndChallenges.tex" 1747592906.58815 6416 927c615c4ce48691d943118307d84411 ""
   "Chapters/LitReview.tex" 1747634434.0843 9153 0337542f5d68383f5b988bd407c770da ""
-  "Chapters/Results.tex" 1747636330.68228 22298 6d94854fed6abfa93f465cd2ef1b7e15 ""
-  "Chapters/acknow.aux" 1747640237.70455 4036 543e4ad38cd49061dc5a97425923da90 "pdflatex"
+  "Chapters/Results.tex" 1747644693.78122 16272 279e21f171a339745996153f958ea927 ""
+  "Chapters/acknow.aux" 1747644694.67346 4036 543e4ad38cd49061dc5a97425923da90 "pdflatex"
   "Chapters/acknow.tex" 1746514234 1454 8deb46423fc855daaa572a5d7af530a0 ""
   "Chapters/conclusion.tex" 1747597452.6785 2531 bf672c7c1b6833f28ebe9af0a8bf76a4 ""
   "Chapters/introduction.tex" 1747375588.44965 4988 a0fc7c39057e85429fbc7e77aa352a4a ""
@@ -198,14 +198,14 @@
   "Images/seasonal_decomposition.pdf" 1746514234 97230 8db98922789581ca9dfe48127abe9e47 ""
   "Images/stochastic_volatility.pdf" 1747589463.64826 17142 6a18e3488f47d3d7cfea61ab8c8793d6 ""
   "Images/stochastic_volatility_density.pdf" 1747589632.04771 15032 0473573e073cf8945ddad040f92cd654 ""
-  "report.aux" 1747640238.08062 28772 f47e877020196c142b12de9609ee90ab "pdflatex"
+  "report.aux" 1747644695.0532 29020 62803c09120d5a5b48c86ffb85317a4e "pdflatex"
   "report.bbl" 1747634437.24338 33429 650c08c01d8772e3b1adfadc5bfc0407 "biber report"
-  "report.lof" 1747640238.08511 4148 a5904e659ea3b8a98b152e12a4924191 "pdflatex"
-  "report.lot" 1747640238.08514 1221 8276283d82ee2fff2fdf27959d9f2cf0 "pdflatex"
-  "report.out" 1747640238.08375 20101 335d8eaff3f0ea28c64cb2aec1b4e6c2 "pdflatex"
-  "report.run.xml" 1747640238.085 2420 9a09caf182037b4a951f7f25f213fb52 "pdflatex"
+  "report.lof" 1747644695.05787 4148 a5904e659ea3b8a98b152e12a4924191 "pdflatex"
+  "report.lot" 1747644695.05791 1330 888a129705db508510baa633a028bade "pdflatex"
+  "report.out" 1747644695.05657 20101 335d8eaff3f0ea28c64cb2aec1b4e6c2 "pdflatex"
+  "report.run.xml" 1747644695.05777 2420 9a09caf182037b4a951f7f25f213fb52 "pdflatex"
   "report.tex" 1747639307.41475 2668 6c5a72471c594aeb83e5d5189e20aa75 ""
-  "report.toc" 1747640238.08505 9972 064d586750251dd587d34a5958416369 "pdflatex"
+  "report.toc" 1747644695.05782 9972 423f87cfff1e12013ab61ee234f09b92 "pdflatex"
   (generated)
   "Chapters/ApprovalSheet.aux"
   "Chapters/Declaration.aux"
