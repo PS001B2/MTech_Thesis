@@ -316,7 +316,7 @@ Figure~\ref{fig:ensemble_actual_vs_pred} presents the predicted daily returns fr
 \begin{itemize}
     \item \textbf{MetaNet RMSE (Validation):} 0.0065
     \item \textbf{MetaNet RMSE (Test):} 0.0064
-    \item \textbf{MetaNet R\textsuperscript{2} Score (Test):} ----
+    \item \textbf{MetaNet R\textsuperscript{2} Score (Test):} 0.5130
 \end{itemize}
 
 \subsection{Base Model Comparison}
@@ -342,7 +342,7 @@ MetaNet     & \textbf{0.00655} & \textbf{0.00638} \\
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth]{Images/metanet_final_test_plot_s.pdf}
+    \includegraphics[width=\textwidth]{Images/metanet_final_test_plot__1.pdf}
     \caption{Actual vs Predicted daily close return (Ensemble Meta-Learner).}
     \label{fig:ensemble_actual_vs_pred}
 \end{figure}
@@ -351,12 +351,6 @@ MetaNet     & \textbf{0.00655} & \textbf{0.00638} \\
 \subsection{Actual vs Predicted Returns}
 Figure~\ref{fig:tgan_actual_vs_pred} illustrates the ability of the Transformer-based GAN to replicate daily return dynamics.
 
-% \subsection{Performance Metrics}
-% \begin{itemize}
-%     \item \textbf{RMSE:} ----
-%     \item \textbf{R\textsuperscript{2} Score:} ----
-% \end{itemize}
-
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{Images/_8_ActualVsPred_c.pdf}
@@ -364,15 +358,11 @@ Figure~\ref{fig:tgan_actual_vs_pred} illustrates the ability of the Transformer-
     \label{fig:tgan_actual_vs_pred}
 \end{figure}
 
+\noindent After visually inspecting the predicted series, it was observed that the predictions deviate significantly from the actual return values, exhibiting erratic and inconsistent behavior. Due to the highly erroneous nature of these predictions, quantitative performance metrics such as RMSE and R\textsuperscript{2} Score are not reported.
+
 \section{RAGIC Framework Results}
 \subsection{Actual vs Predicted Returns}
 Figure~\ref{fig:ragic_actual_vs_pred} compares the predicted returns from the RAGIC framework against the actual returns, reflecting the model’s interpretability and precision.
-
-% \subsection{Performance Metrics}
-% \begin{itemize}
-%     \item \textbf{RMSE:} ----
-%     \item \textbf{R\textsuperscript{2} Score:} ----
-% \end{itemize}
 
 \begin{figure}[h!]
     \centering
@@ -380,6 +370,10 @@ Figure~\ref{fig:ragic_actual_vs_pred} compares the predicted returns from the RA
     \caption{Actual vs Predicted daily close return (RAGIC Framework).}
     \label{fig:ragic_actual_vs_pred}
 \end{figure}
+
+\noindent Although the RAGIC framework incorporates advanced modules, the predicted returns show significant divergence from the actual values. Based on this visual assessment, RMSE and R\textsuperscript{2} Score are omitted as the model fails to produce stable or meaningful numerical results.
+
+\section{Results Comparison}
 
 \begin{table}[h!]
     \centering
@@ -402,17 +396,16 @@ Figure~\ref{fig:ragic_actual_vs_pred} compares the predicted returns from the RA
     
     ARIMAX (Close) & 7431.43 & -35.47 \\ \hline
     ARIMAX (Returns) & 0.703\% & 0.36 \\ \hline
-    Final Model (Close) & 7394.61 & -35.11 \\ \hline
-    Final Model (Returns) & 0.669\% & 0.42 \\ \hline
-    Final Model + RLS (Returns) & 0.72\% & 0.32 \\ \hline
+    ARIMAX Model + RLS (Returns) & 0.72\% & 0.32 \\ \hline
     
     Multi-Feature LSTM & -- & -- \\ \hline
     GARCH Model & -- & -- \\ \hline
     Stochastic Volatility Model & 1.04\% & -0.2091 \\ \hline
-    Ensemble Learning Model & \textbf{0.638\%} -- & -- \\ \hline
+    Ensemble Learning Model & \textbf{0.638\%} & 0.5130 \\ \hline
     Transformer GAN (TTS GAN) & -- & -- \\ \hline
     RAGIC Architecture & -- & -- \\ \hline
     
     \end{tabular}
-    \end{table}
+\end{table}
 
+\noindent As seen in Table~\ref{tab:all_model_comparison}, the \textbf{Ensemble Learning Model} achieves the lowest RMSE of \textbf{0.638\%}, demonstrating the highest predictive accuracy among all evaluated models. The \textbf{LSTM-RLS (Daily Close)} model also performs exceptionally well with an R\textsuperscript{2} score of 0.9956, highlighting its effectiveness in modeling price levels. In contrast, traditional models like \textbf{ARIMAX (Close)} suffer from high error and a significantly negative R\textsuperscript{2} score. Models with missing metrics such as the \textbf{Multi-Feature LSTM}, \textbf{GARCH Model}, \textbf{Transformer GAN}, and \textbf{RAGIC Architecture} exhibited unstable behavior or extremely poor performance during evaluation, hence their numerical results are omitted. Hybrid models like the \textbf{DNS} and \textbf{LSTM-RLS} variants generally outperform classical approaches, especially in denoised trend and price-based forecasting.

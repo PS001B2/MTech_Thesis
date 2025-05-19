@@ -317,17 +317,20 @@ OUTPUT Chapters/acknow.aux
 INPUT ./Chapters/acknow.tex
 INPUT ./Chapters/acknow.tex
 INPUT Chapters/acknow.tex
+INPUT ./Chapters/abstract.tex
+INPUT ./Chapters/abstract.tex
+INPUT Chapters/abstract.tex
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
-INPUT ./report.toc
-INPUT ./report.toc
-INPUT report.toc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT ./report.toc
+INPUT ./report.toc
+INPUT report.toc
 OUTPUT report.toc
 INPUT ./report.lof
 INPUT ./report.lof
@@ -453,6 +456,11 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
+INPUT ./Images/Screenshot 2025-05-19 at 15.00.48.png
+INPUT ./Images/Screenshot 2025-05-19 at 15.00.48.png
+INPUT ./Images/Screenshot 2025-05-19 at 15.00.48.png
+INPUT ./Images/Screenshot 2025-05-19 at 15.00.48.png
+INPUT ./Images/Screenshot 2025-05-19 at 15.00.48.png
 INPUT ./Chapters/Results.tex
 INPUT ./Chapters/Results.tex
 INPUT ./Chapters/Results.tex
@@ -540,11 +548,11 @@ INPUT ./Images/stochastic_volatility_density.pdf
 INPUT ./Images/stochastic_volatility_density.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT ./Images/metanet_final_test_plot_s.pdf
-INPUT ./Images/metanet_final_test_plot_s.pdf
-INPUT ./Images/metanet_final_test_plot_s.pdf
-INPUT ./Images/metanet_final_test_plot_s.pdf
-INPUT ./Images/metanet_final_test_plot_s.pdf
+INPUT ./Images/metanet_final_test_plot__1.pdf
+INPUT ./Images/metanet_final_test_plot__1.pdf
+INPUT ./Images/metanet_final_test_plot__1.pdf
+INPUT ./Images/metanet_final_test_plot__1.pdf
+INPUT ./Images/metanet_final_test_plot__1.pdf
 INPUT ./Images/_8_ActualVsPred_c.pdf
 INPUT ./Images/_8_ActualVsPred_c.pdf
 INPUT ./Images/_8_ActualVsPred_c.pdf

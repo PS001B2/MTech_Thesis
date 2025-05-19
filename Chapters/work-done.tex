@@ -220,16 +220,6 @@ racy of the DNS architecture, so that it could support a greater number of value
 While the predictions of strength were retained, the changes had provided the basis for
 groundwork for subsequent enhancements in model design and integration.
 
-
-% \section{ARIMA-LSTM Residual Integration Framework}
-% \subsection{Justification for ARIMA-LSTM Hybridization}
-% This framework combines ARIMA's ability to model linear patterns with LSTM's strength in capturing non-linear relationships. The final prediction is obtained by integrating outputs from both models. Key components include:
-% \begin{itemize}
-%     \item \textbf{ARIMA model for linear trends:} ARIMA captures the linear component of stock prices.
-%     \item \textbf{LSTM model for residuals:} LSTM models the non-linear residuals.
-%     \item \textbf{Final integration:} Predictions from both models are combined for improved accuracy.
-% \end{itemize}
-
 \section{ARIMAX-LSTM Residual Integration Framework}
 \subsection{ARIMAX-LSTM Hybridization}
 
@@ -274,22 +264,6 @@ To enhance the prediction accuracy, input sequences for RLS were constructed as 
 \end{itemize}
 
 This integration of RLS with the residuals architecture provided valuable insights into whether the additional layer of processing contributed to enhanced model performance.
-
-% \section{Training Method for Multi-Feature LSTM Forecasting Framework}
-
-% \subsection{One-Step Prediction and Incremental Training}
-
-% In this framework, the primary focus is on one-step stock price prediction, as only the error between the next time step prediction and its actual value is significant for the application. Although the model forecasts multiple values in sequence, only the immediate next prediction is utilized in the algorithmic trading process. 
-
-% Once the next day’s prediction is made, the following steps are performed to update the training and testing datasets:
-
-% \begin{enumerate}
-%     \item After the day ends, the actual value corresponding to the predicted value becomes available.
-%     \item The first data point in the training set is discarded, and the current first data point from the testing dataset is appended to the training data.
-%     \item Similarly, the first data point in the testing dataset is removed, and the latest actual value is added to it.
-% \end{enumerate}
-
-
 
 \section{Multi-Feature LSTM Forecasting Framework}
 \subsection{Overview and Objectives}
@@ -669,6 +643,14 @@ RAGIC is designed to forecast the next value in a sequence (e.g., stock return o
     \item \textbf{Temporal Module} (Transformer + TCN for time series understanding)
     \item \textbf{Critic} (Wasserstein GAN discriminator to enforce realistic prediction quality)
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{Images/Screenshot 2025-05-19 at 15.00.48.png}
+    \caption{RAGIC Architecture diagram \cite{gu_ragic_2025}.}
+    \label{fig:ragic_architecture}
+\end{figure}
+The overall architecture of RAGIC, including its three key modules and data flow, is illustrated in Figure~\ref{fig:ragic_architecture}.
 
 \subsection{Theory and Components}
 

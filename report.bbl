@@ -38,8 +38,8 @@
       \strng{authorbibnamehash}{87f38dd604f46996dc5984c1f25e5a08}
       \strng{authornamehash}{87f38dd604f46996dc5984c1f25e5a08}
       \strng{authorfullhash}{87f38dd604f46996dc5984c1f25e5a08}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Predicting financial markets is of particular importance for investors who intend to make the most profit. Analysing reasonable and precise strategies for predicting financial markets has a long history. Deep learning techniques include analyses and predictions that can assist scientists in discovering unknown patterns of data. In this project, application of noise elimination techniques such as Wavelet transform and Kalman filter in combination of deep learning methods were discussed for predicting financial time series. The results show employing noise elimination techniques such as Wavelet transform and Kalman filter, have considerable effect on performance of {LSTM} neural network in extracting hidden patterns in the financial time series and can precisely predict future actions in these markets.}
@@ -111,8 +111,8 @@
       \strng{authorbibnamehash}{e7b029da6adabcfb7d8583619ae1926f}
       \strng{authornamehash}{b05296168368ec9d5b65884a30397a2e}
       \strng{authorfullhash}{e7b029da6adabcfb7d8583619ae1926f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper proposes a time prediction model based on Kalman filtering and {LSTM}, namely the Kalman {LSTM} model, which is used to predict time series data with long-term and short-term characteristics. The {KalmanLSTM} model uses {LSTM}'s unique storage function to "store" the information contained in the pre-order data. It is then used to obtain the basic time series of the prediction problem in subsequent processing. The following Kalman filter model dynamically adjusts the basic time data series obtained by {LSTM} processing. Finally, we will obtain adjusted forecasts. Here, we establish training and test set samples to train the Kalman-{LSTM} model and test the performance of the sample model. For comparison, we evaluated the {RMSE} (root mean square error) indicator of the conventional {LSTM} model with the Kalman-{LSTM} model. The results show that the Kalman-{LSTM} model is superior to the {LSTM} model, and can get more accurate predictions.}
@@ -193,8 +193,8 @@
       \strng{editorbibnamehash}{8405c5e3310cb2cca478dc560491682c}
       \strng{editornamehash}{8405c5e3310cb2cca478dc560491682c}
       \strng{editorfullhash}{8405c5e3310cb2cca478dc560491682c}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The target tracking of nonlinear maneuvering radar in dense clutter environments is still an important but difficult problem to be solved effectively. Traditional solutions often rely on motion models and prior distributions. This paper presents a novel improved architecture of Kalman filter based on a recursive neural network, which combines the sequence learning of recurrent neural networks with the precise prediction of Kalman filter in an end-to-end manner. We employ three {LSTM} networks to model nonlinear motion equation, motion noise, and measurement noise, respectively, and learn their long-term dependence from a large amount of training data. They are then applied to the prediction and update process of Kalman filter to calculate the estimated target state. Our approach is able to address the tracking problem of nonlinear maneuvering radar target online end-to-end and does not require the motion models and prior distributions. Experimental results show that our method is more effective and faster than the traditional methods and more accurate than the method with {LSTM} network alone.}
@@ -266,8 +266,8 @@
       \strng{authorbibnamehash}{1000fc21aa0bcf7b25213512a7a1f8fd}
       \strng{authornamehash}{1c47c20e0901b6b1e48c0bef928245ca}
       \strng{authorfullhash}{1000fc21aa0bcf7b25213512a7a1f8fd}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Abstract Ultra-wideband technology has good anti-interference capabilities and development prospects in indoor positioning. Since ultra-wideband will be affected by random errors in indoor positioning, to exploit the advantages of the Kalman filter ({KF}) and the long short-term memory ({LSTM}) network, this paper proposes a long short-term memory neural network algorithm fused with the Kalman filter ({KF}–{LSTM}) to improve {UWB} positioning. First, the ultra-wideband data is processed through {KF} to weaken the noise in the data, and then the data is fed into the {LSTM} network for training, and the capability of the {LSTM} network to process time series features is employed to obtain more accurate label positions. Finally, simulation and measurement results show that the {KF}–{LSTM} algorithm achieves 71.31\%, 37.28\%, and 49.31\% higher average positioning accuracy than the back propagation ({BP}) network, (back propagation network fused with the Kalman filter ({KF}-{BP}), and {LSTM} network algorithms, respectively, and the {KF}–{LSTM} algorithm performs more stably. Meanwhile, the more noise the data contains, the more obvious the stability contrast between the four algorithms.}
@@ -330,8 +330,8 @@
       \strng{authorbibnamehash}{dd16405c007396f685979b9a06747b38}
       \strng{authornamehash}{73b022eba262c6fb75b8d1ad692633c6}
       \strng{authorfullhash}{dd16405c007396f685979b9a06747b38}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
