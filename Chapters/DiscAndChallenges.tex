@@ -22,6 +22,7 @@ For the Ensemble Learning Framework, predictions from ARIMAX, Random Forest, Cat
 The Transformer GAN-based architecture and the RAGIC model, implemented directly as described in their respective papers, showed significantly higher prediction errors. Even after extended training (up to 500 epochs), both architectures struggled to generalize. Due to limited time, these GAN-based models were not significantly modified, which might have contributed to their underperformance.
 
 To conclude, among all the tested models and algorithms, the Ensemble Learning Framework delivered the best overall performance in terms of pattern tracking, lag elimination, and balanced error metrics.
+
 \section{Challenges and Model Refinement}
 A significant challenge faced during the development of the hybrid models was the persistent lag in long-term predictions. Despite repeated efforts to refine the models—particularly the hybrid LSTM-RLS architectures—the lag in predictions continued to appear consistently. While the introduction of alternative models aimed at mitigating this lag did result in lower RMSE values in some cases, the core issue of delayed predictions remained unresolved.
 
