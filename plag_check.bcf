@@ -2377,14 +2377,21 @@
     <bcf:citekey order="10" intorder="1">wang_hybrid_2024</bcf:citekey>
     <bcf:citekey order="11" intorder="1">sahni_neoteric_2022</bcf:citekey>
     <bcf:citekey order="12" intorder="1">sahni_neoteric_2022</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">yoon_time-series_nodate</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">yoon_time-series_nodate</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">yoon_time-series_2019</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">yoon_time-series_2019</bcf:citekey>
     <bcf:citekey order="15" intorder="1">gu_ragic_2025</bcf:citekey>
     <bcf:citekey order="16" intorder="1">gu_ragic_2025</bcf:citekey>
     <bcf:citekey order="17" intorder="1">samanta_dual_2020</bcf:citekey>
     <bcf:citekey order="18" intorder="1">samanta_dual_2020</bcf:citekey>
     <bcf:citekey order="19" intorder="1">samanta_dual_2020</bcf:citekey>
-    <bcf:citekey order="20" intorder="1">gu_ragic_2025</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">yahoo_nifty50_history</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">nse_vix</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">staudemeyer_understanding_2019</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">9998301</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">BOLLERSLEV1986307</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">breiman2001random</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">yoon_time-series_2019</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">gu_ragic_2025</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

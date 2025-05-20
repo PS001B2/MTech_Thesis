@@ -12,27 +12,27 @@
 \contentsline {figure}{\numberline {3.9}{\ignorespaces RLS input sequence construction using LSTM outputs.}}{29}{figure.3.9}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces DNS Architecture}}{31}{figure.3.10}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Visualization of the Incremental Training Process for Multi-Feature LSTM Forecasting Framework.}}{36}{figure.3.11}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces RAGIC Architecture diagram \blx@tocontentsinit {0}\cite {gu_ragic_2025}.}}{46}{figure.3.12}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces RAGIC Architecture diagram \blx@tocontentsinit {0}\cite {gu_ragic_2025}.}}{47}{figure.3.12}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Original vs. Predicted Stock Prices}}{52}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Returns: Original vs. Predicted Prices}}{52}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Stock Prices: Shifted Predictions (-1)}}{52}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Stock Prices: Actual vs. Predicted Daily Returns}}{53}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison of Stock Prices and Returns (Shifted -1)}}{53}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces ARIMAX Test Predictions - Output: Close Price}}{54}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces ARIMAX Test Predictions - Output: Returns}}{54}{figure.4.7}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Final Test Predictions - Output: Close Price}}{55}{figure.4.8}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Final Test Predictions - Output: Returns}}{55}{figure.4.9}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Actual vs. Predicted Returns After Applying RLS to Final Predictions}}{55}{figure.4.10}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Absolute error between actual and predicted one-time step daily close return, compared with the total RMSE of the test data.}}{57}{figure.4.11}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Actual vs Predicted daily close return where the model is retrained after each prediction as per the incremental training methodology.}}{58}{figure.4.12}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Residuals: Actual Values - ARIMAX Predictions}}{58}{figure.4.13}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Actual vs. Predicted Returns Using GARCH Model}}{59}{figure.4.14}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Normalized actual returns vs filtered log-volatility (Stochastic Volatility Model).}}{60}{figure.4.15}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Density comparison of actual returns vs fitted returns (Stochastic Volatility Model).}}{60}{figure.4.16}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Actual vs Predicted daily close return (Ensemble Meta-Learner).}}{61}{figure.4.17}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Actual vs Predicted daily close return (Transformer GAN).}}{62}{figure.4.18}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Actual vs Predicted daily close return (RAGIC Framework).}}{63}{figure.4.19}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Original vs. Predicted Stock Prices}}{53}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Returns: Original vs. Predicted Prices}}{53}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Stock Prices: Shifted Predictions (-1)}}{53}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Stock Prices: Actual vs. Predicted Daily Returns}}{54}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Comparison of Stock Prices and Returns (Shifted -1)}}{54}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ARIMAX Test Predictions - Output: Close Price}}{55}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces ARIMAX Test Predictions - Output: Returns}}{55}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Final Test Predictions - Output: Close Price}}{56}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Final Test Predictions - Output: Returns}}{56}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Actual vs. Predicted Returns After Applying RLS to Final Predictions}}{57}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Absolute error between actual and predicted one-time step daily close return, compared with the total RMSE of the test data.}}{59}{figure.4.11}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Actual vs Predicted daily close return where the model is retrained after each prediction as per the incremental training methodology.}}{59}{figure.4.12}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Residuals: Actual Values - ARIMAX Predictions}}{60}{figure.4.13}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Actual vs. Predicted Returns Using GARCH Model}}{60}{figure.4.14}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Normalized actual returns vs filtered log-volatility (Stochastic Volatility Model).}}{61}{figure.4.15}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Density comparison of actual returns vs fitted returns (Stochastic Volatility Model).}}{62}{figure.4.16}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Actual vs Predicted daily close return (Ensemble Meta-Learner).}}{63}{figure.4.17}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Actual vs Predicted daily close return (Transformer GAN).}}{63}{figure.4.18}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Actual vs Predicted daily close return (RAGIC Framework).}}{64}{figure.4.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

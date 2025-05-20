@@ -442,7 +442,7 @@
       \verb https://link.springer.com/10.1007/978-981-16-5952-2_33
       \endverb
     \endentry
-    \entry{yoon_time-series_nodate}{article}{}
+    \entry{yoon_time-series_2019}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=7b5738a87e11e248e9c5a24b5b0f0769}{%
            family={Yoon},
@@ -455,6 +455,9 @@
            given={Daniel},
            giveni={D\bibinitperiod}}}%
       }
+      \list{language}{1}{%
+        {english}%
+      }
       \strng{namehash}{22c0ebb4371728d4e5bdc3ad11306d68}
       \strng{fullhash}{22c0ebb4371728d4e5bdc3ad11306d68}
       \strng{bibnamehash}{22c0ebb4371728d4e5bdc3ad11306d68}
@@ -465,9 +468,15 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{A good generative model for time-series data should preserve temporal dynamics, in the sense that new sequences respect the original relationships between variables across time. Existing methods that bring generative adversarial networks ({GANs}) into the sequential setting do not adequately attend to the temporal correlations unique to time-series data. At the same time, supervised models for sequence prediction—which allow ﬁner control over network dynamics—are inherently deterministic. We propose a novel framework for generating realistic time-series data that combines the ﬂexibility of the unsupervised paradigm with the control afforded by supervised training. Through a learned embedding space jointly optimized with both supervised and adversarial objectives, we encourage the network to adhere to the dynamics of the training data during sampling. Empirically, we evaluate the ability of our method to generate realistic samples using a variety of real and synthetic time-series datasets. Qualitatively and quantitatively, we ﬁnd that the proposed framework consistently and signiﬁcantly outperforms state-of-the-art benchmarks with respect to measures of similarity and predictive ability.}
-      \field{langid}{english}
+      \field{abstract}{A good generative model for time-series data should preserve temporal dynamics, in the sense that new sequences respect the original relationships between variables across time. Existing methods that bring generative adversarial networks (GANs) into the sequential setting do not adequately attend to the temporal correlations unique to time-series data. At the same time, supervised models for sequence prediction—which allow finer control over network dynamics—are inherently deterministic. We propose a novel framework for generating realistic time-series data that combines the flexibility of the unsupervised paradigm with the control afforded by supervised training. Through a learned embedding space jointly optimized with both supervised and adversarial objectives, we encourage the network to adhere to the dynamics of the training data during sampling. Empirically, we evaluate the ability of our method to generate realistic samples using a variety of real and synthetic time-series datasets. Qualitatively and quantitatively, we find that the proposed framework consistently and significantly outperforms state-of-the-art benchmarks with respect to measures of similarity and predictive ability.}
+      \field{booktitle}{Proceedings of the 33rd International Conference on Neural Information Processing Systems (NeurIPS)}
+      \field{booktitleaddon}{NeurIPS}
+      \field{month}{12}
+      \field{note}{Article No.: 494}
       \field{title}{Time-series Generative Adversarial Networks}
+      \field{year}{2019}
+      \field{pages}{5508\bibrangedash 5518}
+      \range{pages}{11}
       \verb{file}
       \verb Yoon and Jarrett - Time-series Generative Adversarial Networks.pdf:/Users/sharmaparth/Zotero/storage/HEEXX4IG/Yoon and Jarrett - Time-series Generative Adversarial Networks.pdf:application/pdf
       \endverb
@@ -596,6 +605,221 @@
       \endverb
       \verb{url}
       \verb https://ieeexplore.ieee.org/document/9207022/
+      \endverb
+    \endentry
+    \entry{yahoo_nifty50_history}{online}{}
+      \name{author}{1}{}{%
+        {{hash=866e8d567dd5e253610d253b71b7450e}{%
+           family={{Yahoo Finance}},
+           familyi={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{866e8d567dd5e253610d253b71b7450e}
+      \strng{fullhash}{866e8d567dd5e253610d253b71b7450e}
+      \strng{bibnamehash}{866e8d567dd5e253610d253b71b7450e}
+      \strng{authorbibnamehash}{866e8d567dd5e253610d253b71b7450e}
+      \strng{authornamehash}{866e8d567dd5e253610d253b71b7450e}
+      \strng{authorfullhash}{866e8d567dd5e253610d253b71b7450e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: May 20, 2025}
+      \field{title}{{NIFTY 50 (\textasciicircum NSEI) Historical Data}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://finance.yahoo.com/quote/%5ENSEI/history/
+      \endverb
+      \verb{url}
+      \verb https://finance.yahoo.com/quote/%5ENSEI/history/
+      \endverb
+    \endentry
+    \entry{nse_vix}{online}{}
+      \name{author}{1}{}{%
+        {{hash=31eb890329278c2ccdacdfa3aaf99ca8}{%
+           family={{National Stock Exchange of India}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \strng{fullhash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \strng{bibnamehash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \strng{authorbibnamehash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \strng{authornamehash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \strng{authorfullhash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: May 16, 2025}
+      \field{title}{Historical Volatility Index (VIX) Reports}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.nseindia.com/reports-indices-historical-vix
+      \endverb
+      \verb{url}
+      \verb https://www.nseindia.com/reports-indices-historical-vix
+      \endverb
+    \endentry
+    \entry{staudemeyer_understanding_2019}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ca20c4cfdf776c7f6192e5d69e4473e5}{%
+           family={Staudemeyer},
+           familyi={S\bibinitperiod},
+           given={Ralf\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e1e7bd4c33e3dc907948952e5202a2f4}{%
+           family={Rothstein\bibnamedelima Morris},
+           familyi={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf2f6ce66886fdd83f2867581d0809cb}
+      \strng{fullhash}{cf2f6ce66886fdd83f2867581d0809cb}
+      \strng{bibnamehash}{cf2f6ce66886fdd83f2867581d0809cb}
+      \strng{authorbibnamehash}{cf2f6ce66886fdd83f2867581d0809cb}
+      \strng{authornamehash}{cf2f6ce66886fdd83f2867581d0809cb}
+      \strng{authorfullhash}{cf2f6ce66886fdd83f2867581d0809cb}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Long Short-Term Memory Recurrent Neural Networks (LSTM-RNN) are one of the most powerful dynamic classifiers publicly known. The network itself and the related learning algorithms are reasonably well documented to get an idea how it works. This paper will shed more light into understanding how LSTM-RNNs evolved and why they work impressively well, focusing on the early, ground-breaking publications. We significantly improved documentation and fixed a number of errors and inconsistencies that accumulated in previous publications. To support understanding we as well revised and unified the notation used.}
+      \field{eprintclass}{cs.NE}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{arXiv preprint arXiv:1909.09586}
+      \field{note}{42 pages, 11 figures, tutorial}
+      \field{title}{Understanding {LSTM} -- A Tutorial into Long Short-Term Memory Recurrent Neural Networks}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1909.09586
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.48550/arXiv.1909.09586
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.48550/arXiv.1909.09586
+      \endverb
+      \keyw{Neural and Evolutionary Computing,Computation and Language,Machine Learning}
+    \endentry
+    \entry{9998301}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=0f5d23d681da576bb41893423887d1af}{%
+           family={Atabay},
+           familyi={A\bibinitperiod},
+           given={Fj\bibnamedelima Vincent},
+           giveni={F\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=6e0336c0a7543eeefde0d71ba9f524a7}{%
+           family={Pagkalinawan},
+           familyi={P\bibinitperiod},
+           given={Ryu\bibnamedelima Mendoza},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=8fadc914178499d70d670efa76e49418}{%
+           family={Pajarillo},
+           familyi={P\bibinitperiod},
+           given={Steven\bibnamedelima Dale},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=b9b9210c93425a5aff949068a44a92ca}{%
+           family={Villanueva},
+           familyi={V\bibinitperiod},
+           given={Alonica\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=20defeb4bd1dd7e0f016ebb75947d9c6}{%
+           family={Taylar},
+           familyi={T\bibinitperiod},
+           given={Jonathan\bibnamedelima V.},
+           giveni={J\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{ddba07fffcbc6a94d0897ce727ef5669}
+      \strng{fullhash}{2fbf54fe8a74c18ff0dfc4e1b71b4111}
+      \strng{bibnamehash}{2fbf54fe8a74c18ff0dfc4e1b71b4111}
+      \strng{authorbibnamehash}{2fbf54fe8a74c18ff0dfc4e1b71b4111}
+      \strng{authornamehash}{ddba07fffcbc6a94d0897ce727ef5669}
+      \strng{authorfullhash}{2fbf54fe8a74c18ff0dfc4e1b71b4111}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 3rd International Informatics and Software Engineering Conference (IISEC)}
+      \field{title}{Multivariate Time Series Forecasting using ARIMAX, SARIMAX, and RNN-based Deep Learning Models on Electricity Consumption}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/IISEC56263.2022.9998301
+      \endverb
+      \keyw{Deep learning;COVID-19;Training;Energy consumption;Time series analysis;Predictive models;Data models;Energy Consumption;Multivariate Time Series;Forecasting;Deep Learning Models}
+    \endentry
+    \entry{BOLLERSLEV1986307}{article}{}
+      \name{author}{1}{}{%
+        {{hash=39f8f5a428abd62057a0152546172106}{%
+           family={Bollerslev},
+           familyi={B\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{39f8f5a428abd62057a0152546172106}
+      \strng{fullhash}{39f8f5a428abd62057a0152546172106}
+      \strng{bibnamehash}{39f8f5a428abd62057a0152546172106}
+      \strng{authorbibnamehash}{39f8f5a428abd62057a0152546172106}
+      \strng{authornamehash}{39f8f5a428abd62057a0152546172106}
+      \strng{authorfullhash}{39f8f5a428abd62057a0152546172106}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A natural generalization of the ARCH (Autoregressive Conditional Heteroskedastic) process introduced in Engle (1982) to allow for past conditional variances in the current conditional variance equation is proposed. Stationarity conditions and autocorrelation structure for this new class of parametric models are derived. Maximum likelihood estimation and testing are also considered. Finally an empirical example relating to the uncertainty of the inflation rate is presented.}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{3}
+      \field{title}{Generalized autoregressive conditional heteroskedasticity}
+      \field{volume}{31}
+      \field{year}{1986}
+      \field{pages}{307\bibrangedash 327}
+      \range{pages}{21}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0304-4076(86)90063-1
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0304407686900631
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0304407686900631
+      \endverb
+    \endentry
+    \entry{breiman2001random}{article}{}
+      \name{author}{1}{}{%
+        {{hash=132b7100417675d55d5d4d8b244f7a34}{%
+           family={Breiman},
+           familyi={B\bibinitperiod},
+           given={Leo},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{fullhash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{bibnamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorbibnamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authornamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorfullhash}{132b7100417675d55d5d4d8b244f7a34}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Random forests are a combination of tree predictors such that each tree depends on the values of a random vector sampled independently and with the same distribution for all trees in the forest. The generalization error for forests converges a.s. to a limit as the number of trees in the forest becomes large. The generalization error of a forest of tree classifiers depends on the strength of the individual trees in the forest and the correlation between them. Using a random selection of features to split each node yields error rates that compare favorably to Adaboost (Y. Freund & R. Schapire, Machine Learning: Proceedings of the Thirteenth International conference, ***, 148–156), but are more robust with respect to noise. Internal estimates monitor error, strength, and correlation and these are used to show the response to increasing the number of features used in the splitting. Internal estimates are also used to measure variable importance. These ideas are also applicable to regression.}
+      \field{issn}{1573-0565}
+      \field{journaltitle}{Machine Learning}
+      \field{number}{1}
+      \field{title}{Random Forests}
+      \field{volume}{45}
+      \field{year}{2001}
+      \field{pages}{5\bibrangedash 32}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1023/A:1010933404324
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1023/A:1010933404324
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1023/A:1010933404324
       \endverb
     \endentry
   \enddatalist

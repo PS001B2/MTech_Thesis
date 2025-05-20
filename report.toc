@@ -43,7 +43,7 @@
 \contentsline {subsection}{\numberline {3.7.2}Training Methodology}{34}{subsection.3.7.2}%
 \contentsline {subsubsection}{One-Step Prediction and Incremental Training}{35}{section*.10}%
 \contentsline {subsubsection}{Visualization of Incremental Training Process}{35}{section*.11}%
-\contentsline {section}{\numberline {3.8}GARCH for Stock Price Prediction}{35}{section.3.8}%
+\contentsline {section}{\numberline {3.8}GARCH for Stock Price Prediction}{36}{section.3.8}%
 \contentsline {subsection}{\numberline {3.8.1}Introduction to GARCH}{36}{subsection.3.8.1}%
 \contentsline {subsection}{\numberline {3.8.2}Model Implementation}{37}{subsection.3.8.2}%
 \contentsline {subsection}{\numberline {3.8.3}Integration with Existing Architectures}{37}{subsection.3.8.3}%
@@ -62,52 +62,52 @@
 \contentsline {subsection}{\numberline {3.11.3}Transformer Encoder Block}{44}{subsection.3.11.3}%
 \contentsline {subsection}{\numberline {3.11.4}Training Procedure}{45}{subsection.3.11.4}%
 \contentsline {subsection}{\numberline {3.11.5}Optimization}{45}{subsection.3.11.5}%
-\contentsline {section}{\numberline {3.12}RAGIC Architecture for Financial Time Series Forecasting}{45}{section.3.12}%
+\contentsline {section}{\numberline {3.12}RAGIC Architecture for Financial Time Series Forecasting}{46}{section.3.12}%
 \contentsline {subsection}{\numberline {3.12.1}Overview}{46}{subsection.3.12.1}%
 \contentsline {subsection}{\numberline {3.12.2}Theory and Components}{47}{subsection.3.12.2}%
 \contentsline {subsubsection}{Risk Module}{47}{section*.12}%
-\contentsline {subsubsection}{Temporal Module}{47}{section*.13}%
+\contentsline {subsubsection}{Temporal Module}{48}{section*.13}%
 \contentsline {subsubsection}{Generator and Critic}{48}{section*.14}%
-\contentsline {subsection}{\numberline {3.12.3}Training Algorithm}{48}{subsection.3.12.3}%
-\contentsline {subsection}{\numberline {3.12.4}Workflow}{48}{subsection.3.12.4}%
-\contentsline {subsection}{\numberline {3.12.5}Applications}{49}{subsection.3.12.5}%
-\contentsline {chapter}{\numberline {4}Results and Evaluation}{50}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Evaluation Metrics and Criteria}{50}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Performance of Enhanced Hybrid LSTM-RLS Architecture}{51}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Results Before and After Shift Adjustment}{51}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Performance with Multi-Feature Dataset}{52}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Performance of DNS Architecture}{53}{section.4.3}%
-\contentsline {section}{\numberline {4.4}ARIMA-LSTM Residual Framework Results}{53}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}ARIMAX Test Predictions}{54}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Final Test Predictions}{54}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Performance Metrics}{54}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Impact of RLS on Final Predictions}{55}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Multi-Feature LSTM Results}{56}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Evaluation Metrics and Analysis}{56}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Interpretation of Results}{57}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Visualization of Results}{57}{subsection.4.5.3}%
-\contentsline {section}{\numberline {4.6}GARCH Model Results}{57}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Evaluation Metrics and Performance}{58}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Residuals from ARIMAX Predictions}{58}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Visualization of Predictions}{59}{subsection.4.6.3}%
-\contentsline {section}{\numberline {4.7}Stochastic Volatility Results}{59}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Actual vs Predicted Returns}{59}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Distribution Comparison}{59}{subsection.4.7.2}%
-\contentsline {subsection}{\numberline {4.7.3}Performance Metrics}{59}{subsection.4.7.3}%
-\contentsline {section}{\numberline {4.8}Ensemble Learning Results}{60}{section.4.8}%
-\contentsline {subsection}{\numberline {4.8.1}Actual vs Predicted Returns}{60}{subsection.4.8.1}%
-\contentsline {subsection}{\numberline {4.8.2}Performance Metrics}{61}{subsection.4.8.2}%
-\contentsline {subsection}{\numberline {4.8.3}Base Model Comparison}{61}{subsection.4.8.3}%
-\contentsline {section}{\numberline {4.9}Transformer GAN Results}{61}{section.4.9}%
-\contentsline {subsection}{\numberline {4.9.1}Actual vs Predicted Returns}{62}{subsection.4.9.1}%
-\contentsline {section}{\numberline {4.10}RAGIC Framework Results}{62}{section.4.10}%
-\contentsline {subsection}{\numberline {4.10.1}Actual vs Predicted Returns}{62}{subsection.4.10.1}%
-\contentsline {section}{\numberline {4.11}Results Comparison}{63}{section.4.11}%
-\contentsline {chapter}{\numberline {5}Discussions and Challenges}{65}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Key Findings}{65}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Challenges and Model Refinement}{67}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Conclusion and Future Direction}{70}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Conclusion}{70}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Future Direction}{71}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Publications}{72}{chapter.7}%
-\contentsline {chapter}{Bibliography}{74}{section*.21}%
+\contentsline {subsection}{\numberline {3.12.3}Training Algorithm}{49}{subsection.3.12.3}%
+\contentsline {subsection}{\numberline {3.12.4}Workflow}{49}{subsection.3.12.4}%
+\contentsline {subsection}{\numberline {3.12.5}Applications}{50}{subsection.3.12.5}%
+\contentsline {chapter}{\numberline {4}Results and Evaluation}{51}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Evaluation Metrics and Criteria}{51}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Performance of Enhanced Hybrid LSTM-RLS Architecture}{52}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Results Before and After Shift Adjustment}{52}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Performance with Multi-Feature Dataset}{53}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Performance of DNS Architecture}{54}{section.4.3}%
+\contentsline {section}{\numberline {4.4}ARIMA-LSTM Residual Framework Results}{55}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}ARIMAX Test Predictions}{55}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Final Test Predictions}{55}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Performance Metrics}{56}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Impact of RLS on Final Predictions}{57}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Multi-Feature LSTM Results}{57}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Evaluation Metrics and Analysis}{57}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Interpretation of Results}{58}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Visualization of Results}{58}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.6}GARCH Model Results}{59}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Evaluation Metrics and Performance}{59}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Residuals from ARIMAX Predictions}{60}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Visualization of Predictions}{60}{subsection.4.6.3}%
+\contentsline {section}{\numberline {4.7}Stochastic Volatility Results}{61}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Actual vs Predicted Returns}{61}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Distribution Comparison}{61}{subsection.4.7.2}%
+\contentsline {subsection}{\numberline {4.7.3}Performance Metrics}{61}{subsection.4.7.3}%
+\contentsline {section}{\numberline {4.8}Ensemble Learning Results}{62}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Actual vs Predicted Returns}{62}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Performance Metrics}{62}{subsection.4.8.2}%
+\contentsline {subsection}{\numberline {4.8.3}Base Model Comparison}{62}{subsection.4.8.3}%
+\contentsline {section}{\numberline {4.9}Transformer GAN Results}{63}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Actual vs Predicted Returns}{63}{subsection.4.9.1}%
+\contentsline {section}{\numberline {4.10}RAGIC Framework Results}{64}{section.4.10}%
+\contentsline {subsection}{\numberline {4.10.1}Actual vs Predicted Returns}{64}{subsection.4.10.1}%
+\contentsline {section}{\numberline {4.11}Results Comparison}{64}{section.4.11}%
+\contentsline {chapter}{\numberline {5}Discussions and Challenges}{66}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Key Findings}{66}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Challenges and Model Refinement}{68}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future Direction}{71}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Conclusion}{71}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Future Direction}{72}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Publications}{73}{chapter.7}%
+\contentsline {chapter}{Bibliography}{75}{section*.21}%
