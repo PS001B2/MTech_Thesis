@@ -58,16 +58,16 @@
 \contentsline {subsection}{\numberline {3.10.4}Algorithm Flow}{42}{subsection.3.10.4}%
 \contentsline {section}{\numberline {3.11}Transformer-based GAN Architecture}{43}{section.3.11}%
 \contentsline {subsection}{\numberline {3.11.1}Generator Architecture}{43}{subsection.3.11.1}%
-\contentsline {subsection}{\numberline {3.11.2}Discriminator Architecture}{43}{subsection.3.11.2}%
+\contentsline {subsection}{\numberline {3.11.2}Discriminator Architecture}{44}{subsection.3.11.2}%
 \contentsline {subsection}{\numberline {3.11.3}Transformer Encoder Block}{44}{subsection.3.11.3}%
-\contentsline {subsection}{\numberline {3.11.4}Training Procedure}{44}{subsection.3.11.4}%
+\contentsline {subsection}{\numberline {3.11.4}Training Procedure}{45}{subsection.3.11.4}%
 \contentsline {subsection}{\numberline {3.11.5}Optimization}{45}{subsection.3.11.5}%
 \contentsline {section}{\numberline {3.12}RAGIC Architecture for Financial Time Series Forecasting}{45}{section.3.12}%
-\contentsline {subsection}{\numberline {3.12.1}Overview}{45}{subsection.3.12.1}%
-\contentsline {subsection}{\numberline {3.12.2}Theory and Components}{46}{subsection.3.12.2}%
-\contentsline {subsubsection}{Risk Module}{46}{section*.12}%
+\contentsline {subsection}{\numberline {3.12.1}Overview}{46}{subsection.3.12.1}%
+\contentsline {subsection}{\numberline {3.12.2}Theory and Components}{47}{subsection.3.12.2}%
+\contentsline {subsubsection}{Risk Module}{47}{section*.12}%
 \contentsline {subsubsection}{Temporal Module}{47}{section*.13}%
-\contentsline {subsubsection}{Generator and Critic}{47}{section*.14}%
+\contentsline {subsubsection}{Generator and Critic}{48}{section*.14}%
 \contentsline {subsection}{\numberline {3.12.3}Training Algorithm}{48}{subsection.3.12.3}%
 \contentsline {subsection}{\numberline {3.12.4}Workflow}{48}{subsection.3.12.4}%
 \contentsline {subsection}{\numberline {3.12.5}Applications}{49}{subsection.3.12.5}%

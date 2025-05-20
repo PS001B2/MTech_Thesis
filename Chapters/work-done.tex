@@ -189,7 +189,7 @@ The architecture process involves the following steps:
     
     \item \textbf{Sequence creation for LSTM:}
     \begin{itemize}
-        \item Sequences of historical stock prices were created as inputs for training the LSTM model.
+        \item Sequences of historical stock prices were created as inputs for training the LSTM \cite{staudemeyer_understanding_2019} model.
     \end{itemize}
     
     \item \textbf{Split dataset into training and testing set}
@@ -351,7 +351,7 @@ Steps include:
 \section{ARIMAX-LSTM Residual Integration Framework}
 \subsection{ARIMAX-LSTM Hybridization}
 
-The initial approach involved integrating the capability of ARIMA to model linear patterns and LSTM's strength in capturing non-linear relationships. However, due to suboptimal performance, the ARIMA model was replaced with ARIMAX for handling the linear component while LSTM continued to process residuals. The final prediction was obtained by integrating the outputs of these two models. The revised framework consists of:
+The initial approach involved integrating the capability of ARIMA to model linear patterns and LSTM's strength in capturing non-linear relationships. However, due to suboptimal performance, the ARIMA model was replaced with ARIMAX \cite{9998301} for handling the linear component while LSTM continued to process residuals. The final prediction was obtained by integrating the outputs of these two models. The revised framework consists of:
 
 \begin{itemize}
     \item \textbf{ARIMAX model for linear trends:} Unlike ARIMA, ARIMAX incorporates external features alongside past values to better capture the linear component of stock prices.
@@ -500,7 +500,7 @@ The incremental training process is visualized in Figure~\ref{fig:incremental_tr
 
 \subsection{Introduction to GARCH}
 
-The Generalized Autoregressive Conditional Heteroskedasticity (GARCH) model is widely used in financial time series modeling due to its ability to capture volatility clustering. In stock markets, volatility tends to persist over time, meaning that periods of high volatility are often followed by more volatile periods, and similarly for low volatility. Since the target variable in this study is \textbf{daily returns}, which inherently exhibits volatility characteristics, GARCH is a suitable choice for modeling this behavior.
+The Generalized Autoregressive Conditional Heteroskedasticity (GARCH) \cite{BOLLERSLEV1986307} model is widely used in financial time series modeling due to its ability to capture volatility clustering. In stock markets, volatility tends to persist over time, meaning that periods of high volatility are often followed by more volatile periods, and similarly for low volatility. Since the target variable in this study is \textbf{daily returns}, which inherently exhibits volatility characteristics, GARCH is a suitable choice for modeling this behavior.
 
 GARCH is particularly relevant to this study because it models conditional variance, providing insights into future uncertainty levels. By leveraging GARCH, we aim to enhance stock return prediction by explicitly modeling the variance dynamics, which traditional models might overlook.
 
@@ -612,7 +612,7 @@ Model parameters are estimated by minimizing the negative log-likelihood of the 
 This model is an ensemble learning framework designed to improve predictive accuracy by combining multiple base regressors and modeling their outputs using a neural network-based MetaLearner. The architecture consists of:
 
 \begin{enumerate}
-    \item \textbf{Base Models:} Four tree-based regressors (XGBoost, LightGBM, CatBoost, RandomForest) and a time series model (ARIMAX).
+    \item \textbf{Base Models:} Four tree-based regressors (XGBoost, LightGBM, CatBoost, RandomForest \cite{breiman2001random}) and a time series model (ARIMAX).
     \item \textbf{Meta Feature Generator:} Uses predictions from base models and their rolling MAE to construct meta features.
     \item \textbf{MetaLearner:} A sequence-based LSTM model that learns to optimally combine meta features to predict the final target.
 \end{enumerate}
@@ -706,8 +706,11 @@ The output of the MetaLearner is given by:
 
 \section{Transformer-based GAN Architecture}
 
-In this section, we propose a sequence-to-one forecasting framework inspired by the TTS-GAN architecture. The model consists of a Generator and a Discriminator, both utilizing Transformer Encoder blocks to process multivariate sequential data. The goal is to generate a future return value based on historical sequences, and adversarially train the model to ensure realistic output generation.
+In this section, we propose a sequence-to-one forecasting framework inspired by the TTS-GAN architecture as proposed in \cite{yoon_time-series_2019}. The model consists of a Generator and a Discriminator, both built using Transformer Encoder blocks to effectively process multivariate sequential data. The architecture leverages self-attention mechanisms to capture temporal dependencies and contextual relationships across multiple input features.
 
+The Generator takes a fixed-length historical input sequence and outputs a single predicted return value for the next time step. The Discriminator, in turn, distinguishes between the real future value and the one generated by the Generator, thereby adversarially training the system to enhance the quality and realism of predictions.
+
+This Transformer-based GAN approach enables more robust modeling of complex nonlinear patterns in financial time series data and shows promise in generating plausible and sharp return estimates for short-term stock price prediction.
 \subsection{Generator Architecture}
 
 The Generator $G$ takes as input a multivariate sequence $X \in \mathbb{R}^{T \times d}$ of length $T=60$ with $d=12$ features and predicts a scalar output $\hat{y}_{t+1} \in \mathbb{R}$. The input is first linearly projected into an embedding space and combined with learned positional encodings:
