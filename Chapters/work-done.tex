@@ -359,6 +359,14 @@ The initial approach involved integrating the capability of ARIMA to model linea
     \item \textbf{Final integration:} Predictions from both models are combined to enhance accuracy.
 \end{itemize}
 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.85\textwidth]{Images/Residuals.pdf}
+    \caption{ARIMAX-LSTM Residual Integration Framework Architecture}
+    \label{fig:arimax_lstm_architecture}
+\end{figure}
+
 \subsection{Challenges and Model Refinement}
 
 Initially, the ARIMA-LSTM hybrid model was tested; however, its performance was unsatisfactory. The residuals did not capture sufficient differences between the original close price values and ARIMA’s linear predictions, leading to subpar results. 

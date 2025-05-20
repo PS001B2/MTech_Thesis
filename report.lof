@@ -11,10 +11,11 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Flow diagram of Multi-Feature Hybrid LSTM-RLS implementation.}}{28}{figure.3.8}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces RLS input sequence construction using LSTM outputs.}}{29}{figure.3.9}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces DNS Architecture}}{31}{figure.3.10}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Visualization of the Incremental Training Process for Multi-Feature LSTM Forecasting Framework.}}{36}{figure.3.11}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Custom Ensemble Learning Architecture}}{41}{figure.3.12}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Transformer-based GAN architecture showing the structure of the Generator and Discriminator.}}{46}{figure.3.13}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces RAGIC Architecture diagram \blx@tocontentsinit {0}\cite {gu_ragic_2025}.}}{48}{figure.3.14}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces ARIMAX-LSTM Residual Integration Framework Architecture}}{32}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Visualization of the Incremental Training Process for Multi-Feature LSTM Forecasting Framework.}}{36}{figure.3.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Custom Ensemble Learning Architecture}}{42}{figure.3.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Transformer-based GAN architecture showing the structure of the Generator and Discriminator.}}{46}{figure.3.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces RAGIC Architecture diagram \blx@tocontentsinit {0}\cite {gu_ragic_2025}.}}{48}{figure.3.15}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Original vs. Predicted Stock Prices}}{54}{figure.4.1}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Returns: Original vs. Predicted Prices}}{54}{figure.4.2}%

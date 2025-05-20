@@ -1,6 +1,6 @@
 \contentsline {chapter}{Abstract}{iv}{chapter*.2}%
 \contentsline {chapter}{List of Figures}{xiii}{chapter*.4}%
-\contentsline {chapter}{List of Tables}{xiii}{chapter*.5}%
+\contentsline {chapter}{List of Tables}{xiv}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Background and Motivation}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Objectives of the Study}{2}{section.1.2}%
@@ -37,37 +37,37 @@
 \contentsline {subsection}{\numberline {3.6.2}Challenges and Model Refinement}{32}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Integration of RLS into Residuals Framework Output}{33}{subsection.3.6.3}%
 \contentsline {subsubsection}{RLS Input Sequence Construction}{33}{section*.8}%
-\contentsline {subsubsection}{Impact of RLS on the Residuals Architecture}{33}{section*.9}%
+\contentsline {subsubsection}{Impact of RLS on the Residuals Architecture}{34}{section*.9}%
 \contentsline {section}{\numberline {3.7}Multi-Feature LSTM Forecasting Framework}{34}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Overview and Objectives}{34}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Training Methodology}{34}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.2}Training Methodology}{35}{subsection.3.7.2}%
 \contentsline {subsubsection}{One-Step Prediction and Incremental Training}{35}{section*.10}%
-\contentsline {subsubsection}{Visualization of Incremental Training Process}{35}{section*.11}%
-\contentsline {section}{\numberline {3.8}GARCH for Stock Price Prediction}{36}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Introduction to GARCH}{36}{subsection.3.8.1}%
+\contentsline {subsubsection}{Visualization of Incremental Training Process}{36}{section*.11}%
+\contentsline {section}{\numberline {3.8}GARCH for Stock Price Prediction}{37}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Introduction to GARCH}{37}{subsection.3.8.1}%
 \contentsline {subsection}{\numberline {3.8.2}Model Implementation}{37}{subsection.3.8.2}%
-\contentsline {subsection}{\numberline {3.8.3}Integration with Existing Architectures}{37}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.3}Integration with Existing Architectures}{38}{subsection.3.8.3}%
 \contentsline {section}{\numberline {3.9}Stochastic Volatility Model with Gaussian Mixture Observation}{38}{section.3.9}%
-\contentsline {subsection}{\numberline {3.9.1}Model Specification}{38}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.1}Model Specification}{39}{subsection.3.9.1}%
 \contentsline {subsection}{\numberline {3.9.2}Filtering Procedure}{39}{subsection.3.9.2}%
 \contentsline {subsection}{\numberline {3.9.3}Parameter Estimation}{40}{subsection.3.9.3}%
-\contentsline {section}{\numberline {3.10}Custom Ensemble Learning Architecture}{40}{section.3.10}%
-\contentsline {subsection}{\numberline {3.10.1}Theory and Architecture Overview}{40}{subsection.3.10.1}%
+\contentsline {section}{\numberline {3.10}Custom Ensemble Learning Architecture}{41}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Theory and Architecture Overview}{41}{subsection.3.10.1}%
 \contentsline {subsection}{\numberline {3.10.2}Meta Feature Representation}{41}{subsection.3.10.2}%
-\contentsline {subsection}{\numberline {3.10.3}MetaLearner Model}{42}{subsection.3.10.3}%
-\contentsline {subsection}{\numberline {3.10.4}Algorithm Flow}{42}{subsection.3.10.4}%
-\contentsline {section}{\numberline {3.11}Transformer-based GAN Architecture}{43}{section.3.11}%
-\contentsline {subsection}{\numberline {3.11.1}Generator Architecture}{44}{subsection.3.11.1}%
-\contentsline {subsection}{\numberline {3.11.2}Discriminator Architecture}{44}{subsection.3.11.2}%
+\contentsline {subsection}{\numberline {3.10.3}MetaLearner Model}{43}{subsection.3.10.3}%
+\contentsline {subsection}{\numberline {3.10.4}Algorithm Flow}{43}{subsection.3.10.4}%
+\contentsline {section}{\numberline {3.11}Transformer-based GAN Architecture}{44}{section.3.11}%
+\contentsline {subsection}{\numberline {3.11.1}Generator Architecture}{45}{subsection.3.11.1}%
+\contentsline {subsection}{\numberline {3.11.2}Discriminator Architecture}{45}{subsection.3.11.2}%
 \contentsline {subsection}{\numberline {3.11.3}Transformer Encoder Block}{45}{subsection.3.11.3}%
-\contentsline {subsection}{\numberline {3.11.4}Training Procedure}{45}{subsection.3.11.4}%
+\contentsline {subsection}{\numberline {3.11.4}Training Procedure}{47}{subsection.3.11.4}%
 \contentsline {subsection}{\numberline {3.11.5}Optimization}{47}{subsection.3.11.5}%
 \contentsline {section}{\numberline {3.12}RAGIC Architecture for Financial Time Series Forecasting}{47}{section.3.12}%
-\contentsline {subsection}{\numberline {3.12.1}Overview}{47}{subsection.3.12.1}%
-\contentsline {subsection}{\numberline {3.12.2}Theory and Components}{48}{subsection.3.12.2}%
-\contentsline {subsubsection}{Risk Module}{48}{section*.12}%
+\contentsline {subsection}{\numberline {3.12.1}Overview}{48}{subsection.3.12.1}%
+\contentsline {subsection}{\numberline {3.12.2}Theory and Components}{49}{subsection.3.12.2}%
+\contentsline {subsubsection}{Risk Module}{49}{section*.12}%
 \contentsline {subsubsection}{Temporal Module}{49}{section*.13}%
-\contentsline {subsubsection}{Generator and Critic}{49}{section*.14}%
+\contentsline {subsubsection}{Generator and Critic}{50}{section*.14}%
 \contentsline {subsection}{\numberline {3.12.3}Training Algorithm}{50}{subsection.3.12.3}%
 \contentsline {subsection}{\numberline {3.12.4}Workflow}{50}{subsection.3.12.4}%
 \contentsline {subsection}{\numberline {3.12.5}Applications}{51}{subsection.3.12.5}%
