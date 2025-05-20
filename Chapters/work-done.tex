@@ -1,8 +1,136 @@
 \chapter{Model Architectures for Stock Price Prediction}
 
 \section{Overview of Proposed Architectures}
-This chapter presents the various architectures and frameworks explored for stock price prediction, from initial experiments during the summer internship to advanced hybrid and feature-rich frameworks developed later. The focus is on improving prediction accuracy, addressing issues like lag, and incorporating domain-specific features. A systematic approach to model building, including feature engineering and model integration, is discussed.
 
+This chapter presents a comprehensive suite of model architectures and frameworks developed for stock price prediction, spanning from initial exploratory models built during the early phases of research to sophisticated hybrid and deep learning solutions designed for high accuracy and robustness. The progression reflects a systematic effort to enhance predictive performance, resolve issues such as prediction lag, and effectively leverage domain-specific knowledge through advanced feature engineering and integration techniques.
+
+The chapter begins with a detailed description of the dataset and the preprocessing strategy adopted, including steps like data cleaning, alignment, normalization, and feature selection using statistical methods such as \textit{SelectKBest}. Feature engineering approaches to improve input signal quality and predictive power are also discussed.
+
+Following this, various model architectures are presented:
+
+\begin{itemize}
+    \item \textbf{Hybrid LSTM-RLS Architecture:} A novel integration of LSTM for sequence modeling and Recursive Least Squares (RLS) for refining predictions.
+    
+    \item \textbf{Enhanced Hybrid LSTM-RLS:} A more feature-rich and modular extension, including sequence generation for RLS and multi-feature incorporation.
+    
+    \item \textbf{Dual Network Solution (DNS):} A parallel processing architecture designed to leverage both trend and residual components for improved performance.
+    
+    \item \textbf{ARIMAX-LSTM Residual Integration:} A hybrid statistical-deep learning model combining ARIMAX for linear dependencies and LSTM for capturing non-linear residual dynamics.
+    
+    \item \textbf{Multi-Feature LSTM Forecasting:} A deep learning framework that utilizes a broader feature set and standardized preprocessing for robust return prediction.
+    
+    \item \textbf{GARCH-Based Volatility Forecasting:} A statistical approach focusing on volatility modeling and its integration with deep learning architectures.
+    
+    \item \textbf{Stochastic Volatility with Gaussian Mixture Observations:} A custom probabilistic filtering model capturing latent volatility states using mixture distributions.
+    
+    \item \textbf{Custom Ensemble Learning Architecture:} An ensemble system combining multiple base learners (e.g., ARIMAX, XGBoost, CatBoost) with an LSTM-based MetaLearner to enhance generalization.
+    
+    \item \textbf{Transformer-based GAN for Time Series:} A generative adversarial framework incorporating Transformer encoders for sequential data generation and discrimination.
+    
+    \item \textbf{RAGIC Architecture:} A state of the art multi-module architecture designed for financial time series prediction, incorporating temporal modeling, attention based risk modules, and GAN-based critics.
+\end{itemize}
+
+Each architecture is accompanied by its design rationale, workflow diagrams, implementation details, training methodology, and integration strategy. Collectively, these models represent a holistic approach to modern financial time series forecasting, combining classical statistical tools, deep learning, attention mechanisms, and generative modeling.
+
+\newpage
+\section{Data Description and Preprocessing}
+\subsection{Dataset Overview}
+The dataset used in this study was obtained using the \texttt{yfinance} \cite{yahoo_nifty50_history} API and spans from January 1, 2014, to April 30, 2025. The primary target variable is the daily return of the NSEI index. In a few architectures, such as the DNS and Transformer-based models, the target is the close price, for which additional preprocessing was applied.
+
+The dataset includes 12 input features:
+\begin{itemize}
+    \item 5, 15, 30, and 60-day returns of the open-close average
+    \item 5, 15, 30, and 60-day returns of the high-low average
+    \item On-Balance Volume (OBV)
+    \item Relative Strength Index (RSI)
+    \item Daily return of INR/USD exchange rate
+    \item India Volatility Index (VIX) \cite{nse_vix}
+\end{itemize}
+
+\subsection{Data Cleaning and Alignment}
+The \texttt{yfinance} data was clean and contained no missing values. For the INR/USD forex time series, values were filtered to retain only dates corresponding to valid NSEI trading days, ensuring temporal alignment across all features.
+
+\subsection{Train-Validation-Test Split}
+The data was split chronologically, preserving its sequential nature without any shuffling. The proportions for training, validation, and testing were set at 85\%, 10\%, and 5\% respectively.
+
+\subsection{Preprocessing Strategy}
+Two distinct preprocessing pipelines were followed based on the target variable:
+\begin{itemize}
+    \item \textbf{When the target is return-based:} No preprocessing was applied to the target or return features. These were used in their raw form to maintain interpretability.
+    \item \textbf{When the target is the close price:}
+    \begin{itemize}
+        \item A \textbf{log transformation} was applied to reduce skewness and stabilize variance.
+        \item \textbf{StandardScaler} was used to normalize the log-transformed values.
+        \item A scaling factor of 2.5 was applied post-\texttt{tanh} activation to expand the output range to $[-2.5, 2.5]$.
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{Images/distribution_plot.pdf}
+    \caption{Distribution plot of raw close values, log-transformed close values, and scaled log-transformed close values.}
+    \label{fig:distribution_plot}
+\end{figure}
+
+\subsection{Feature Engineering Techniques}
+This forecasting framework incorporates a variety of technical indicators and statistical transformations, including return-based features, RSI, OBV, and volatility indices. All input features were normalized to ensure consistency across different magnitudes and units.
+
+The distribution of all features after normalization is depicted in Figure~\ref{fig:feature_distributions}, which illustrates their range and variability.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/feature_distributions.pdf}
+    \caption{Distribution plots of all features used in the forecasting framework.}
+    \label{fig:feature_distributions}
+\end{figure}
+
+The correlation matrix in Figure~\ref{fig:correlation_plot} highlights the interdependencies among the input variables and their relationships with the target variable.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/correlation_plot.pdf}
+    \caption{Correlation matrix of all features in the dataset.}
+    \label{fig:correlation_plot}
+\end{figure}
+
+To examine underlying temporal components of the target, a seasonal decomposition of the NSEI close price series was performed. The result, shown in Figure~\ref{fig:seasonal_decomposition}, presents the observed trend, seasonal, and residual elements.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/seasonal_decomposition.pdf}
+    \caption{Seasonal decomposition of NSEI close values.}
+    \label{fig:seasonal_decomposition}
+\end{figure}
+
+\subsection{Feature Selection Using SelectKBest}
+To improve model efficiency and reduce overfitting, feature selection was performed using the SelectKBest method with \textsf{f\_regression}. Table~\ref{tab:feature_importance} presents the computed importance scores for each feature.
+
+\begin{table}[h!]
+\centering
+\caption{Feature Importance Scores using SelectKBest}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Feature} & \textbf{Score} \\ \hline
+INDIAVIX\_1D     & 1125.250       \\ \hline
+RSI\_Normalized  & 292.775        \\ \hline
+Open\_Close\_5d  & 276.985        \\ \hline
+High\_Low\_5d    & 268.947        \\ \hline
+High\_Low\_15d   & 79.877         \\ \hline
+Open\_Close\_15d & 79.634         \\ \hline
+INRUSD\_X        & 42.358         \\ \hline
+Open\_Close\_30d & 35.719         \\ \hline
+High\_Low\_30d   & 35.260         \\ \hline
+Open\_Close\_60d & 16.825         \\ \hline
+High\_Low\_60d   & 16.236         \\ \hline
+OBV\_Normalized  & 0.570          \\ \hline
+\end{tabular}
+\label{tab:feature_importance}
+\end{table}
+
+\subsection{Feature Refinement}
+Features with low predictive value—such as OBV\_Normalized and long-horizon returns (30-day and 60-day)—were removed. This refinement step led to improved training efficiency and reduced model complexity, without compromising forecast accuracy.
+
+\newpage
 \section{Hybrid LSTM-RLS Architecture}
 
 \subsection{Workflow and Design}
@@ -188,37 +316,37 @@ Steps include:
     \item \textbf{Prediction refinement:} Network 2 uses the output of Network 1 to generate lag-free predictions.
 \end{enumerate}
 
-\section{Advanced Data Preprocessing for Enhanced\\ Model Performance}
-\subsection{Challenges in Scaling and Activation}
-During the development of the stock price prediction models, challenges arose when scaling the data using traditional normalization techniques such as MinMaxScaler. This approach limits the range of predictions to the maximum value observed during training, potentially capping future predictions. To address this issue, an alternative preprocessing technique was introduced, which involves:
-\begin{itemize}
-    \item \textbf{Log Transformation:} Applying a logarithmic transformation to the close price values to reduce large variations and stabilize the data.
-    \item \textbf{Standardization:} Standardizing the log-transformed values to ensure that the data is centered and scaled, allowing it to be processed effectively by the model.
-\end{itemize}
+% \section{Advanced Data Preprocessing for Enhanced\\ Model Performance}
+% \subsection{Challenges in Scaling and Activation}
+% During the development of the stock price prediction models, challenges arose when scaling the data using traditional normalization techniques such as MinMaxScaler. This approach limits the range of predictions to the maximum value observed during training, potentially capping future predictions. To address this issue, an alternative preprocessing technique was introduced, which involves:
+% \begin{itemize}
+%     \item \textbf{Log Transformation:} Applying a logarithmic transformation to the close price values to reduce large variations and stabilize the data.
+%     \item \textbf{Standardization:} Standardizing the log-transformed values to ensure that the data is centered and scaled, allowing it to be processed effectively by the model.
+% \end{itemize}
 
-After preprocessing, the resulting data ranged approximately between $-2$ and $2$. To handle this range, the \texttt{tanh} activation function was selected for its natural prediction range of $[-1, 1]$. However, to ensure flexibility in predictions beyond this range:
-\begin{itemize}
-    \item A multiplier of $2.5$ was applied after the \texttt{tanh} activation function. This adjustment extended the prediction range to $[-2.5, 2.5]$, providing additional room for extreme values without capping predictions.
-\end{itemize}
+% After preprocessing, the resulting data ranged approximately between $-2$ and $2$. To handle this range, the \texttt{tanh} activation function was selected for its natural prediction range of $[-1, 1]$. However, to ensure flexibility in predictions beyond this range:
+% \begin{itemize}
+%     \item A multiplier of $2.5$ was applied after the \texttt{tanh} activation function. This adjustment extended the prediction range to $[-2.5, 2.5]$, providing additional room for extreme values without capping predictions.
+% \end{itemize}
 
-Figure~\ref{fig:distribution_plot} shows the distribution plot of the raw close values, log-transformed close values, and scaled log-transformed values. This plot depicts how the preprocessing steps have allowed the data to fall in a range that the activation function can handle effectively.
+% Figure~\ref{fig:distribution_plot} shows the distribution plot of the raw close values, log-transformed close values, and scaled log-transformed values. This plot depicts how the preprocessing steps have allowed the data to fall in a range that the activation function can handle effectively.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{Images/distribution_plot.pdf}
-    \caption{Distribution plot of raw close values, log-transformed close values, and scaled log-transformed close values.}
-    \label{fig:distribution_plot}
-\end{figure}
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{Images/distribution_plot.pdf}
+%     \caption{Distribution plot of raw close values, log-transformed close values, and scaled log-transformed close values.}
+%     \label{fig:distribution_plot}
+% \end{figure}
 
-\subsection{Application in DNS Architecture}
-This preprocessing technique, as explained in Section 3.5.1 was used in the concept of the Dual Network Solution Architecture. Using log transformation, standardization, and modified range of activation functions,
-the DNS model represents both linear and nonlinear parts of
-stock price movements.
+% \subsection{Application in DNS Architecture}
+% This preprocessing technique, as explained in Section 3.5.1 was used in the concept of the Dual Network Solution Architecture. Using log transformation, standardization, and modified range of activation functions,
+% the DNS model represents both linear and nonlinear parts of
+% stock price movements.
 
-This preprocess step was crucial in enhancing the prediction accuracy of the model.
-racy of the DNS architecture, so that it could support a greater number of values
-While the predictions of strength were retained, the changes had provided the basis for
-groundwork for subsequent enhancements in model design and integration.
+% This preprocess step was crucial in enhancing the prediction accuracy of the model.
+% racy of the DNS architecture, so that it could support a greater number of values
+% While the predictions of strength were retained, the changes had provided the basis for
+% groundwork for subsequent enhancements in model design and integration.
 
 \section{ARIMAX-LSTM Residual Integration Framework}
 \subsection{ARIMAX-LSTM Hybridization}
@@ -309,64 +437,64 @@ The incremental training process is visualized in Figure~\ref{fig:incremental_tr
     \label{fig:incremental_training}
 \end{figure}
 
-\subsection{Feature Engineering Techniques}
-This framework incorporates multiple features, such as returns, RSI, and OBV, to enhance predictive accuracy. All features were normalized for consistency. 
+% \subsection{Feature Engineering Techniques}
+% This framework incorporates multiple features, such as returns, RSI, and OBV, to enhance predictive accuracy. All features were normalized for consistency. 
 
-The distribution of all features in the dataset is shown in Figure~\ref{fig:feature_distributions}. This plot highlights the range and variability of each feature, demonstrating the effectiveness of normalization.
+% The distribution of all features in the dataset is shown in Figure~\ref{fig:feature_distributions}. This plot highlights the range and variability of each feature, demonstrating the effectiveness of normalization.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{Images/feature_distributions.pdf}
-    \caption{Distribution plots of all features used in the forecasting framework.}
-    \label{fig:feature_distributions}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{Images/feature_distributions.pdf}
+%     \caption{Distribution plots of all features used in the forecasting framework.}
+%     \label{fig:feature_distributions}
+% \end{figure}
 
-Additionally, the correlation matrix for all features is displayed in Figure~\ref{fig:correlation_plot}. This plot provides insights into feature interdependencies and the strength of their relationships with the target variable.
+% Additionally, the correlation matrix for all features is displayed in Figure~\ref{fig:correlation_plot}. This plot provides insights into feature interdependencies and the strength of their relationships with the target variable.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{Images/correlation_plot.pdf}
-    \caption{Correlation matrix of all features in the dataset.}
-    \label{fig:correlation_plot}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{Images/correlation_plot.pdf}
+%     \caption{Correlation matrix of all features in the dataset.}
+%     \label{fig:correlation_plot}
+% \end{figure}
 
-Finally, Figure~\ref{fig:seasonal_decomposition} presents the seasonal decomposition plot of NSEI close values, illustrating the observed trend, seasonality, and residual components. This visualization assists in understanding the underlying temporal patterns of the target variable.
+% Finally, Figure~\ref{fig:seasonal_decomposition} presents the seasonal decomposition plot of NSEI close values, illustrating the observed trend, seasonality, and residual components. This visualization assists in understanding the underlying temporal patterns of the target variable.
 
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=\textwidth]{Images/seasonal_decomposition.pdf}
-    \caption{Seasonal decomposition of NSEI close values.}
-    \label{fig:seasonal_decomposition}
-\end{figure}
+% \begin{figure}[h!]
+%     \centering
+%     \includegraphics[width=\textwidth]{Images/seasonal_decomposition.pdf}
+%     \caption{Seasonal decomposition of NSEI close values.}
+%     \label{fig:seasonal_decomposition}
+% \end{figure}
 
-\subsection{Feature Selection Using SelectKBest}
-Feature selection was performed using the SelectKBest method with \textsf{f\_regression}. The feature importance scores are presented in Table~\ref{tab:feature_importance}.
+% \subsection{Feature Selection Using SelectKBest}
+% Feature selection was performed using the SelectKBest method with \textsf{f\_regression}. The feature importance scores are presented in Table~\ref{tab:feature_importance}.
 
-\begin{table}[h!]
-\centering
-\caption{Feature Importance Scores using SelectKBest}
-\begin{tabular}{|l|c|}
-\hline
-\textbf{Feature} & \textbf{Score} \\ \hline
-INDIAVIX\_1D     & 1125.250181    \\ \hline
-RSI\_Normalized  & 292.775295     \\ \hline
-Open\_Close\_5d  & 276.984547     \\ \hline
-High\_Low\_5d    & 268.947328     \\ \hline
-High\_Low\_15d   & 79.876745      \\ \hline
-Open\_Close\_15d & 79.634278      \\ \hline
-INRUSD\_X        & 42.357608      \\ \hline
-Open\_Close\_30d & 35.719346      \\ \hline
-High\_Low\_30d   & 35.259659      \\ \hline
-Open\_Close\_60d & 16.824506      \\ \hline
-High\_Low\_60d   & 16.235917      \\ \hline
-OBV\_Normalized  & 0.570088       \\ \hline
-\end{tabular}
+% \begin{table}[h!]
+% \centering
+% \caption{Feature Importance Scores using SelectKBest}
+% \begin{tabular}{|l|c|}
+% \hline
+% \textbf{Feature} & \textbf{Score} \\ \hline
+% INDIAVIX\_1D     & 1125.250181    \\ \hline
+% RSI\_Normalized  & 292.775295     \\ \hline
+% Open\_Close\_5d  & 276.984547     \\ \hline
+% High\_Low\_5d    & 268.947328     \\ \hline
+% High\_Low\_15d   & 79.876745      \\ \hline
+% Open\_Close\_15d & 79.634278      \\ \hline
+% INRUSD\_X        & 42.357608      \\ \hline
+% Open\_Close\_30d & 35.719346      \\ \hline
+% High\_Low\_30d   & 35.259659      \\ \hline
+% Open\_Close\_60d & 16.824506      \\ \hline
+% High\_Low\_60d   & 16.235917      \\ \hline
+% OBV\_Normalized  & 0.570088       \\ \hline
+% \end{tabular}
 
-\label{tab:feature_importance}
-\end{table}
+% \label{tab:feature_importance}
+% \end{table}
 
-\subsection{Feature Refinement}
-Low-importance features such as OBV\_Normalized and 30-day/60-day returns were dropped. The refined feature set ensured better model performance with reduced complexity.
+% \subsection{Feature Refinement}
+% Low-importance features such as OBV\_Normalized and 30-day/60-day returns were dropped. The refined feature set ensured better model performance with reduced complexity.
 
 \section{GARCH for Stock Price Prediction}
 

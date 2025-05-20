@@ -381,29 +381,29 @@ Figure~\ref{fig:ragic_actual_vs_pred} compares the predicted returns from the RA
     \label{tab:all_model_comparison}
     \begin{tabular}{|l|c|c|}
     \hline
-    \textbf{Model} & \textbf{RMSE} & \textbf{R\textsuperscript{2} Score} \\ \hline
+    \textbf{Model (Target)} & \textbf{RMSE} & \textbf{R\textsuperscript{2} Score} \\ \hline
     
     LSTM-RLS (Daily Returns) & 0.76\% & -0.0636 \\ \hline
     LSTM-RLS (Weekly Returns) & 1.44\% & -0.038 \\ \hline
     LSTM-RLS (Daily Close) & 161.8935 & 0.9956 \\ \hline
-    LSTM-RLS (Shifted Daily Returns) & 0.24\% & -- \\ \hline
-    LSTM-RLS (Multi-Feature Returns) & 0.91\% & -0.061 \\ \hline
+    LSTM-RLS, Shifted (Returns) & 0.24\% & 0.9982 \\ \hline
+    LSTM-RLS, Multi-Feature Input (Returns) & 0.91\% & -0.061 \\ \hline
     
-    DNS - LSTM-SDM & 1082.0187 & 0.8092 \\ \hline
-    DNS - LSTM-MA & 688.529 & 0.9227 \\ \hline
-    DNS - RBF-SDM & 328.7387 & 0.9823 \\ \hline
-    DNS - RBF-MA & 479.8617 & 0.9624 \\ \hline
+    DNS - LSTM-SDM (Close) & 1082.0187 & 0.8092 \\ \hline
+    DNS - LSTM-MA (Close) & 688.529 & 0.9227 \\ \hline
+    DNS - RBF-SDM (Close) & 328.7387 & 0.9823 \\ \hline
+    DNS - RBF-MA (Close) & 479.8617 & 0.9624 \\ \hline
     
     ARIMAX (Close) & 7431.43 & -35.47 \\ \hline
     ARIMAX (Returns) & 0.703\% & 0.36 \\ \hline
     ARIMAX Model + RLS (Returns) & 0.72\% & 0.32 \\ \hline
     
-    Multi-Feature LSTM & -- & -- \\ \hline
-    GARCH Model & -- & -- \\ \hline
-    Stochastic Volatility Model & 1.04\% & -0.2091 \\ \hline
-    Ensemble Learning Model & \textbf{0.638\%} & 0.5130 \\ \hline
-    Transformer GAN (TTS GAN) & -- & -- \\ \hline
-    RAGIC Architecture & -- & -- \\ \hline
+    Multi-Feature LSTM (Returns) & -- & -- \\ \hline
+    GARCH Model (Returns) & -- & -- \\ \hline
+    Stochastic Volatility Model (Returns) & 1.04\% & -0.2091 \\ \hline
+    Ensemble Learning Model (Returns) & \textbf{0.638\%} & 0.5130 \\ \hline
+    Transformer GAN (Close) & -- & -- \\ \hline
+    RAGIC Architecture (Close) & -- & -- \\ \hline
     
     \end{tabular}
 \end{table}

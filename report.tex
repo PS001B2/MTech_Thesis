@@ -59,6 +59,7 @@
 
 % \thispagestyle{empty}
 % \includepdf[pages={1}]{DIAT_Internship_Completion_Certificate-crop.pdf}
+\pagenumbering{roman}
 
 \thispagestyle{empty}
 \include{Chapters/Declaration}
@@ -74,11 +75,15 @@
 % Set to fancy headers and footers again
 \pagestyle{fancy}
 
-\pagenumbering{roman}
+
 \tableofcontents 
 \clearpage
 \listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
 \listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
 \newpage
 
 \pagenumbering{arabic}

@@ -598,6 +598,58 @@
       \verb https://ieeexplore.ieee.org/document/9207022/
       \endverb
     \endentry
+    \entry{yahoo_nifty50_history}{online}{}
+      \name{author}{1}{}{%
+        {{hash=866e8d567dd5e253610d253b71b7450e}{%
+           family={{Yahoo Finance}},
+           familyi={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{866e8d567dd5e253610d253b71b7450e}
+      \strng{fullhash}{866e8d567dd5e253610d253b71b7450e}
+      \strng{bibnamehash}{866e8d567dd5e253610d253b71b7450e}
+      \strng{authorbibnamehash}{866e8d567dd5e253610d253b71b7450e}
+      \strng{authornamehash}{866e8d567dd5e253610d253b71b7450e}
+      \strng{authorfullhash}{866e8d567dd5e253610d253b71b7450e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: May 20, 2025}
+      \field{title}{{NIFTY 50 (\textasciicircum NSEI) Historical Data}}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://finance.yahoo.com/quote/%5ENSEI/history/
+      \endverb
+      \verb{url}
+      \verb https://finance.yahoo.com/quote/%5ENSEI/history/
+      \endverb
+    \endentry
+    \entry{nse_vix}{online}{}
+      \name{author}{1}{}{%
+        {{hash=31eb890329278c2ccdacdfa3aaf99ca8}{%
+           family={{National Stock Exchange of India}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \strng{fullhash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \strng{bibnamehash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \strng{authorbibnamehash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \strng{authornamehash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \strng{authorfullhash}{31eb890329278c2ccdacdfa3aaf99ca8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: May 16, 2025}
+      \field{title}{Historical Volatility Index (VIX) Reports}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.nseindia.com/reports-indices-historical-vix
+      \endverb
+      \verb{url}
+      \verb https://www.nseindia.com/reports-indices-historical-vix
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
