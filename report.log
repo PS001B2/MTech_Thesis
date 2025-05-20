@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.3)  21 MAY 2025 03:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.3)  21 MAY 2025 03:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -977,13 +977,13 @@ pdfTeX warning: pdflatex (file ./Images/Ensemble_.pdf): PDF inclusion: found PDF
 <Images/Ensemble_.pdf, id=1281, 277.035pt x 262.0992pt>
 File: Images/Ensemble_.pdf Graphic file (type pdf)
 <use Images/Ensemble_.pdf>
-Package pdftex.def Info: Images/Ensemble_.pdf  used on input line 630.
+Package pdftex.def Info: Images/Ensemble_.pdf  used on input line 631.
 (pdftex.def)             Requested size: 390.0pt x 368.976pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [41] [42 <./Images/Ensemble_.pdf>] [43]
-Overfull \hbox (0.48521pt too wide) in paragraph at lines 727--728
+Overfull \hbox (0.48521pt too wide) in paragraph at lines 728--729
 []\OT1/ptm/m/n/12 This Transformer-based GAN ap-proach en-ables more ro-bust mod-el-ing of com-
  []
 
@@ -991,14 +991,14 @@ Overfull \hbox (0.48521pt too wide) in paragraph at lines 727--728
 <Images/TimeGAN.png, id=1334, 749.80125pt x 925.4575pt>
 File: Images/TimeGAN.png Graphic file (type png)
 <use Images/TimeGAN.png>
-Package pdftex.def Info: Images/TimeGAN.png  used on input line 750.
+Package pdftex.def Info: Images/TimeGAN.png  used on input line 751.
 (pdftex.def)             Requested size: 390.0pt x 481.36777pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (1.35225pt too wide) in paragraph at lines 759--761
+Overfull \hbox (1.35225pt too wide) in paragraph at lines 760--762
 \OT1/ptm/m/n/12 Each Trans-former En-coder block con-sists of a Multi-Head Self-Attention (MHSA)
  []
 
@@ -1009,14 +1009,14 @@ Overfull \vbox (0.39311pt too high) has occurred while \output is active []
 <Images/Screenshot 2025-05-19 at 15.00.48.png, id=1349, 1350.04375pt x 461.725pt>
 File: Images/Screenshot 2025-05-19 at 15.00.48.png Graphic file (type png)
 <use Images/Screenshot 2025-05-19 at 15.00.48.png>
-Package pdftex.def Info: Images/Screenshot 2025-05-19 at 15.00.48.png  used on input line 803.
+Package pdftex.def Info: Images/Screenshot 2025-05-19 at 15.00.48.png  used on input line 804.
 (pdftex.def)             Requested size: 370.49881pt x 126.71056pt.
- [48 <./Images/Screenshot 2025-05-19 at 15.00.48.png>] [49] [50]) (./Chapters/Results.tex [51]
+ [48] [49 <./Images/Screenshot 2025-05-19 at 15.00.48.png>] [50] [51]) (./Chapters/Results.tex [52]
 Chapter 4.
-[52
+[53
 
 ]
-<Images/ActvsPred.pdf, id=1393, 1445.4pt x 289.08pt>
+<Images/ActvsPred.pdf, id=1397, 1445.4pt x 289.08pt>
 File: Images/ActvsPred.pdf Graphic file (type pdf)
 <use Images/ActvsPred.pdf>
 Package pdftex.def Info: Images/ActvsPred.pdf  used on input line 41.
@@ -1025,7 +1025,7 @@ Package pdftex.def Info: Images/ActvsPred.pdf  used on input line 41.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/returns_comparision.pdf, id=1394, 1445.4pt x 289.08pt>
+<Images/returns_comparision.pdf, id=1398, 1445.4pt x 289.08pt>
 File: Images/returns_comparision.pdf Graphic file (type pdf)
 <use Images/returns_comparision.pdf>
 Package pdftex.def Info: Images/returns_comparision.pdf  used on input line 48.
@@ -1033,7 +1033,7 @@ Package pdftex.def Info: Images/returns_comparision.pdf  used on input line 48.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/ActvsPredshift.pdf, id=1395, 1445.4pt x 289.08pt>
+<Images/ActvsPredshift.pdf, id=1399, 1445.4pt x 289.08pt>
 File: Images/ActvsPredshift.pdf Graphic file (type pdf)
 <use Images/ActvsPredshift.pdf>
 Package pdftex.def Info: Images/ActvsPredshift.pdf  used on input line 68.
@@ -1044,27 +1044,27 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/5_ActvsPred_LSTM_RLS.pdf, id=1396, 1445.4pt x 361.35pt>
+<Images/5_ActvsPred_LSTM_RLS.pdf, id=1400, 1445.4pt x 361.35pt>
 File: Images/5_ActvsPred_LSTM_RLS.pdf Graphic file (type pdf)
 <use Images/5_ActvsPred_LSTM_RLS.pdf>
 Package pdftex.def Info: Images/5_ActvsPred_LSTM_RLS.pdf  used on input line 90.
 (pdftex.def)             Requested size: 390.0pt x 97.49963pt.
-[53]
+[54]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/actual_vs_predicted_main_N2_50seq_LSTM.pdf, id=1404, 1208.72832pt x 308.70395pt>
+<Images/actual_vs_predicted_main_N2_50seq_LSTM.pdf, id=1408, 1208.72832pt x 308.70395pt>
 File: Images/actual_vs_predicted_main_N2_50seq_LSTM.pdf Graphic file (type pdf)
 <use Images/actual_vs_predicted_main_N2_50seq_LSTM.pdf>
 Package pdftex.def Info: Images/actual_vs_predicted_main_N2_50seq_LSTM.pdf  used on input line 114.
 (pdftex.def)             Requested size: 390.0pt x 99.60217pt.
-[54 <./Images/ActvsPred.pdf> <./Images/returns_comparision.pdf> <./Images/ActvsPredshift.pdf>] [55 <./Images/5_ActvsPred_LSTM_RLS.pdf> <./Images/actual_vs_predicted_main_N2_50seq_LSTM.pdf>]
-<Images/3_final_predictions_close.pdf, id=1597, 1445.4pt x 361.35pt>
+[55 <./Images/ActvsPred.pdf> <./Images/returns_comparision.pdf> <./Images/ActvsPredshift.pdf>] [56 <./Images/5_ActvsPred_LSTM_RLS.pdf> <./Images/actual_vs_predicted_main_N2_50seq_LSTM.pdf>]
+<Images/3_final_predictions_close.pdf, id=1601, 1445.4pt x 361.35pt>
 File: Images/3_final_predictions_close.pdf Graphic file (type pdf)
 <use Images/3_final_predictions_close.pdf>
 Package pdftex.def Info: Images/3_final_predictions_close.pdf  used on input line 142.
 (pdftex.def)             Requested size: 390.0pt x 97.49963pt.
-<Images/3_final_predictions_return.pdf, id=1598, 1445.4pt x 361.35pt>
+<Images/3_final_predictions_return.pdf, id=1602, 1445.4pt x 361.35pt>
 File: Images/3_final_predictions_return.pdf Graphic file (type pdf)
 <use Images/3_final_predictions_return.pdf>
 Package pdftex.def Info: Images/3_final_predictions_return.pdf  used on input line 149.
@@ -1084,8 +1084,8 @@ Package pdftex.def Info: Images/3_final_predictions_return.pdf  used on input li
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[56 <./Images/3_final_predictions_close.pdf> <./Images/3_final_predictions_return.pdf>]
-<Images/6_Final_Pred.pdf, id=1671, 2890.8pt x 578.16pt>
+[57 <./Images/3_final_predictions_close.pdf> <./Images/3_final_predictions_return.pdf>]
+<Images/6_Final_Pred.pdf, id=1675, 2890.8pt x 578.16pt>
 File: Images/6_Final_Pred.pdf Graphic file (type pdf)
 <use Images/6_Final_Pred.pdf>
 Package pdftex.def Info: Images/6_Final_Pred.pdf  used on input line 192.
@@ -1097,8 +1097,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[57] [58 <./Images/6_Final_Pred.pdf>]
-<Images/absolute_error_vs_rmse.pdf, id=1729, 1445.4pt x 505.89pt>
+[58] [59 <./Images/6_Final_Pred.pdf>]
+<Images/absolute_error_vs_rmse.pdf, id=1733, 1445.4pt x 505.89pt>
 File: Images/absolute_error_vs_rmse.pdf Graphic file (type pdf)
 <use Images/absolute_error_vs_rmse.pdf>
 Package pdftex.def Info: Images/absolute_error_vs_rmse.pdf  used on input line 233.
@@ -1107,7 +1107,7 @@ Package pdftex.def Info: Images/absolute_error_vs_rmse.pdf  used on input line 2
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/actual_vs_predicted_returns.pdf, id=1730, 1445.4pt x 505.89pt>
+<Images/actual_vs_predicted_returns.pdf, id=1734, 1445.4pt x 505.89pt>
 File: Images/actual_vs_predicted_returns.pdf Graphic file (type pdf)
 <use Images/actual_vs_predicted_returns.pdf>
 Package pdftex.def Info: Images/actual_vs_predicted_returns.pdf  used on input line 240.
@@ -1115,30 +1115,30 @@ Package pdftex.def Info: Images/actual_vs_predicted_returns.pdf  used on input l
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[59] [60 <./Images/absolute_error_vs_rmse.pdf> <./Images/actual_vs_predicted_returns.pdf>]
-<Images/7_Residuals.pdf, id=1811, 1445.4pt x 361.35pt>
+[60] [61 <./Images/absolute_error_vs_rmse.pdf> <./Images/actual_vs_predicted_returns.pdf>]
+<Images/7_Residuals.pdf, id=1815, 1445.4pt x 361.35pt>
 File: Images/7_Residuals.pdf Graphic file (type pdf)
 <use Images/7_Residuals.pdf>
 Package pdftex.def Info: Images/7_Residuals.pdf  used on input line 258.
 (pdftex.def)             Requested size: 390.0pt x 97.49963pt.
-<Images/7_garchx_arimax.pdf, id=1812, 1445.4pt x 361.35pt>
+<Images/7_garchx_arimax.pdf, id=1816, 1445.4pt x 361.35pt>
 File: Images/7_garchx_arimax.pdf Graphic file (type pdf)
 <use Images/7_garchx_arimax.pdf>
 Package pdftex.def Info: Images/7_garchx_arimax.pdf  used on input line 267.
 (pdftex.def)             Requested size: 390.0pt x 97.49963pt.
- [61 <./Images/7_Residuals.pdf> <./Images/7_garchx_arimax.pdf>]
-<Images/7_garchx.pdf, id=1883, 1445.4pt x 361.35pt>
+ [62 <./Images/7_Residuals.pdf> <./Images/7_garchx_arimax.pdf>]
+<Images/7_garchx.pdf, id=1887, 1445.4pt x 361.35pt>
 File: Images/7_garchx.pdf Graphic file (type pdf)
 <use Images/7_garchx.pdf>
 Package pdftex.def Info: Images/7_garchx.pdf  used on input line 290.
 (pdftex.def)             Requested size: 390.0pt x 97.49963pt.
- [62 <./Images/7_garchx.pdf>]
-<Images/stochastic_volatility.pdf, id=1930, 1084.05pt x 361.35pt>
+ [63 <./Images/7_garchx.pdf>]
+<Images/stochastic_volatility.pdf, id=1934, 1084.05pt x 361.35pt>
 File: Images/stochastic_volatility.pdf Graphic file (type pdf)
 <use Images/stochastic_volatility.pdf>
 Package pdftex.def Info: Images/stochastic_volatility.pdf  used on input line 323.
 (pdftex.def)             Requested size: 390.0pt x 129.99768pt.
-<Images/stochastic_volatility_density.pdf, id=1931, 1084.05pt x 361.35pt>
+<Images/stochastic_volatility_density.pdf, id=1935, 1084.05pt x 361.35pt>
 File: Images/stochastic_volatility_density.pdf Graphic file (type pdf)
 <use Images/stochastic_volatility_density.pdf>
 Package pdftex.def Info: Images/stochastic_volatility_density.pdf  used on input line 330.
@@ -1147,8 +1147,8 @@ Package pdftex.def Info: Images/stochastic_volatility_density.pdf  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[63 <./Images/stochastic_volatility.pdf>]
-<Images/metanet_final_test_plot__1.pdf, id=1982, 1445.4pt x 361.35pt>
+[64 <./Images/stochastic_volatility.pdf>]
+<Images/metanet_final_test_plot__1.pdf, id=1987, 1445.4pt x 361.35pt>
 File: Images/metanet_final_test_plot__1.pdf Graphic file (type pdf)
 <use Images/metanet_final_test_plot__1.pdf>
 Package pdftex.def Info: Images/metanet_final_test_plot__1.pdf  used on input line 370.
@@ -1157,44 +1157,45 @@ Package pdftex.def Info: Images/metanet_final_test_plot__1.pdf  used on input li
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[64 <./Images/stochastic_volatility_density.pdf>]
-<Images/_8_ActualVsPred_c.pdf, id=2024, 1445.4pt x 361.35pt>
+[65 <./Images/stochastic_volatility_density.pdf>]
+<Images/_8_ActualVsPred_c.pdf, id=2028, 1445.4pt x 361.35pt>
 File: Images/_8_ActualVsPred_c.pdf Graphic file (type pdf)
 <use Images/_8_ActualVsPred_c.pdf>
 Package pdftex.def Info: Images/_8_ActualVsPred_c.pdf  used on input line 381.
 (pdftex.def)             Requested size: 390.0pt x 97.49963pt.
-<Images/9_Act_vs_Pred_Point.pdf, id=2026, 1445.4pt x 361.35pt>
+ [66 <./Images/metanet_final_test_plot__1.pdf> <./Images/_8_ActualVsPred_c.pdf>]
+<Images/9_Act_vs_Pred_Point.pdf, id=2105, 1445.4pt x 361.35pt>
 File: Images/9_Act_vs_Pred_Point.pdf Graphic file (type pdf)
 <use Images/9_Act_vs_Pred_Point.pdf>
-Package pdftex.def Info: Images/9_Act_vs_Pred_Point.pdf  used on input line 394.
+Package pdftex.def Info: Images/9_Act_vs_Pred_Point.pdf  used on input line 395.
 (pdftex.def)             Requested size: 390.0pt x 97.49963pt.
- [65 <./Images/metanet_final_test_plot__1.pdf> <./Images/_8_ActualVsPred_c.pdf>]
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./Chapters/DiscAndChallenges.tex [66 <./Images/9_Act_vs_Pred_Point.pdf>] [67]
+) (./Chapters/DiscAndChallenges.tex [67 <./Images/9_Act_vs_Pred_Point.pdf>] [68]
 Chapter 5.
 
 Overfull \hbox (4.984pt too wide) in paragraph at lines 6--7
 []\OT1/ptm/m/n/12 Consequently, the DNS ar-chi-tec-ture was re-placed by the ARIMA-LSTM Resid-
  []
 
-[68
+[69
 
-] [69]
+] [70]
 Overfull \hbox (2.68077pt too wide) in paragraph at lines 22--23
 []\OT1/ptm/m/n/12 The Trans-former GAN-based ar-chi-tec-ture and the RAGIC model, im-ple-mented
  []
 
-[70]) (./Chapters/conclusion.tex [71] [72]
+[71]) (./Chapters/conclusion.tex [72] [73]
 Chapter 6.
-[73
+[74
 
-] [74]
+] [75]
 Chapter 7.
-[75
+[76
 
-]) [76] [77
+]) [77] [78
 
 
 ]
@@ -1202,7 +1203,7 @@ Overfull \hbox (21.62631pt too wide) in paragraph at lines 103--103
 \OT1/ptm/m/it/12 Pro-cess-ing Sys-tems (NeurIPS)\OT1/ptm/m/n/12 , NeurIPS, Ar-ti-cle No.: 494, Dec. 2019, pp. 5508{
  []
 
-[78]
+[79]
 Overfull \hbox (3.39728pt too wide) in paragraph at lines 103--103
 \OT1/cmtt/m/n/12 IJCNN48605 . 2020 . 9207022$[]\OT1/ptm/m/n/12 . [On-line]. Avail-able: []$\OT1/cmtt/m/n/12 https : / / ieeexplore .
  []
@@ -1212,12 +1213,12 @@ Overfull \hbox (7.8002pt too wide) in paragraph at lines 103--103
 \OT1/ptm/m/n/12 to-rial into long short-term mem-ory re-cur-rent neu-ral net-works," \OT1/ptm/m/it/12 arXiv preprint
  []
 
-[79]
+[80]
 Overfull \hbox (7.34238pt too wide) in paragraph at lines 103--103
 \OT1/ptm/m/it/12 3rd In-ter-na-tional In-for-mat-ics and Soft-ware En-gi-neer-ing Con-fer-ence (IISEC)\OT1/ptm/m/n/12 ,
  []
 
-[80] (./report.aux (./Chapters/Declaration.aux) (./Chapters/ApprovalSheet.aux) (./Chapters/acknow.aux))
+[81] (./report.aux (./Chapters/Declaration.aux) (./Chapters/ApprovalSheet.aux) (./Chapters/acknow.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1229,18 +1230,18 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20289 strings out of 474116
- 358220 string characters out of 5743683
+ 20290 strings out of 474116
+ 358227 string characters out of 5743683
  1938187 words of memory out of 5000000
  41960 multiletter control sequences out of 15000+600000
  597862 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,13n,81p,1798b,1567s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (95 pages, 1799387 bytes).
+Output written on report.pdf (96 pages, 1799680 bytes).
 PDF statistics:
- 2373 PDF objects out of 2487 (max. 8388607)
- 1448 compressed objects within 15 object streams
- 349 named destinations out of 1000 (max. 500000)
+ 2377 PDF objects out of 2487 (max. 8388607)
+ 1451 compressed objects within 15 object streams
+ 350 named destinations out of 1000 (max. 500000)
  1011 words of extra memory for PDF output out of 10000 (max. 10000000)
 
