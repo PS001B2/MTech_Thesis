@@ -451,11 +451,21 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT ./Images/Ensemble_.pdf
+INPUT ./Images/Ensemble_.pdf
+INPUT ./Images/Ensemble_.pdf
+INPUT ./Images/Ensemble_.pdf
+INPUT ./Images/Ensemble_.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/times/zptmcm7v.vf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
+INPUT ./Images/TimeGAN.png
+INPUT ./Images/TimeGAN.png
+INPUT ./Images/TimeGAN.png
+INPUT ./Images/TimeGAN.png
+INPUT ./Images/TimeGAN.png
 INPUT ./Images/Screenshot 2025-05-19 at 15.00.48.png
 INPUT ./Images/Screenshot 2025-05-19 at 15.00.48.png
 INPUT ./Images/Screenshot 2025-05-19 at 15.00.48.png
@@ -536,6 +546,11 @@ INPUT ./Images/7_garchx_arimax.pdf
 INPUT ./Images/7_garchx_arimax.pdf
 INPUT ./Images/7_garchx_arimax.pdf
 INPUT ./Images/7_garchx_arimax.pdf
+INPUT ./Images/7_garchx.pdf
+INPUT ./Images/7_garchx.pdf
+INPUT ./Images/7_garchx.pdf
+INPUT ./Images/7_garchx.pdf
+INPUT ./Images/7_garchx.pdf
 INPUT ./Images/stochastic_volatility.pdf
 INPUT ./Images/stochastic_volatility.pdf
 INPUT ./Images/stochastic_volatility.pdf

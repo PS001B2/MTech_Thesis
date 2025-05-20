@@ -247,7 +247,7 @@ The plots illustrating the framework's performance are provided below:
 
 \subsection{Evaluation Metrics and Performance}
 
-The GARCH model does not capture any volatility from the residuals, resulting in final predictions that are nearly identical to the ARIMAX model outputs.
+Both the ARIMAX and GARCHX models were trained on the same return-based dataset to separately model the conditional mean and variance components of the time series. While the ARIMAX model produced valid forecasts, the GARCHX model failed to detect meaningful volatility patterns in the residuals and generated nearly constant predictions, with changes appearing only after the fifth decimal place. As a result, the GARCHX predictions were almost indistinguishable from a flat line, indicating its inability to model residual volatility in this dataset.
 
 \subsection{Residuals from ARIMAX Predictions}
 
@@ -260,19 +260,19 @@ To analyze the deviations captured by the GARCH model, we plot the residuals obt
     \label{fig:residuals_actual_arimax}
 \end{figure}
 
-\subsection{Visualization of Predictions}
+\subsection{Combined ARIMAX + GARCHX Predictions}
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{Images/7_garchx_arimax.pdf}
-    \caption{Actual vs. Predicted Returns Using GARCH Model}
+    \caption{Actual vs. Predicted Returns Using ARIMAX + GARCHX}
     \label{fig:garch_actual_pred}
 \end{figure}
 
 \begin{table}[h!]
 \centering
-\caption{Performance Metrics of GARCH Model}
-\label{tab:garch_performance}
+\caption{Performance Metrics of ARIMAX + GARCHX Model}
+\label{tab:arimax_garch_performance}
 \begin{tabular}{|l|c|}
 \hline
 \textbf{Metric}   & \textbf{Value}  \\ \hline
@@ -281,7 +281,30 @@ R\textsuperscript{2} Score & 0.36  \\ \hline
 \end{tabular}
 \end{table}
 
-\newpage
+\subsection{GARCHX-Only Predictions}
+
+To further evaluate the GARCHX model, we isolate and plot its predicted volatility component (added to ARIMAX residuals). As seen below, these predictions are nearly flat, reflecting the model's inability to detect or amplify residual variations.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/7_garchx.pdf}
+    \caption{Predicted Residuals from GARCHX Model}
+    \label{fig:garchx_only_pred}
+\end{figure}
+
+\begin{table}[h!]
+\centering
+\caption{Performance Metrics of GARCHX-Only Predictions}
+\label{tab:garchx_only_performance}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Metric}   & \textbf{Value}  \\ \hline
+RMSE              & 0.9219\%  \\ \hline
+R\textsuperscript{2} Score & -0.001381  \\ \hline
+\end{tabular}
+\end{table}
+
+% \newpage
 \section{Stochastic Volatility Results}
 \subsection{Actual vs Predicted Returns}
 Figure~\ref{fig:sv_actual_vs_pred} shows the normalized actual returns plotted against the normalized filtered log-volatility estimates from the stochastic volatility model.
@@ -360,7 +383,7 @@ Figure~\ref{fig:tgan_actual_vs_pred} illustrates the ability of the Transformer-
     \label{fig:tgan_actual_vs_pred}
 \end{figure}
 
-\noindent After visually inspecting the predicted series, it was observed that the predictions deviate significantly from the actual return values, exhibiting erratic and inconsistent behavior. Due to the highly erroneous nature of these predictions, quantitative performance metrics such as RMSE and R\textsuperscript{2} Score are not reported.
+\noindent The Transformer GAN demonstrates poor predictive capability, with predictions deviating significantly from actual return values and exhibiting erratic behavior. Quantitative evaluation confirms this outcome, with a high RMSE of \textcolor{red}{14550.0515} and a highly negative \( R^2 \) score of \textcolor{red}{-12.2655}, indicating that the model performs substantially worse than a simple mean-based prediction.
 
 \section{RAGIC Framework Results}
 \subsection{Actual vs Predicted Returns}
@@ -373,7 +396,7 @@ Figure~\ref{fig:ragic_actual_vs_pred} compares the predicted returns from the RA
     \label{fig:ragic_actual_vs_pred}
 \end{figure}
 
-\noindent Although the RAGIC framework incorporates advanced modules, the predicted returns show significant divergence from the actual values. Based on this visual assessment, RMSE and R\textsuperscript{2} Score are omitted as the model fails to produce stable or meaningful numerical results.
+\noindent Despite the use of an attention-based risk module and temporal modeling in the RAGIC framework, the predictions diverge drastically from the actual values. This is quantitatively supported by an RMSE of \textcolor{red}{16192.9227} and an extremely negative \( R^2 \) score of \textcolor{red}{-37.1641}, indicating the model fails to capture any meaningful signal from the data and performs far worse than baseline methods.
 
 \section{Results Comparison}
 
@@ -385,29 +408,29 @@ Figure~\ref{fig:ragic_actual_vs_pred} compares the predicted returns from the RA
     \hline
     \textbf{Model (Target)} & \textbf{RMSE} & \textbf{R\textsuperscript{2} Score} \\ \hline
     
-    LSTM-RLS (Daily Returns) & 0.76\% & -0.0636 \\ \hline
-    LSTM-RLS (Weekly Returns) & 1.44\% & -0.038 \\ \hline
+    LSTM-RLS (Daily Returns) & \textcolor{red}{0.76\%} & \textcolor{red}{-0.0636} \\ \hline
+    LSTM-RLS (Weekly Returns) & \textcolor{red}{1.44\%} & \textcolor{red}{-0.038} \\ \hline
     LSTM-RLS (Daily Close) & 161.8935 & 0.9956 \\ \hline
-    LSTM-RLS, Shifted (Returns) & 0.24\% & 0.9982 \\ \hline
-    LSTM-RLS, Multi-Feature Input (Returns) & 0.91\% & -0.061 \\ \hline
+    LSTM-RLS, Manually Shifted (Returns) & 0.24\% & 0.9982 \\ \hline
+    LSTM-RLS, Multi-Feature Input (Returns) & \textcolor{red}{0.91\%} & \textcolor{red}{-0.061} \\ \hline
     
     DNS - LSTM-SDM (Close) & 1082.0187 & 0.8092 \\ \hline
     DNS - LSTM-MA (Close) & 688.529 & 0.9227 \\ \hline
     DNS - RBF-SDM (Close) & 328.7387 & 0.9823 \\ \hline
     DNS - RBF-MA (Close) & 479.8617 & 0.9624 \\ \hline
     
-    ARIMAX (Close) & 7431.43 & -35.47 \\ \hline
+    ARIMAX (Close) & \textcolor{red}{7431.43} & \textcolor{red}{-35.47} \\ \hline
     ARIMAX (Returns) & 0.703\% & 0.36 \\ \hline
     ARIMAX Model + RLS (Returns) & 0.72\% & 0.32 \\ \hline
     
-    Multi-Feature LSTM (Returns) & -- & -- \\ \hline
-    GARCH Model (Returns) & -- & -- \\ \hline
-    Stochastic Volatility Model (Returns) & 1.04\% & -0.2091 \\ \hline
-    Ensemble Learning Model (Returns) & \textbf{0.638\%} & 0.5130 \\ \hline
-    Transformer GAN (Close) & -- & -- \\ \hline
-    RAGIC Architecture (Close) & -- & -- \\ \hline
+    Multi-Feature LSTM (Returns) & \textcolor{red}{0.9072\%} & \textcolor{red}{-0.01376} \\ \hline
+    GARCH Model (Returns) & \textcolor{red}{0.9219\%} & \textcolor{red}{-0.001381} \\ \hline
+    Stochastic Volatility Model (Returns) & \textcolor{red}{1.04\%} & \textcolor{red}{-0.2091} \\ \hline
+    Ensemble Learning Model (Returns) & \textbf{0.638\%} & \textbf{0.5130} \\ \hline
+    Transformer GAN (Close) & \textcolor{red}{14550.0515} & \textcolor{red}{-12.2655} \\ \hline
+    RAGIC Architecture (Close) & \textcolor{red}{16192.9227} & \textcolor{red}{-37.1641} \\ \hline
     
     \end{tabular}
 \end{table}
 
-\noindent As seen in Table~\ref{tab:all_model_comparison}, the \textbf{Ensemble Learning Model} achieves the lowest RMSE of \textbf{0.638\%}, demonstrating the highest predictive accuracy among all evaluated models. The \textbf{LSTM-RLS (Daily Close)} model also performs exceptionally well with an R\textsuperscript{2} score of 0.9956, highlighting its effectiveness in modeling price levels. In contrast, traditional models like \textbf{ARIMAX (Close)} suffer from high error and a significantly negative R\textsuperscript{2} score. Models with missing metrics such as the \textbf{Multi-Feature LSTM}, \textbf{GARCH Model}, \textbf{Transformer GAN}, and \textbf{RAGIC Architecture} exhibited unstable behavior or extremely poor performance during evaluation, hence their numerical results are omitted. Hybrid models like the \textbf{DNS} and \textbf{LSTM-RLS} variants generally outperform classical approaches, especially in denoised trend and price-based forecasting.
+\noindent As seen in Table~\ref{tab:all_model_comparison}, the \textbf{Ensemble Learning Model} achieves the lowest RMSE of \textbf{0.638\%}, demonstrating the highest predictive accuracy among all evaluated models. The \textbf{LSTM-RLS (Daily Close)} model also performs exceptionally well with an R\textsuperscript{2} score of 0.9956, highlighting its effectiveness in modeling price levels. In contrast, traditional models like \textbf{ARIMAX (Close)} suffer from high error and a significantly negative R\textsuperscript{2} score. Models such as the \textbf{Multi-Feature LSTM}, \textbf{GARCH Model}, and \textbf{Stochastic Volatility Model} yield relatively poor results, with RMSE values close to or above 0.9\% and negative R\textsuperscript{2} scores. Traditional approaches like \textbf{ARIMAX (Close)} and even advanced generative models such as \textbf{Transformer GAN} and the \textbf{RAGIC Architecture} perform poorly, showing extremely high RMSEs and strongly negative R\textsuperscript{2} values. Hybrid models like the \textbf{DNS} and \textbf{LSTM-RLS} variants generally outperform classical approaches, especially in denoised trend and price-based forecasting.
